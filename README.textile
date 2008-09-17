@@ -1,1 +1,3 @@
 h1. jQuery Bundle for TextMate
+
+This is a TextMate bundle to help with jQuery functions.
