@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>.ancestors(${1/(.+)/(?1:':)/}${1:CSS Selector}${1/(.+)/(?1:':)/})$0</string>
+	<key>name</key>
+	<string>ancestors</string>
+	<key>scope</key>
+	<string>source.js.jquery</string>
+	<key>tabTrigger</key>
+	<string>.ancestors</string>
+	<key>uuid</key>
+	<string>30E96707-7160-4BA2-901A-741F087F8539</string>
+</dict>
+</plist>

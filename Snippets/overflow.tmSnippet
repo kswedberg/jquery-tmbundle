@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>.overflow(${1/(.+)/(?1:':)/}${1:visible/hidden/scroll/auto}${1/(.+)/(?1:':)/})$0</string>
+	<key>name</key>
+	<string>overflow</string>
+	<key>scope</key>
+	<string>source.js.jquery</string>
+	<key>tabTrigger</key>
+	<string>.overflow</string>
+	<key>uuid</key>
+	<string>D3629558-2635-4201-8110-8F54AEF20B96</string>
+</dict>
+</plist>

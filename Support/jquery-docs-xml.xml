@@ -1,0 +1,2707 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<docs version='1.1.2'>
+<method cat='Core' type='jQuery' short='This function accepts a string containing a CSS or
+basic XPath selector which is then used to match a set of elements.' name='$'>
+<desc>This function accepts a string containing a CSS or
+basic XPath selector which is then used to match a set of elements.
+
+The core functionality of jQuery centers around this function.
+Everything in jQuery is based upon this, or uses this in some way.
+The most basic use of this function is to pass in an expression
+(usually consisting of CSS or XPath), which then finds all matching
+elements.
+
+By default, if no context is specified, $() looks for DOM elements within the context of the
+current HTML document. If you do specify a context, such as a DOM
+element or jQuery object, the expression will be matched against
+the contents of that context.
+
+See [[DOM/Traversing/Selectors]] for the allowed CSS/XPath syntax for expressions.</desc>
+<see>$(Element)</see>
+<see>$(Element&lt;Array&gt;)</see>
+<params type='String' name='expr'>
+<desc>An expression to search with</desc>
+</params>
+<params type='Element|jQuery' name='context'>
+<desc>(optional) A DOM Element, Document or jQuery to use as context</desc>
+</params>
+<examples>
+<desc>Finds all p elements that are children of a div element.</desc>
+<before>&lt;p&gt;one&lt;/p&gt; &lt;div&gt;&lt;p&gt;two&lt;/p&gt;&lt;/div&gt; &lt;p&gt;three&lt;/p&gt;</before>
+<code>$("div &gt; p")</code>
+<result>[ &lt;p&gt;two&lt;/p&gt; ]</result>
+</examples>
+<examples>
+<desc>Searches for all inputs of type radio within the first form in the document</desc>
+<code>$("input:radio", document.forms[0])</code>
+</examples>
+<examples>
+<desc>This finds all div elements within the specified XML document.</desc>
+<code>$("div", xml.responseXML)</code>
+</examples>
+</method>
+<method cat='Core' type='jQuery' see='appendTo(String)' short='Create DOM elements on-the-fly from the provided String of raw HTML.' name='$'>
+<desc>Create DOM elements on-the-fly from the provided String of raw HTML.</desc>
+<params type='String' name='html'>
+<desc>A string of HTML to create on the fly.</desc>
+</params>
+<examples>
+<desc>Creates a div element (and all of its contents) dynamically, 
+and appends it to the body element. Internally, an
+element is created and its innerHTML property set to the given markup.
+It is therefore both quite flexible and limited.</desc>
+<code>$("&lt;div&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/div&gt;").appendTo("body")</code>
+</examples>
+</method>
+<method cat='Core' type='jQuery' short='Wrap jQuery functionality around a single or multiple DOM Element(s).' name='$'>
+<desc>Wrap jQuery functionality around a single or multiple DOM Element(s).
+
+This function also accepts XML Documents and Window objects
+as valid arguments (even though they are not DOM Elements).</desc>
+<params type='Element|Array&lt;Element&gt;' name='elems'>
+<desc>DOM element(s) to be encapsulated by a jQuery object.</desc>
+</params>
+<examples>
+<desc>Sets the background color of the page to black.</desc>
+<code>$(document.body).css( "background", "black" );</code>
+</examples>
+<examples>
+<desc>Hides all the input elements within a form</desc>
+<code>$( myForm.elements ).hide()</code>
+</examples>
+</method>
+<method cat='Core' type='jQuery' see='ready(Function)' short='A shorthand for $(document).' name='$'>
+<desc>A shorthand for $(document).ready(), allowing you to bind a function
+to be executed when the DOM document has finished loading. This function
+behaves just like $(document).ready(), in that it should be used to wrap
+other $() operations on your page that depend on the DOM being ready to be
+operated on. While this function is, technically, chainable - there really
+isn't much use for chaining against it.
+
+You can have as many $(document).ready events on your page as you like.
+
+See ready(Function) for details about the ready event.</desc>
+<params type='Function' name='fn'>
+<desc>The function to execute when the DOM is ready.</desc>
+</params>
+<examples>
+<desc>Executes the function when the DOM is ready to be used.</desc>
+<code>$(function(){
+  // Document is ready
+});</code>
+</examples>
+<examples>
+<desc>Uses both the shortcut for $(document).ready() and the argument
+to write failsafe jQuery code using the $ alias, without relying on the
+global alias.</desc>
+<code>jQuery(function($) {
+  // Your code using failsafe $ alias here...
+});</code>
+</examples>
+</method>
+<method property='1' cat='Core' type='String' short='The current version of jQuery.' name='jquery' private='1'>
+<desc>The current version of jQuery.</desc>
+</method>
+<method property='1' cat='Core' type='Number' short='The number of elements currently matched.' name='length'>
+<desc>The number of elements currently matched. The size function will return the same value.</desc>
+<examples>
+<code>$("img").length;</code>
+<result>2</result>
+<before>&lt;img src="test1.jpg"/&gt; &lt;img src="test2.jpg"/&gt;</before>
+</examples>
+</method>
+<method cat='Core' type='Number' short='Get the number of elements currently matched.' name='size'>
+<desc>Get the number of elements currently matched. This returns the same
+number as the 'length' property of the jQuery object.</desc>
+<examples>
+<code>$("img").size();</code>
+<result>2</result>
+<before>&lt;img src="test1.jpg"/&gt; &lt;img src="test2.jpg"/&gt;</before>
+</examples>
+</method>
+<method cat='Core' type='Array&lt;Element&gt;' short='Access all matched DOM elements.' name='get'>
+<desc>Access all matched DOM elements. This serves as a backwards-compatible
+way of accessing all matched elements (other than the jQuery object
+itself, which is, in fact, an array of elements).
+
+It is useful if you need to operate on the DOM elements themselves instead of using built-in jQuery functions.</desc>
+<examples>
+<desc>Selects all images in the document and returns the DOM Elements as an Array</desc>
+<before>&lt;img src="test1.jpg"/&gt; &lt;img src="test2.jpg"/&gt;</before>
+<code>$("img").get();</code>
+<result>[ &lt;img src="test1.jpg"/&gt; &lt;img src="test2.jpg"/&gt; ]</result>
+</examples>
+</method>
+<method cat='Core' type='Element' short='Access a single matched DOM element at a specified index in the matched set.' name='get'>
+<desc>Access a single matched DOM element at a specified index in the matched set.
+This allows you to extract the actual DOM element and operate on it
+directly without necessarily using jQuery functionality on it.</desc>
+<params type='Number' name='num'>
+<desc>Access the element in the Nth position.</desc>
+</params>
+<examples>
+<desc>Selects all images in the document and returns the first one</desc>
+<before>&lt;img src="test1.jpg"/&gt; &lt;img src="test2.jpg"/&gt;</before>
+<code>$("img").get(0);</code>
+<result>&lt;img src="test1.jpg"/&gt;</result>
+</examples>
+</method>
+<method cat='Core' type='jQuery' short='Set the jQuery object to an array of elements, while maintaining
+the stack.' name='pushStack' private='1'>
+<desc>Set the jQuery object to an array of elements, while maintaining
+the stack.</desc>
+<params type='Elements' name='elems'>
+<desc>An array of elements</desc>
+</params>
+<examples>
+<code>$("img").pushStack([ document.body ]);</code>
+<result>$("img").pushStack() == [ document.body ]</result>
+</examples>
+</method>
+<method cat='Core' type='jQuery' short='Set the jQuery object to an array of elements.' name='setArray' private='1'>
+<desc>Set the jQuery object to an array of elements. This operation is
+completely destructive - be sure to use .pushStack() if you wish to maintain
+the jQuery stack.</desc>
+<params type='Elements' name='elems'>
+<desc>An array of elements</desc>
+</params>
+<examples>
+<code>$("img").setArray([ document.body ]);</code>
+<result>$("img").setArray() == [ document.body ]</result>
+</examples>
+</method>
+<method cat='Core' type='jQuery' short='Execute a function within the context of every matched element.' name='each'>
+<desc>Execute a function within the context of every matched element.
+This means that every time the passed-in function is executed
+(which is once for every element matched) the 'this' keyword
+points to the specific DOM element.
+
+Additionally, the function, when executed, is passed a single
+argument representing the position of the element in the matched
+set (integer, zero-index).</desc>
+<params type='Function' name='fn'>
+<desc>A function to execute</desc>
+</params>
+<examples>
+<desc>Iterates over two images and sets their src property</desc>
+<before>&lt;img/&gt;&lt;img/&gt;</before>
+<code>$("img").each(function(i){
+  this.src = "test" + i + ".jpg";
+});</code>
+<result>&lt;img src="test0.jpg"/&gt;&lt;img src="test1.jpg"/&gt;</result>
+</examples>
+</method>
+<method cat='Core' type='Number' short='Searches every matched element for the object and returns
+the index of the element, if found, starting with zero.' name='index'>
+<desc>Searches every matched element for the object and returns
+the index of the element, if found, starting with zero. 
+Returns -1 if the object wasn't found.</desc>
+<params type='Element' name='subject'>
+<desc>Object to search for</desc>
+</params>
+<examples>
+<desc>Returns the index for the element with ID foobar</desc>
+<before>&lt;div id="foobar"&gt;&lt;b&gt;&lt;/b&gt;&lt;span id="foo"&gt;&lt;/span&gt;&lt;/div&gt;</before>
+<code>$("*").index( $('#foobar')[0] )</code>
+<result>0</result>
+</examples>
+<examples>
+<desc>Returns the index for the element with ID foo within another element</desc>
+<before>&lt;div id="foobar"&gt;&lt;b&gt;&lt;/b&gt;&lt;span id="foo"&gt;&lt;/span&gt;&lt;/div&gt;</before>
+<code>$("*").index( $('#foo')[0] )</code>
+<result>2</result>
+</examples>
+<examples>
+<desc>Returns -1, as there is no element with ID bar</desc>
+<before>&lt;div id="foobar"&gt;&lt;b&gt;&lt;/b&gt;&lt;span id="foo"&gt;&lt;/span&gt;&lt;/div&gt;</before>
+<code>$("*").index( $('#bar')[0] )</code>
+<result>-1</result>
+</examples>
+</method>
+<method cat='DOM/Attributes' type='Object' short='Access a property on the first matched element.' name='attr'>
+<desc>Access a property on the first matched element.
+This method makes it easy to retrieve a property value
+from the first matched element.
+
+If the element does not have an attribute with such a
+name, undefined is returned.</desc>
+<params type='String' name='name'>
+<desc>The name of the property to access.</desc>
+</params>
+<examples>
+<desc>Returns the src attribute from the first image in the document.</desc>
+<before>&lt;img src="test.jpg"/&gt;</before>
+<code>$("img").attr("src");</code>
+<result>test.jpg</result>
+</examples>
+</method>
+<method cat='DOM/Attributes' type='jQuery' short='Set a key/value object as properties to all matched elements.' name='attr'>
+<desc>Set a key/value object as properties to all matched elements.
+
+This serves as the best way to set a large number of properties
+on all matched elements.</desc>
+<params type='Map' name='properties'>
+<desc>Key/value pairs to set as object properties.</desc>
+</params>
+<examples>
+<desc>Sets src and alt attributes to all images.</desc>
+<before>&lt;img/&gt;</before>
+<code>$("img").attr({ src: "test.jpg", alt: "Test Image" });</code>
+<result>&lt;img src="test.jpg" alt="Test Image"/&gt;</result>
+</examples>
+</method>
+<method cat='DOM/Attributes' type='jQuery' short='Set a single property to a value, on all matched elements.' name='attr'>
+<desc>Set a single property to a value, on all matched elements.
+
+Note that you can't set the name property of input elements in IE.
+Use $(html) or .append(html) or .html(html) to create elements
+on the fly including the name property.</desc>
+<params type='String' name='key'>
+<desc>The name of the property to set.</desc>
+</params>
+<params type='Object' name='value'>
+<desc>The value to set the property to.</desc>
+</params>
+<examples>
+<desc>Sets src attribute to all images.</desc>
+<before>&lt;img/&gt;</before>
+<code>$("img").attr("src","test.jpg");</code>
+<result>&lt;img src="test.jpg"/&gt;</result>
+</examples>
+</method>
+<method cat='DOM/Attributes' type='jQuery' short='Set a single property to a computed value, on all matched elements.' name='attr'>
+<desc>Set a single property to a computed value, on all matched elements.
+
+Instead of supplying a string value as described
+[[DOM/Attributes#attr.28_key.2C_value_.29|above]],
+a function is provided that computes the value.</desc>
+<params type='String' name='key'>
+<desc>The name of the property to set.</desc>
+</params>
+<params type='Function' name='value'>
+<desc>A function returning the value to set. Scope: Current element, argument: Index of current element</desc>
+</params>
+<examples>
+<desc>Sets title attribute from src attribute.</desc>
+<before>&lt;img src="test.jpg" /&gt;</before>
+<code>$("img").attr("title", function() { return this.src });</code>
+<result>&lt;img src="test.jpg" title="test.jpg" /&gt;</result>
+</examples>
+<examples>
+<desc>Enumerate title attribute.</desc>
+<before>&lt;img title="pic" /&gt;&lt;img title="pic" /&gt;&lt;img title="pic" /&gt;</before>
+<code>$("img").attr("title", function(index) { return this.title + (i + 1); });</code>
+<result>&lt;img title="pic1" /&gt;&lt;img title="pic2" /&gt;&lt;img title="pic3" /&gt;</result>
+</examples>
+</method>
+<method cat='CSS' type='String' short='Access a style property on the first matched element.' name='css'>
+<desc>Access a style property on the first matched element.
+This method makes it easy to retrieve a style property value
+from the first matched element.</desc>
+<params type='String' name='name'>
+<desc>The name of the property to access.</desc>
+</params>
+<examples>
+<desc>Retrieves the color style of the first paragraph</desc>
+<before>&lt;p style="color:red;"&gt;Test Paragraph.&lt;/p&gt;</before>
+<code>$("p").css("color");</code>
+<result>"red"</result>
+</examples>
+<examples>
+<desc>Retrieves the font-weight style of the first paragraph.</desc>
+<before>&lt;p style="font-weight: bold;"&gt;Test Paragraph.&lt;/p&gt;</before>
+<code>$("p").css("font-weight");</code>
+<result>"bold"</result>
+</examples>
+</method>
+<method cat='CSS' type='jQuery' short='Set a key/value object as style properties to all matched elements.' name='css'>
+<desc>Set a key/value object as style properties to all matched elements.
+
+This serves as the best way to set a large number of style properties
+on all matched elements.</desc>
+<params type='Map' name='properties'>
+<desc>Key/value pairs to set as style properties.</desc>
+</params>
+<examples>
+<desc>Sets color and background styles to all p elements.</desc>
+<before>&lt;p&gt;Test Paragraph.&lt;/p&gt;</before>
+<code>$("p").css({ color: "red", background: "blue" });</code>
+<result>&lt;p style="color:red; background:blue;"&gt;Test Paragraph.&lt;/p&gt;</result>
+</examples>
+</method>
+<method cat='CSS' type='jQuery' short='Set a single style property to a value, on all matched elements.' name='css'>
+<desc>Set a single style property to a value, on all matched elements.
+If a number is provided, it is automatically converted into a pixel value.</desc>
+<params type='String' name='key'>
+<desc>The name of the property to set.</desc>
+</params>
+<params type='String|Number' name='value'>
+<desc>The value to set the property to.</desc>
+</params>
+<examples>
+<desc>Changes the color of all paragraphs to red</desc>
+<before>&lt;p&gt;Test Paragraph.&lt;/p&gt;</before>
+<code>$("p").css("color","red");</code>
+<result>&lt;p style="color:red;"&gt;Test Paragraph.&lt;/p&gt;</result>
+</examples>
+<examples>
+<desc>Changes the left of all paragraphs to "30px"</desc>
+<before>&lt;p&gt;Test Paragraph.&lt;/p&gt;</before>
+<code>$("p").css("left",30);</code>
+<result>&lt;p style="left:30px;"&gt;Test Paragraph.&lt;/p&gt;</result>
+</examples>
+</method>
+<method cat='DOM/Attributes' type='String' short='Get the text contents of all matched elements.' name='text'>
+<desc>Get the text contents of all matched elements. The result is
+a string that contains the combined text contents of all matched
+elements. This method works on both HTML and XML documents.</desc>
+<examples>
+<desc>Gets the concatenated text of all paragraphs</desc>
+<before>&lt;p&gt;&lt;b&gt;Test&lt;/b&gt; Paragraph.&lt;/p&gt;&lt;p&gt;Paraparagraph&lt;/p&gt;</before>
+<code>$("p").text();</code>
+<result>Test Paragraph.Paraparagraph</result>
+</examples>
+</method>
+<method cat='DOM/Attributes' type='String' short='Set the text contents of all matched elements.' name='text'>
+<desc>Set the text contents of all matched elements.
+
+Similar to html(), but escapes HTML (replace "&lt;" and "&gt;" with their
+HTML entities).</desc>
+<params type='String' name='val'>
+<desc>The text value to set the contents of the element to.</desc>
+</params>
+<examples>
+<desc>Sets the text of all paragraphs.</desc>
+<before>&lt;p&gt;Test Paragraph.&lt;/p&gt;</before>
+<code>$("p").text("&lt;b&gt;Some&lt;/b&gt; new text.");</code>
+<result>&lt;p&gt;&amp;lt;b&amp;gt;Some&amp;lt;/b&amp;gt; new text.&lt;/p&gt;</result>
+</examples>
+<examples>
+<desc>Sets the text of all paragraphs.</desc>
+<before>&lt;p&gt;Test Paragraph.&lt;/p&gt;</before>
+<code>$("p").text("&lt;b&gt;Some&lt;/b&gt; new text.", true);</code>
+<result>&lt;p&gt;Some new text.&lt;/p&gt;</result>
+</examples>
+</method>
+<method cat='DOM/Manipulation' type='jQuery' short='Wrap all matched elements with a structure of other elements.' name='wrap'>
+<desc>Wrap all matched elements with a structure of other elements.
+This wrapping process is most useful for injecting additional
+stucture into a document, without ruining the original semantic
+qualities of a document.
+
+This works by going through the first element
+provided (which is generated, on the fly, from the provided HTML)
+and finds the deepest ancestor element within its
+structure - it is that element that will en-wrap everything else.
+
+This does not work with elements that contain text. Any necessary text
+must be added after the wrapping is done.</desc>
+<params type='String' name='html'>
+<desc>A string of HTML, that will be created on the fly and wrapped around the target.</desc>
+</params>
+<examples>
+<code>$("p").wrap("&lt;div class='wrap'&gt;&lt;/div&gt;");</code>
+<result>&lt;div class='wrap'&gt;&lt;p&gt;Test Paragraph.&lt;/p&gt;&lt;/div&gt;</result>
+<before>&lt;p&gt;Test Paragraph.&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='DOM/Manipulation' type='jQuery' short='Wrap all matched elements with a structure of other elements.' name='wrap'>
+<desc>Wrap all matched elements with a structure of other elements.
+This wrapping process is most useful for injecting additional
+stucture into a document, without ruining the original semantic
+qualities of a document.
+
+This works by going through the first element
+provided and finding the deepest ancestor element within its
+structure - it is that element that will en-wrap everything else.
+
+This does not work with elements that contain text. Any necessary text
+must be added after the wrapping is done.</desc>
+<params type='Element' name='elem'>
+<desc>A DOM element that will be wrapped around the target.</desc>
+</params>
+<examples>
+<code>$("p").wrap( document.getElementById('content') );</code>
+<result>&lt;div id="content"&gt;&lt;p&gt;Test Paragraph.&lt;/p&gt;&lt;/div&gt;</result>
+<before>&lt;p&gt;Test Paragraph.&lt;/p&gt;&lt;div id="content"&gt;&lt;/div&gt;</before>
+</examples>
+</method>
+<method cat='DOM/Manipulation' type='jQuery' short='Append content to the inside of every matched element.' name='append'>
+<desc>Append content to the inside of every matched element.
+
+This operation is similar to doing an appendChild to all the
+specified elements, adding them into the document.</desc>
+<see>prepend(&lt;Content&gt;)</see>
+<see>before(&lt;Content&gt;)</see>
+<see>after(&lt;Content&gt;)</see>
+<params type='&lt;Content&gt;' name='content'>
+<desc>Content to append to the target</desc>
+</params>
+<examples>
+<desc>Appends some HTML to all paragraphs.</desc>
+<before>&lt;p&gt;I would like to say: &lt;/p&gt;</before>
+<code>$("p").append("&lt;b&gt;Hello&lt;/b&gt;");</code>
+<result>&lt;p&gt;I would like to say: &lt;b&gt;Hello&lt;/b&gt;&lt;/p&gt;</result>
+</examples>
+<examples>
+<desc>Appends an Element to all paragraphs.</desc>
+<before>&lt;p&gt;I would like to say: &lt;/p&gt;&lt;b id="foo"&gt;Hello&lt;/b&gt;</before>
+<code>$("p").append( $("#foo")[0] );</code>
+<result>&lt;p&gt;I would like to say: &lt;b id="foo"&gt;Hello&lt;/b&gt;&lt;/p&gt;</result>
+</examples>
+<examples>
+<desc>Appends a jQuery object (similar to an Array of DOM Elements) to all paragraphs.</desc>
+<before>&lt;p&gt;I would like to say: &lt;/p&gt;&lt;b&gt;Hello&lt;/b&gt;</before>
+<code>$("p").append( $("b") );</code>
+<result>&lt;p&gt;I would like to say: &lt;b&gt;Hello&lt;/b&gt;&lt;/p&gt;</result>
+</examples>
+</method>
+<method cat='DOM/Manipulation' type='jQuery' short='Prepend content to the inside of every matched element.' name='prepend'>
+<desc>Prepend content to the inside of every matched element.
+
+This operation is the best way to insert elements
+inside, at the beginning, of all matched elements.</desc>
+<see>append(&lt;Content&gt;)</see>
+<see>before(&lt;Content&gt;)</see>
+<see>after(&lt;Content&gt;)</see>
+<params type='&lt;Content&gt;' name='content'>
+<desc>Content to prepend to the target.</desc>
+</params>
+<examples>
+<desc>Prepends some HTML to all paragraphs.</desc>
+<before>&lt;p&gt;I would like to say: &lt;/p&gt;</before>
+<code>$("p").prepend("&lt;b&gt;Hello&lt;/b&gt;");</code>
+<result>&lt;p&gt;&lt;b&gt;Hello&lt;/b&gt;I would like to say: &lt;/p&gt;</result>
+</examples>
+<examples>
+<desc>Prepends an Element to all paragraphs.</desc>
+<before>&lt;p&gt;I would like to say: &lt;/p&gt;&lt;b id="foo"&gt;Hello&lt;/b&gt;</before>
+<code>$("p").prepend( $("#foo")[0] );</code>
+<result>&lt;p&gt;&lt;b id="foo"&gt;Hello&lt;/b&gt;I would like to say: &lt;/p&gt;</result>
+</examples>
+<examples>
+<desc>Prepends a jQuery object (similar to an Array of DOM Elements) to all paragraphs.</desc>
+<before>&lt;p&gt;I would like to say: &lt;/p&gt;&lt;b&gt;Hello&lt;/b&gt;</before>
+<code>$("p").prepend( $("b") );</code>
+<result>&lt;p&gt;&lt;b&gt;Hello&lt;/b&gt;I would like to say: &lt;/p&gt;</result>
+</examples>
+</method>
+<method cat='DOM/Manipulation' type='jQuery' short='Insert content before each of the matched elements.' name='before'>
+<desc>Insert content before each of the matched elements.</desc>
+<see>append(&lt;Content&gt;)</see>
+<see>prepend(&lt;Content&gt;)</see>
+<see>after(&lt;Content&gt;)</see>
+<params type='&lt;Content&gt;' name='content'>
+<desc>Content to insert before each target.</desc>
+</params>
+<examples>
+<desc>Inserts some HTML before all paragraphs.</desc>
+<before>&lt;p&gt;I would like to say: &lt;/p&gt;</before>
+<code>$("p").before("&lt;b&gt;Hello&lt;/b&gt;");</code>
+<result>&lt;b&gt;Hello&lt;/b&gt;&lt;p&gt;I would like to say: &lt;/p&gt;</result>
+</examples>
+<examples>
+<desc>Inserts an Element before all paragraphs.</desc>
+<before>&lt;p&gt;I would like to say: &lt;/p&gt;&lt;b id="foo"&gt;Hello&lt;/b&gt;</before>
+<code>$("p").before( $("#foo")[0] );</code>
+<result>&lt;b id="foo"&gt;Hello&lt;/b&gt;&lt;p&gt;I would like to say: &lt;/p&gt;</result>
+</examples>
+<examples>
+<desc>Inserts a jQuery object (similar to an Array of DOM Elements) before all paragraphs.</desc>
+<before>&lt;p&gt;I would like to say: &lt;/p&gt;&lt;b&gt;Hello&lt;/b&gt;</before>
+<code>$("p").before( $("b") );</code>
+<result>&lt;b&gt;Hello&lt;/b&gt;&lt;p&gt;I would like to say: &lt;/p&gt;</result>
+</examples>
+</method>
+<method cat='DOM/Manipulation' type='jQuery' short='Insert content after each of the matched elements.' name='after'>
+<desc>Insert content after each of the matched elements.</desc>
+<see>append(&lt;Content&gt;)</see>
+<see>prepend(&lt;Content&gt;)</see>
+<see>before(&lt;Content&gt;)</see>
+<params type='&lt;Content&gt;' name='content'>
+<desc>Content to insert after each target.</desc>
+</params>
+<examples>
+<desc>Inserts some HTML after all paragraphs.</desc>
+<before>&lt;p&gt;I would like to say: &lt;/p&gt;</before>
+<code>$("p").after("&lt;b&gt;Hello&lt;/b&gt;");</code>
+<result>&lt;p&gt;I would like to say: &lt;/p&gt;&lt;b&gt;Hello&lt;/b&gt;</result>
+</examples>
+<examples>
+<desc>Inserts an Element after all paragraphs.</desc>
+<before>&lt;b id="foo"&gt;Hello&lt;/b&gt;&lt;p&gt;I would like to say: &lt;/p&gt;</before>
+<code>$("p").after( $("#foo")[0] );</code>
+<result>&lt;p&gt;I would like to say: &lt;/p&gt;&lt;b id="foo"&gt;Hello&lt;/b&gt;</result>
+</examples>
+<examples>
+<desc>Inserts a jQuery object (similar to an Array of DOM Elements) after all paragraphs.</desc>
+<before>&lt;b&gt;Hello&lt;/b&gt;&lt;p&gt;I would like to say: &lt;/p&gt;</before>
+<code>$("p").after( $("b") );</code>
+<result>&lt;p&gt;I would like to say: &lt;/p&gt;&lt;b&gt;Hello&lt;/b&gt;</result>
+</examples>
+</method>
+<method cat='DOM/Traversing' type='jQuery' short='Revert the most recent &apos;destructive&apos; operation, changing the set of matched elements
+to its previous state (right before the destructive operation).' name='end'>
+<desc>Revert the most recent 'destructive' operation, changing the set of matched elements
+to its previous state (right before the destructive operation).
+
+If there was no destructive operation before, an empty set is returned.
+
+A 'destructive' operation is any operation that changes the set of
+matched jQuery elements. These functions are: &lt;code&gt;add&lt;/code&gt;,
+&lt;code&gt;children&lt;/code&gt;, &lt;code&gt;clone&lt;/code&gt;, &lt;code&gt;filter&lt;/code&gt;,
+&lt;code&gt;find&lt;/code&gt;, &lt;code&gt;not&lt;/code&gt;, &lt;code&gt;next&lt;/code&gt;,
+&lt;code&gt;parent&lt;/code&gt;, &lt;code&gt;parents&lt;/code&gt;, &lt;code&gt;prev&lt;/code&gt; and &lt;code&gt;siblings&lt;/code&gt;.</desc>
+<examples>
+<desc>Selects all paragraphs, finds span elements inside these, and reverts the
+selection back to the paragraphs.</desc>
+<before>&lt;p&gt;&lt;span&gt;Hello&lt;/span&gt;, how are you?&lt;/p&gt;</before>
+<code>$("p").find("span").end();</code>
+<result>[ &lt;p&gt;...&lt;/p&gt; ]</result>
+</examples>
+</method>
+<method cat='DOM/Traversing' type='jQuery' short='Searches for all elements that match the specified expression.' name='find'>
+<desc>Searches for all elements that match the specified expression.
+This method is a good way to find additional descendant
+elements with which to process.
+
+All searching is done using a jQuery expression. The expression can be
+written using CSS 1-3 Selector syntax, or basic XPath.</desc>
+<params type='String' name='expr'>
+<desc>An expression to search with.</desc>
+</params>
+<examples>
+<desc>Starts with all paragraphs and searches for descendant span
+elements, same as $("p span")</desc>
+<before>&lt;p&gt;&lt;span&gt;Hello&lt;/span&gt;, how are you?&lt;/p&gt;</before>
+<code>$("p").find("span");</code>
+<result>[ &lt;span&gt;Hello&lt;/span&gt; ]</result>
+</examples>
+</method>
+<method cat='DOM/Manipulation' type='jQuery' short='Clone matched DOM Elements and select the clones.' name='clone'>
+<desc>Clone matched DOM Elements and select the clones. 
+
+This is useful for moving copies of the elements to another
+location in the DOM.</desc>
+<params type='Boolean' name='deep'>
+<desc>(Optional) Set to false if you don't want to clone all descendant nodes, in addition to the element itself.</desc>
+</params>
+<examples>
+<desc>Clones all b elements (and selects the clones) and prepends them to all paragraphs.</desc>
+<before>&lt;b&gt;Hello&lt;/b&gt;&lt;p&gt;, how are you?&lt;/p&gt;</before>
+<code>$("b").clone().prependTo("p");</code>
+<result>&lt;b&gt;Hello&lt;/b&gt;&lt;p&gt;&lt;b&gt;Hello&lt;/b&gt;, how are you?&lt;/p&gt;</result>
+</examples>
+</method>
+<method cat='DOM/Traversing' type='jQuery' short='Removes all elements from the set of matched elements that do not
+match the specified expression(s).' name='filter'>
+<desc>Removes all elements from the set of matched elements that do not
+match the specified expression(s). This method is used to narrow down
+the results of a search.
+
+Provide a comma-separated list of expressions to apply multiple filters at once.</desc>
+<params type='String' name='expression'>
+<desc>Expression(s) to search with.</desc>
+</params>
+<examples>
+<desc>Selects all paragraphs and removes those without a class "selected".</desc>
+<before>&lt;p class="selected"&gt;Hello&lt;/p&gt;&lt;p&gt;How are you?&lt;/p&gt;</before>
+<code>$("p").filter(".selected")</code>
+<result>[ &lt;p class="selected"&gt;Hello&lt;/p&gt; ]</result>
+</examples>
+<examples>
+<desc>Selects all paragraphs and removes those without class "selected" and being the first one.</desc>
+<before>&lt;p&gt;Hello&lt;/p&gt;&lt;p&gt;Hello Again&lt;/p&gt;&lt;p class="selected"&gt;And Again&lt;/p&gt;</before>
+<code>$("p").filter(".selected, :first")</code>
+<result>[ &lt;p&gt;Hello&lt;/p&gt;, &lt;p class="selected"&gt;And Again&lt;/p&gt; ]</result>
+</examples>
+</method>
+<method cat='DOM/Traversing' type='jQuery' short='Removes all elements from the set of matched elements that do not
+pass the specified filter.' name='filter'>
+<desc>Removes all elements from the set of matched elements that do not
+pass the specified filter. This method is used to narrow down
+the results of a search.</desc>
+<params type='Function' name='filter'>
+<desc>A function to use for filtering</desc>
+</params>
+<examples>
+<desc>Remove all elements that have a child ol element</desc>
+<before>&lt;p&gt;&lt;ol&gt;&lt;li&gt;Hello&lt;/li&gt;&lt;/ol&gt;&lt;/p&gt;&lt;p&gt;How are you?&lt;/p&gt;</before>
+<code>$("p").filter(function(index) {
+  return $("ol", this).length == 0;
+})</code>
+<result>[ &lt;p&gt;How are you?&lt;/p&gt; ]</result>
+</examples>
+</method>
+<method cat='DOM/Traversing' type='jQuery' short='Removes the specified Element from the set of matched elements.' name='not'>
+<desc>Removes the specified Element from the set of matched elements. This
+method is used to remove a single Element from a jQuery object.</desc>
+<params type='Element' name='el'>
+<desc>An element to remove from the set</desc>
+</params>
+<examples>
+<desc>Removes the element with the ID "selected" from the set of all paragraphs.</desc>
+<before>&lt;p&gt;Hello&lt;/p&gt;&lt;p id="selected"&gt;Hello Again&lt;/p&gt;</before>
+<code>$("p").not( $("#selected")[0] )</code>
+<result>[ &lt;p&gt;Hello&lt;/p&gt; ]</result>
+</examples>
+</method>
+<method cat='DOM/Traversing' type='jQuery' short='Removes elements matching the specified expression from the set
+of matched elements.' name='not'>
+<desc>Removes elements matching the specified expression from the set
+of matched elements. This method is used to remove one or more
+elements from a jQuery object.</desc>
+<params type='String' name='expr'>
+<desc>An expression with which to remove matching elements</desc>
+</params>
+<examples>
+<desc>Removes the element with the ID "selected" from the set of all paragraphs.</desc>
+<before>&lt;p&gt;Hello&lt;/p&gt;&lt;p id="selected"&gt;Hello Again&lt;/p&gt;</before>
+<code>$("p").not("#selected")</code>
+<result>[ &lt;p&gt;Hello&lt;/p&gt; ]</result>
+</examples>
+</method>
+<method cat='DOM/Traversing' type='jQuery' short='Removes any elements inside the array of elements from the set
+of matched elements.' name='not'>
+<desc>Removes any elements inside the array of elements from the set
+of matched elements. This method is used to remove one or more
+elements from a jQuery object.
+
+Please note: the expression cannot use a reference to the
+element name. See the two examples below.</desc>
+<params type='jQuery' name='elems'>
+<desc>A set of elements to remove from the jQuery set of matched elements.</desc>
+</params>
+<examples>
+<desc>Removes all elements that match "div p.selected" from the total set of all paragraphs.</desc>
+<before>&lt;div&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;p class="selected"&gt;Hello Again&lt;/p&gt;&lt;/div&gt;</before>
+<code>$("p").not( $("div p.selected") )</code>
+<result>[ &lt;p&gt;Hello&lt;/p&gt; ]</result>
+</examples>
+</method>
+<method cat='DOM/Traversing' type='jQuery' short='Adds more elements, matched by the given expression,
+to the set of matched elements.' name='add'>
+<desc>Adds more elements, matched by the given expression,
+to the set of matched elements.</desc>
+<params type='String' name='expr'>
+<desc>An expression whose matched elements are added</desc>
+</params>
+<examples>
+<desc>Compare the above result to the result of &lt;code&gt;$('p')&lt;/code&gt;,
+which would just result in &lt;code&gt;&lt;nowiki&gt;[ &lt;p&gt;Hello&lt;/p&gt; ]&lt;/nowiki&gt;&lt;/code&gt;.
+Using add(), matched elements of &lt;code&gt;$('span')&lt;/code&gt; are simply
+added to the returned jQuery-object.</desc>
+<before>(HTML) &lt;p&gt;Hello&lt;/p&gt;&lt;span&gt;Hello Again&lt;/span&gt;</before>
+<code>$("p").add("span")</code>
+<result>(jQuery object matching 2 elements) [ &lt;p&gt;Hello&lt;/p&gt;, &lt;span&gt;Hello Again&lt;/span&gt; ]</result>
+</examples>
+</method>
+<method cat='DOM/Traversing' type='jQuery' short='Adds more elements, created on the fly, to the set of
+matched elements.' name='add'>
+<desc>Adds more elements, created on the fly, to the set of
+matched elements.</desc>
+<params type='String' name='html'>
+<desc>A string of HTML to create on the fly.</desc>
+</params>
+<examples>
+<code>$("p").add("&lt;span&gt;Again&lt;/span&gt;")</code>
+<result>[ &lt;p&gt;Hello&lt;/p&gt;, &lt;span&gt;Again&lt;/span&gt; ]</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='DOM/Traversing' type='jQuery' short='Adds one or more Elements to the set of matched elements.' name='add'>
+<desc>Adds one or more Elements to the set of matched elements.</desc>
+<params type='Element|Array&lt;Element&gt;' name='elements'>
+<desc>One or more Elements to add</desc>
+</params>
+<examples>
+<code>$("p").add( document.getElementById("a") )</code>
+<result>[ &lt;p&gt;Hello&lt;/p&gt;, &lt;span id="a"&gt;Hello Again&lt;/span&gt; ]</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;&lt;p&gt;&lt;span id="a"&gt;Hello Again&lt;/span&gt;&lt;/p&gt;</before>
+</examples>
+<examples>
+<code>$("p").add( document.forms[0].elements )</code>
+<result>[ &lt;p&gt;Hello&lt;/p&gt;, &lt;input/&gt;, &lt;button/&gt; ]</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;&lt;p&gt;&lt;form&gt;&lt;input/&gt;&lt;button/&gt;&lt;/form&gt;</before>
+</examples>
+</method>
+<method cat='DOM/Traversing' type='Boolean' short='Checks the current selection against an expression and returns true,
+if at least one element of the selection fits the given expression.' name='is'>
+<desc>Checks the current selection against an expression and returns true,
+if at least one element of the selection fits the given expression.
+
+Does return false, if no element fits or the expression is not valid.
+
+filter(String) is used internally, therefore all rules that apply there
+apply here, too.</desc>
+<params type='String' name='expr'>
+<desc>The expression with which to filter</desc>
+</params>
+<examples>
+<desc>Returns true, because the parent of the input is a form element</desc>
+<before>&lt;form&gt;&lt;input type="checkbox" /&gt;&lt;/form&gt;</before>
+<code>$("input[@type='checkbox']").parent().is("form")</code>
+<result>true</result>
+</examples>
+<examples>
+<desc>Returns false, because the parent of the input is a p element</desc>
+<before>&lt;form&gt;&lt;p&gt;&lt;input type="checkbox" /&gt;&lt;/p&gt;&lt;/form&gt;</before>
+<code>$("input[@type='checkbox']").parent().is("form")</code>
+<result>false</result>
+</examples>
+</method>
+<method cat='DOM/Attributes' type='String' short='Get the content of the value attribute of the first matched element.' name='val'>
+<desc>Get the content of the value attribute of the first matched element.
+
+Use caution when relying on this function to check the value of
+multiple-select elements and checkboxes in a form. While it will
+still work as intended, it may not accurately represent the value
+the server will receive because these elements may send an array
+of values. For more robust handling of field values, see the
+[http://www.malsup.com/jquery/form/#fields fieldValue function of the Form Plugin].</desc>
+<examples>
+<code>$("input").val();</code>
+<result>"some text"</result>
+<before>&lt;input type="text" value="some text"/&gt;</before>
+</examples>
+</method>
+<method cat='DOM/Attributes' type='jQuery' short='	Set the value attribute of every matched element.' name='val'>
+<desc>	Set the value attribute of every matched element.</desc>
+<params type='String' name='val'>
+<desc>Set the property to the specified value.</desc>
+</params>
+<examples>
+<code>$("input").val("test");</code>
+<result>&lt;input type="text" value="test"/&gt;</result>
+<before>&lt;input type="text" value="some text"/&gt;</before>
+</examples>
+</method>
+<method cat='DOM/Attributes' type='String' short='Get the html contents of the first matched element.' name='html'>
+<desc>Get the html contents of the first matched element.
+This property is not available on XML documents.</desc>
+<examples>
+<code>$("div").html();</code>
+<result>&lt;input/&gt;</result>
+<before>&lt;div&gt;&lt;input/&gt;&lt;/div&gt;</before>
+</examples>
+</method>
+<method cat='DOM/Attributes' type='jQuery' short='Set the html contents of every matched element.' name='html'>
+<desc>Set the html contents of every matched element.
+This property is not available on XML documents.</desc>
+<params type='String' name='val'>
+<desc>Set the html contents to the specified value.</desc>
+</params>
+<examples>
+<code>$("div").html("&lt;b&gt;new stuff&lt;/b&gt;");</code>
+<result>&lt;div&gt;&lt;b&gt;new stuff&lt;/b&gt;&lt;/div&gt;</result>
+<before>&lt;div&gt;&lt;input/&gt;&lt;/div&gt;</before>
+</examples>
+</method>
+<method cat='Core' type='jQuery' short='' name='domManip' private='1'>
+<desc></desc>
+<params type='Array' name='args'>
+<desc></desc>
+</params>
+<params type='Boolean' name='table'>
+<desc>Insert TBODY in TABLEs if one is not found.</desc>
+</params>
+<params type='Number' name='dir'>
+<desc>If dir&lt;0, process args in reverse order.</desc>
+</params>
+<params type='Function' name='fn'>
+<desc>The function doing the DOM manipulation.</desc>
+</params>
+</method>
+<method cat='Core' type='Object' short='Extends the jQuery object itself.' name='$.extend'>
+<desc>Extends the jQuery object itself. Can be used to add functions into
+the jQuery namespace and to [[Plugins/Authoring|add plugin methods]] (plugins).</desc>
+<params type='Object' name='prop'>
+<desc>The object that will be merged into the jQuery object</desc>
+</params>
+<examples>
+<desc>Adds two plugin methods.</desc>
+<code>jQuery.fn.extend({
+  check: function() {
+    return this.each(function() { this.checked = true; });
+  },
+  uncheck: function() {
+    return this.each(function() { this.checked = false; });
+  }
+});
+$("input[@type=checkbox]").check();
+$("input[@type=radio]").uncheck();</code>
+</examples>
+<examples>
+<desc>Adds two functions into the jQuery namespace</desc>
+<code>jQuery.extend({
+  min: function(a, b) { return a &lt; b ? a : b; },
+  max: function(a, b) { return a &gt; b ? a : b; }
+});</code>
+</examples>
+</method>
+<method cat='JavaScript' type='Object' short='Extend one object with one or more others, returning the original,
+modified, object.' name='$.extend'>
+<desc>Extend one object with one or more others, returning the original,
+modified, object. This is a great utility for simple inheritance.</desc>
+<params type='Object' name='target'>
+<desc>The object to extend</desc>
+</params>
+<params type='Object' name='prop1'>
+<desc>The object that will be merged into the first.</desc>
+</params>
+<params type='Object' name='propN'>
+<desc>(optional) More objects to merge into the first</desc>
+</params>
+<examples>
+<desc>Merge settings and options, modifying settings</desc>
+<code>var settings = { validate: false, limit: 5, name: "foo" };
+var options = { validate: true, name: "bar" };
+jQuery.extend(settings, options);</code>
+<result>settings == { validate: true, limit: 5, name: "bar" }</result>
+</examples>
+<examples>
+<desc>Merge defaults and options, without modifying the defaults</desc>
+<code>var defaults = { validate: false, limit: 5, name: "foo" };
+var options = { validate: true, name: "bar" };
+var settings = jQuery.extend({}, defaults, options);</code>
+<result>settings == { validate: true, limit: 5, name: "bar" }</result>
+</examples>
+</method>
+<method cat='Core' type='undefined' short='Run this function to give control of the $ variable back
+to whichever library first implemented it.' name='$.noConflict'>
+<desc>Run this function to give control of the $ variable back
+to whichever library first implemented it. This helps to make 
+sure that jQuery doesn't conflict with the $ object
+of other libraries.
+
+By using this function, you will only be able to access jQuery
+using the 'jQuery' variable. For example, where you used to do
+$("div p"), you now must do jQuery("div p").</desc>
+<examples>
+<desc>Maps the original object that was referenced by $ back to $</desc>
+<code>jQuery.noConflict();
+// Do something with jQuery
+jQuery("div p").hide();
+// Do something with another library's $()
+$("content").style.display = 'none';</code>
+</examples>
+<examples>
+<desc>Reverts the $ alias and then creates and executes a
+function to provide the $ as a jQuery alias inside the functions
+scope. Inside the function the original $ object is not available.
+This works well for most plugins that don't rely on any other library.</desc>
+<code>jQuery.noConflict();
+(function($) { 
+  $(function() {
+    // more code using $ as alias to jQuery
+  });
+})(jQuery);
+// other code using $ as an alias to the other library</code>
+</examples>
+</method>
+<method cat='JavaScript' type='Object' short='A generic iterator function, which can be used to seamlessly
+iterate over both objects and arrays.' name='$.each'>
+<desc>A generic iterator function, which can be used to seamlessly
+iterate over both objects and arrays. This function is not the same
+as $().each() - which is used to iterate, exclusively, over a jQuery
+object. This function can be used to iterate over anything.
+
+The callback has two arguments:the key (objects) or index (arrays) as first
+the first, and the value as the second.</desc>
+<params type='Object' name='obj'>
+<desc>The object, or array, to iterate over.</desc>
+</params>
+<params type='Function' name='fn'>
+<desc>The function that will be executed on every object.</desc>
+</params>
+<examples>
+<desc>This is an example of iterating over the items in an array,
+accessing both the current item and its index.</desc>
+<code>$.each( [0,1,2], function(i, n){
+  alert( "Item #" + i + ": " + n );
+});</code>
+</examples>
+<examples>
+<desc>This is an example of iterating over the properties in an
+Object, accessing both the current item and its key.</desc>
+<code>$.each( { name: "John", lang: "JS" }, function(i, n){
+  alert( "Name: " + i + ", Value: " + n );
+});</code>
+</examples>
+</method>
+<method cat='JavaScript' type='String' short='Remove the whitespace from the beginning and end of a string.' name='$.trim'>
+<desc>Remove the whitespace from the beginning and end of a string.</desc>
+<params type='String' name='str'>
+<desc>The string to trim.</desc>
+</params>
+<examples>
+<code>$.trim("  hello, how are you?  ");</code>
+<result>"hello, how are you?"</result>
+</examples>
+</method>
+<method cat='JavaScript' type='Array' short='Merge two arrays together, removing all duplicates.' name='$.merge'>
+<desc>Merge two arrays together, removing all duplicates.
+
+The result is the altered first argument with
+the unique elements from the second array added.</desc>
+<params type='Array' name='first'>
+<desc>The first array to merge, the unique elements of second added.</desc>
+</params>
+<params type='Array' name='second'>
+<desc>The second array to merge into the first, unaltered.</desc>
+</params>
+<examples>
+<desc>Merges two arrays, removing the duplicate 2</desc>
+<code>$.merge( [0,1,2], [2,3,4] )</code>
+<result>[0,1,2,3,4]</result>
+</examples>
+<examples>
+<desc>Merges two arrays, removing the duplicates 3 and 2</desc>
+<code>var array = [3,2,1];
+$.merge( array, [4,3,2] )</code>
+<result>array == [3,2,1,4]</result>
+</examples>
+</method>
+<method cat='JavaScript' type='Array' short='Filter items out of an array, by using a filter function.' name='$.grep'>
+<desc>Filter items out of an array, by using a filter function.
+
+The specified function will be passed two arguments: The
+current array item and the index of the item in the array. The
+function must return 'true' to keep the item in the array, 
+false to remove it.</desc>
+<params type='Array' name='array'>
+<desc>The Array to find items in.</desc>
+</params>
+<params type='Function' name='fn'>
+<desc>The function to process each item against.</desc>
+</params>
+<params type='Boolean' name='inv'>
+<desc>Invert the selection - select the opposite of the function.</desc>
+</params>
+<examples>
+<code>$.grep( [0,1,2], function(i){
+  return i &gt; 0;
+});</code>
+<result>[1, 2]</result>
+</examples>
+</method>
+<method cat='JavaScript' type='Array' short='Translate all items in an array to another array of items.' name='$.map'>
+<desc>Translate all items in an array to another array of items.
+
+The translation function that is provided to this method is 
+called for each item in the array and is passed one argument: 
+The item to be translated.
+
+The function can then return the translated value, 'null'
+(to remove the item), or  an array of values - which will
+be flattened into the full array.</desc>
+<params type='Array' name='array'>
+<desc>The Array to translate.</desc>
+</params>
+<params type='Function' name='fn'>
+<desc>The function to process each item against.</desc>
+</params>
+<examples>
+<desc>Maps the original array to a new one and adds 4 to each value.</desc>
+<code>$.map( [0,1,2], function(i){
+  return i + 4;
+});</code>
+<result>[4, 5, 6]</result>
+</examples>
+<examples>
+<desc>Maps the original array to a new one and adds 1 to each
+value if it is bigger then zero, otherwise it's removed-</desc>
+<code>$.map( [0,1,2], function(i){
+  return i &gt; 0 ? i + 1 : null;
+});</code>
+<result>[2, 3]</result>
+</examples>
+<examples>
+<desc>Maps the original array to a new one, each element is added
+with it's original value and the value plus one.</desc>
+<code>$.map( [0,1,2], function(i){
+  return [ i, i + 1 ];
+});</code>
+<result>[0, 1, 1, 2, 2, 3]</result>
+</examples>
+</method>
+<method property='1' cat='JavaScript' type='Boolean' short='Contains flags for the useragent, read from navigator.' name='$.browser'>
+<desc>Contains flags for the useragent, read from navigator.userAgent.
+Available flags are: safari, opera, msie, mozilla
+
+This property is available before the DOM is ready, therefore you can
+use it to add ready events only for certain browsers.
+
+There are situations where object detections is not reliable enough, in that
+cases it makes sense to use browser detection. Simply try to avoid both!
+
+A combination of browser and object detection yields quite reliable results.</desc>
+<examples>
+<desc>Returns true if the current useragent is some version of microsoft's internet explorer</desc>
+<code>$.browser.msie</code>
+</examples>
+<examples>
+<desc>Alerts "this is safari!" only for safari browsers</desc>
+<code>if($.browser.safari) { $( function() { alert("this is safari!"); } ); }</code>
+</examples>
+</method>
+<method cat='DOM/Traversing' type='jQuery' short='Get a set of elements containing the unique parents of the matched
+set of elements.' name='parent'>
+<desc>Get a set of elements containing the unique parents of the matched
+set of elements.
+
+You may use an optional expression to filter the set of parent elements that will match.</desc>
+<params type='String' name='expr'>
+<desc>(optional) An expression to filter the parents with</desc>
+</params>
+<examples>
+<desc>Find the parent element of each paragraph.</desc>
+<before>&lt;div&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/div&gt;</before>
+<code>$("p").parent()</code>
+<result>[ &lt;div&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/div&gt; ]</result>
+</examples>
+<examples>
+<desc>Find the parent element of each paragraph with a class "selected".</desc>
+<before>&lt;div&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/div&gt;&lt;div class="selected"&gt;&lt;p&gt;Hello Again&lt;/p&gt;&lt;/div&gt;</before>
+<code>$("p").parent(".selected")</code>
+<result>[ &lt;div class="selected"&gt;&lt;p&gt;Hello Again&lt;/p&gt;&lt;/div&gt; ]</result>
+</examples>
+</method>
+<method cat='DOM/Traversing' type='jQuery' short='Get a set of elements containing the unique ancestors of the matched
+set of elements (except for the root element).' name='parents'>
+<desc>Get a set of elements containing the unique ancestors of the matched
+set of elements (except for the root element).
+
+The matched elements can be filtered with an optional expression.</desc>
+<params type='String' name='expr'>
+<desc>(optional) An expression to filter the ancestors with</desc>
+</params>
+<examples>
+<desc>Find all parent elements of each span.</desc>
+<before>&lt;html&gt;&lt;body&gt;&lt;div&gt;&lt;p&gt;&lt;span&gt;Hello&lt;/span&gt;&lt;/p&gt;&lt;span&gt;Hello Again&lt;/span&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</before>
+<code>$("span").parents()</code>
+<result>[ &lt;body&gt;...&lt;/body&gt;, &lt;div&gt;...&lt;/div&gt;, &lt;p&gt;&lt;span&gt;Hello&lt;/span&gt;&lt;/p&gt; ]</result>
+</examples>
+<examples>
+<desc>Find all parent elements of each span that is a paragraph.</desc>
+<before>&lt;html&gt;&lt;body&gt;&lt;div&gt;&lt;p&gt;&lt;span&gt;Hello&lt;/span&gt;&lt;/p&gt;&lt;span&gt;Hello Again&lt;/span&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</before>
+<code>$("span").parents("p")</code>
+<result>[ &lt;p&gt;&lt;span&gt;Hello&lt;/span&gt;&lt;/p&gt; ]</result>
+</examples>
+</method>
+<method cat='DOM/Traversing' type='jQuery' short='Get a set of elements containing the unique next siblings of each of the
+matched set of elements.' name='next'>
+<desc>Get a set of elements containing the unique next siblings of each of the
+matched set of elements.
+
+It only returns the very next sibling for each element, not all
+next siblings.
+
+You may provide an optional expression to filter the match.</desc>
+<params type='String' name='expr'>
+<desc>(optional) An expression to filter the next Elements with</desc>
+</params>
+<examples>
+<desc>Find the very next sibling of each paragraph.</desc>
+<before>&lt;p&gt;Hello&lt;/p&gt;&lt;p&gt;Hello Again&lt;/p&gt;&lt;div&gt;&lt;span&gt;And Again&lt;/span&gt;&lt;/div&gt;</before>
+<code>$("p").next()</code>
+<result>[ &lt;p&gt;Hello Again&lt;/p&gt;, &lt;div&gt;&lt;span&gt;And Again&lt;/span&gt;&lt;/div&gt; ]</result>
+</examples>
+<examples>
+<desc>Find the very next sibling of each paragraph that has a class "selected".</desc>
+<before>&lt;p&gt;Hello&lt;/p&gt;&lt;p class="selected"&gt;Hello Again&lt;/p&gt;&lt;div&gt;&lt;span&gt;And Again&lt;/span&gt;&lt;/div&gt;</before>
+<code>$("p").next(".selected")</code>
+<result>[ &lt;p class="selected"&gt;Hello Again&lt;/p&gt; ]</result>
+</examples>
+</method>
+<method cat='DOM/Traversing' type='jQuery' short='Get a set of elements containing the unique previous siblings of each of the
+matched set of elements.' name='prev'>
+<desc>Get a set of elements containing the unique previous siblings of each of the
+matched set of elements.
+
+Use an optional expression to filter the matched set.
+
+	Only the immediately previous sibling is returned, not all previous siblings.</desc>
+<params type='String' name='expr'>
+<desc>(optional) An expression to filter the previous Elements with</desc>
+</params>
+<examples>
+<desc>Find the very previous sibling of each paragraph.</desc>
+<before>&lt;p&gt;Hello&lt;/p&gt;&lt;div&gt;&lt;span&gt;Hello Again&lt;/span&gt;&lt;/div&gt;&lt;p&gt;And Again&lt;/p&gt;</before>
+<code>$("p").prev()</code>
+<result>[ &lt;div&gt;&lt;span&gt;Hello Again&lt;/span&gt;&lt;/div&gt; ]</result>
+</examples>
+<examples>
+<desc>Find the very previous sibling of each paragraph that has a class "selected".</desc>
+<before>&lt;div&gt;&lt;span&gt;Hello&lt;/span&gt;&lt;/div&gt;&lt;p class="selected"&gt;Hello Again&lt;/p&gt;&lt;p&gt;And Again&lt;/p&gt;</before>
+<code>$("p").prev(".selected")</code>
+<result>[ &lt;div&gt;&lt;span&gt;Hello&lt;/span&gt;&lt;/div&gt; ]</result>
+</examples>
+</method>
+<method cat='DOM/Traversing' type='jQuery' short='Get a set of elements containing all of the unique siblings of each of the
+matched set of elements.' name='siblings'>
+<desc>Get a set of elements containing all of the unique siblings of each of the
+matched set of elements.
+
+Can be filtered with an optional expressions.</desc>
+<params type='String' name='expr'>
+<desc>(optional) An expression to filter the sibling Elements with</desc>
+</params>
+<examples>
+<desc>Find all siblings of each div.</desc>
+<before>&lt;p&gt;Hello&lt;/p&gt;&lt;div&gt;&lt;span&gt;Hello Again&lt;/span&gt;&lt;/div&gt;&lt;p&gt;And Again&lt;/p&gt;</before>
+<code>$("div").siblings()</code>
+<result>[ &lt;p&gt;Hello&lt;/p&gt;, &lt;p&gt;And Again&lt;/p&gt; ]</result>
+</examples>
+<examples>
+<desc>Find all siblings with a class "selected" of each div.</desc>
+<before>&lt;div&gt;&lt;span&gt;Hello&lt;/span&gt;&lt;/div&gt;&lt;p class="selected"&gt;Hello Again&lt;/p&gt;&lt;p&gt;And Again&lt;/p&gt;</before>
+<code>$("div").siblings(".selected")</code>
+<result>[ &lt;p class="selected"&gt;Hello Again&lt;/p&gt; ]</result>
+</examples>
+</method>
+<method cat='DOM/Traversing' type='jQuery' short='Get a set of elements containing all of the unique children of each of the
+matched set of elements.' name='children'>
+<desc>Get a set of elements containing all of the unique children of each of the
+matched set of elements.
+
+This set can be filtered with an optional expression that will cause
+only elements matching the selector to be collected.</desc>
+<params type='String' name='expr'>
+<desc>(optional) An expression to filter the child Elements with</desc>
+</params>
+<examples>
+<desc>Find all children of each div.</desc>
+<before>&lt;p&gt;Hello&lt;/p&gt;&lt;div&gt;&lt;span&gt;Hello Again&lt;/span&gt;&lt;/div&gt;&lt;p&gt;And Again&lt;/p&gt;</before>
+<code>$("div").children()</code>
+<result>[ &lt;span&gt;Hello Again&lt;/span&gt; ]</result>
+</examples>
+<examples>
+<desc>Find all children with a class "selected" of each div.</desc>
+<before>&lt;div&gt;&lt;span&gt;Hello&lt;/span&gt;&lt;p class="selected"&gt;Hello Again&lt;/p&gt;&lt;p&gt;And Again&lt;/p&gt;&lt;/div&gt;</before>
+<code>$("div").children(".selected")</code>
+<result>[ &lt;p class="selected"&gt;Hello Again&lt;/p&gt; ]</result>
+</examples>
+</method>
+<method cat='DOM/Manipulation' type='jQuery' see='append(&lt;Content&gt;)' short='Append all of the matched elements to another, specified, set of elements.' name='appendTo'>
+<desc>Append all of the matched elements to another, specified, set of elements.
+This operation is, essentially, the reverse of doing a regular
+$(A).append(B), in that instead of appending B to A, you're appending
+A to B.</desc>
+<params type='&lt;Content&gt;' name='content'>
+<desc>Content to append to the selected element to.</desc>
+</params>
+<examples>
+<desc>Appends all paragraphs to the element with the ID "foo"</desc>
+<before>&lt;p&gt;I would like to say: &lt;/p&gt;&lt;div id="foo"&gt;&lt;/div&gt;</before>
+<code>$("p").appendTo("#foo");</code>
+<result>&lt;div id="foo"&gt;&lt;p&gt;I would like to say: &lt;/p&gt;&lt;/div&gt;</result>
+</examples>
+</method>
+<method cat='DOM/Manipulation' type='jQuery' see='prepend(&lt;Content&gt;)' short='Prepend all of the matched elements to another, specified, set of elements.' name='prependTo'>
+<desc>Prepend all of the matched elements to another, specified, set of elements.
+This operation is, essentially, the reverse of doing a regular
+$(A).prepend(B), in that instead of prepending B to A, you're prepending
+A to B.</desc>
+<params type='&lt;Content&gt;' name='content'>
+<desc>Content to prepend to the selected element to.</desc>
+</params>
+<examples>
+<desc>Prepends all paragraphs to the element with the ID "foo"</desc>
+<before>&lt;p&gt;I would like to say: &lt;/p&gt;&lt;div id="foo"&gt;&lt;b&gt;Hello&lt;/b&gt;&lt;/div&gt;</before>
+<code>$("p").prependTo("#foo");</code>
+<result>&lt;div id="foo"&gt;&lt;p&gt;I would like to say: &lt;/p&gt;&lt;b&gt;Hello&lt;/b&gt;&lt;/div&gt;</result>
+</examples>
+</method>
+<method cat='DOM/Manipulation' type='jQuery' see='before(&lt;Content&gt;)' short='Insert all of the matched elements before another, specified, set of elements.' name='insertBefore'>
+<desc>Insert all of the matched elements before another, specified, set of elements.
+This operation is, essentially, the reverse of doing a regular
+$(A).before(B), in that instead of inserting B before A, you're inserting
+A before B.</desc>
+<params type='&lt;Content&gt;' name='content'>
+<desc>Content to insert the selected element before.</desc>
+</params>
+<examples>
+<desc>Same as $("#foo").before("p")</desc>
+<before>&lt;div id="foo"&gt;Hello&lt;/div&gt;&lt;p&gt;I would like to say: &lt;/p&gt;</before>
+<code>$("p").insertBefore("#foo");</code>
+<result>&lt;p&gt;I would like to say: &lt;/p&gt;&lt;div id="foo"&gt;Hello&lt;/div&gt;</result>
+</examples>
+</method>
+<method cat='DOM/Manipulation' type='jQuery' see='after(&lt;Content&gt;)' short='Insert all of the matched elements after another, specified, set of elements.' name='insertAfter'>
+<desc>Insert all of the matched elements after another, specified, set of elements.
+This operation is, essentially, the reverse of doing a regular
+$(A).after(B), in that instead of inserting B after A, you're inserting
+A after B.</desc>
+<params type='&lt;Content&gt;' name='content'>
+<desc>Content to insert the selected element after.</desc>
+</params>
+<examples>
+<desc>Same as $("#foo").after("p")</desc>
+<before>&lt;p&gt;I would like to say: &lt;/p&gt;&lt;div id="foo"&gt;Hello&lt;/div&gt;</before>
+<code>$("p").insertAfter("#foo");</code>
+<result>&lt;div id="foo"&gt;Hello&lt;/div&gt;&lt;p&gt;I would like to say: &lt;/p&gt;</result>
+</examples>
+</method>
+<method cat='DOM/Attributes' type='jQuery' short='Remove an attribute from each of the matched elements.' name='removeAttr'>
+<desc>Remove an attribute from each of the matched elements.</desc>
+<params type='String' name='name'>
+<desc>The name of the attribute to remove.</desc>
+</params>
+<examples>
+<code>$("input").removeAttr("disabled")</code>
+<result>&lt;input/&gt;</result>
+<before>&lt;input disabled="disabled"/&gt;</before>
+</examples>
+</method>
+<method cat='DOM/Attributes' type='jQuery' see='removeClass(String)' short='Adds the specified class(es) to each of the set of matched elements.' name='addClass'>
+<desc>Adds the specified class(es) to each of the set of matched elements.</desc>
+<params type='String' name='class'>
+<desc>One or more CSS classes to add to the elements</desc>
+</params>
+<examples>
+<code>$("p").addClass("selected")</code>
+<result>[ &lt;p class="selected"&gt;Hello&lt;/p&gt; ]</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+<examples>
+<code>$("p").addClass("selected highlight")</code>
+<result>[ &lt;p class="selected highlight"&gt;Hello&lt;/p&gt; ]</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='DOM/Attributes' type='jQuery' see='addClass(String)' short='Removes all or the specified class(es) from the set of matched elements.' name='removeClass'>
+<desc>Removes all or the specified class(es) from the set of matched elements.</desc>
+<params type='String' name='class'>
+<desc>(optional) One or more CSS classes to remove from the elements</desc>
+</params>
+<examples>
+<code>$("p").removeClass()</code>
+<result>[ &lt;p&gt;Hello&lt;/p&gt; ]</result>
+<before>&lt;p class="selected"&gt;Hello&lt;/p&gt;</before>
+</examples>
+<examples>
+<code>$("p").removeClass("selected")</code>
+<result>[ &lt;p class="first"&gt;Hello&lt;/p&gt; ]</result>
+<before>&lt;p class="selected first"&gt;Hello&lt;/p&gt;</before>
+</examples>
+<examples>
+<code>$("p").removeClass("selected highlight")</code>
+<result>[ &lt;p class="first"&gt;Hello&lt;/p&gt; ]</result>
+<before>&lt;p class="highlight selected first"&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='DOM/Attributes' type='jQuery' short='Adds the specified class if it is not present, removes it if it is
+present.' name='toggleClass'>
+<desc>Adds the specified class if it is not present, removes it if it is
+present.</desc>
+<params type='String' name='class'>
+<desc>A CSS class with which to toggle the elements</desc>
+</params>
+<examples>
+<code>$("p").toggleClass("selected")</code>
+<result>[ &lt;p class="selected"&gt;Hello&lt;/p&gt;, &lt;p&gt;Hello Again&lt;/p&gt; ]</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;&lt;p class="selected"&gt;Hello Again&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='DOM/Manipulation' type='jQuery' short='Removes all matched elements from the DOM.' name='remove'>
+<desc>Removes all matched elements from the DOM. This does NOT remove them from the
+jQuery object, allowing you to use the matched elements further.
+
+Can be filtered with an optional expressions.</desc>
+<params type='String' name='expr'>
+<desc>(optional) A jQuery expression to filter elements by.</desc>
+</params>
+<examples>
+<code>$("p").remove();</code>
+<result>how are</result>
+<before>&lt;p&gt;Hello&lt;/p&gt; how are &lt;p&gt;you?&lt;/p&gt;</before>
+</examples>
+<examples>
+<code>$("p").remove(".hello");</code>
+<result>how are &lt;p&gt;you?&lt;/p&gt;</result>
+<before>&lt;p class="hello"&gt;Hello&lt;/p&gt; how are &lt;p&gt;you?&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='DOM/Manipulation' type='jQuery' short='Removes all child nodes from the set of matched elements.' name='empty'>
+<desc>Removes all child nodes from the set of matched elements.</desc>
+<examples>
+<code>$("p").empty()</code>
+<result>[ &lt;p&gt;&lt;/p&gt; ]</result>
+<before>&lt;p&gt;Hello, &lt;span&gt;Person&lt;/span&gt; &lt;a href="#"&gt;and person&lt;/a&gt;&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Core' type='jQuery' short='Reduce the set of matched elements to a single element.' name='eq'>
+<desc>Reduce the set of matched elements to a single element.
+The position of the element in the set of matched elements
+starts at 0 and goes to length - 1.</desc>
+<params type='Number' name='pos'>
+<desc>The index of the element that you wish to limit to.</desc>
+</params>
+<examples>
+<code>$("p").eq(1)</code>
+<result>[ &lt;p&gt;So is this&lt;/p&gt; ]</result>
+<before>&lt;p&gt;This is just a test.&lt;/p&gt;&lt;p&gt;So is this&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Core' type='jQuery' short='Reduce the set of matched elements to all elements before a given position.' name='lt'>
+<desc>Reduce the set of matched elements to all elements before a given position.
+The position of the element in the set of matched elements
+starts at 0 and goes to length - 1.</desc>
+<params type='Number' name='pos'>
+<desc>Reduce the set to all elements below this position.</desc>
+</params>
+<examples>
+<code>$("p").lt(1)</code>
+<result>[ &lt;p&gt;This is just a test.&lt;/p&gt; ]</result>
+<before>&lt;p&gt;This is just a test.&lt;/p&gt;&lt;p&gt;So is this&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Core' type='jQuery' short='Reduce the set of matched elements to all elements after a given position.' name='gt'>
+<desc>Reduce the set of matched elements to all elements after a given position.
+The position of the element in the set of matched elements
+starts at 0 and goes to length - 1.</desc>
+<params type='Number' name='pos'>
+<desc>Reduce the set to all elements after this position.</desc>
+</params>
+<examples>
+<code>$("p").gt(0)</code>
+<result>[ &lt;p&gt;So is this&lt;/p&gt; ]</result>
+<before>&lt;p&gt;This is just a test.&lt;/p&gt;&lt;p&gt;So is this&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='DOM/Traversing' type='jQuery' short='Filter the set of elements to those that contain the specified text.' name='contains'>
+<desc>Filter the set of elements to those that contain the specified text.</desc>
+<params type='String' name='str'>
+<desc>The string that will be contained within the text of an element.</desc>
+</params>
+<examples>
+<code>$("p").contains("test")</code>
+<result>[ &lt;p&gt;This is just a test.&lt;/p&gt; ]</result>
+<before>&lt;p&gt;This is just a test.&lt;/p&gt;&lt;p&gt;So is this&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='CSS' type='String' short='Get the current computed, pixel, width of the first matched element.' name='width'>
+<desc>Get the current computed, pixel, width of the first matched element.</desc>
+<examples>
+<code>$("p").width();</code>
+<result>300</result>
+<before>&lt;p&gt;This is just a test.&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='CSS' type='jQuery' short='Set the CSS width of every matched element.' name='width'>
+<desc>Set the CSS width of every matched element. If no explicit unit
+was specified (like 'em' or '%') then "px" is added to the width.</desc>
+<params type='String|Number' name='val'>
+<desc>Set the CSS property to the specified value.</desc>
+</params>
+<examples>
+<code>$("p").width(20);</code>
+<result>&lt;p style="width:20px;"&gt;This is just a test.&lt;/p&gt;</result>
+<before>&lt;p&gt;This is just a test.&lt;/p&gt;</before>
+</examples>
+<examples>
+<code>$("p").width("20em");</code>
+<result>&lt;p style="width:20em;"&gt;This is just a test.&lt;/p&gt;</result>
+<before>&lt;p&gt;This is just a test.&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='CSS' type='String' short='Get the current computed, pixel, height of the first matched element.' name='height'>
+<desc>Get the current computed, pixel, height of the first matched element.</desc>
+<examples>
+<code>$("p").height();</code>
+<result>300</result>
+<before>&lt;p&gt;This is just a test.&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='CSS' type='jQuery' short='Set the CSS height of every matched element.' name='height'>
+<desc>Set the CSS height of every matched element. If no explicit unit
+was specified (like 'em' or '%') then "px" is added to the width.</desc>
+<params type='String|Number' name='val'>
+<desc>Set the CSS property to the specified value.</desc>
+</params>
+<examples>
+<code>$("p").height(20);</code>
+<result>&lt;p style="height:20px;"&gt;This is just a test.&lt;/p&gt;</result>
+<before>&lt;p&gt;This is just a test.&lt;/p&gt;</before>
+</examples>
+<examples>
+<code>$("p").height("20em");</code>
+<result>&lt;p style="height:20em;"&gt;This is just a test.&lt;/p&gt;</result>
+<before>&lt;p&gt;This is just a test.&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Core' type='Array&lt;Element&gt;' short='' private='1' name='$.find'>
+<desc></desc>
+</method>
+<method cat='DOM/Traversing' type='Array&lt;Element&gt;' short='All ancestors of a given element.' name='$.parents' private='1'>
+<desc>All ancestors of a given element.</desc>
+<params type='Element' name='elem'>
+<desc>The element to find the ancestors of.</desc>
+</params>
+</method>
+<method cat='DOM/Traversing' type='DOMElement' short='A handy, and fast, way to traverse in a particular direction and find
+a specific element.' name='$.nth' private='1'>
+<desc>A handy, and fast, way to traverse in a particular direction and find
+a specific element.</desc>
+<params type='DOMElement' name='cur'>
+<desc>The element to search from.</desc>
+</params>
+<params type='String|Number' name='num'>
+<desc>The Nth result to match. Can be a number or a string (like 'even' or 'odd').</desc>
+</params>
+<params type='String' name='dir'>
+<desc>The direction to move in (pass in something like 'previousSibling' or 'nextSibling').</desc>
+</params>
+</method>
+<method cat='DOM/Traversing' type='Array' short='All elements on a specified axis.' name='$.sibling' private='1'>
+<desc>All elements on a specified axis.</desc>
+<params type='Element' name='elem'>
+<desc>The element to find all the siblings of (including itself).</desc>
+</params>
+</method>
+<method cat='Events' type='jQuery' short='Binds a handler to a particular event (like click) for each matched element.' name='bind'>
+<desc>Binds a handler to a particular event (like click) for each matched element.
+The event handler is passed an event object that you can use to prevent
+default behaviour. To stop both default action and event bubbling, your handler
+has to return false.
+
+In most cases, you can define your event handlers as anonymous functions
+(see first example). In cases where that is not possible, you can pass additional
+data as the second parameter (and the handler function as the third), see 
+second example.</desc>
+<params type='String' name='type'>
+<desc>An event type</desc>
+</params>
+<params type='Object' name='data'>
+<desc>(optional) Additional data passed to the event handler as event.data</desc>
+</params>
+<params type='Function' name='fn'>
+<desc>A function to bind to the event on each of the set of matched elements</desc>
+</params>
+<examples>
+<code>$("p").bind("click", function(){
+  alert( $(this).text() );
+});</code>
+<result>alert("Hello")</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+<examples>
+<desc>Pass some additional data to the event handler.</desc>
+<code>function handler(event) {
+  alert(event.data.foo);
+}
+$("p").bind("click", {foo: "bar"}, handler)</code>
+<result>alert("bar")</result>
+</examples>
+<examples>
+<desc>Cancel a default action and prevent it from bubbling by returning false
+from your function.</desc>
+<code>$("form").bind("submit", function() { return false; })</code>
+</examples>
+<examples>
+<desc>Cancel only the default action by using the preventDefault method.</desc>
+<code>$("form").bind("submit", function(event){
+  event.preventDefault();
+});</code>
+</examples>
+<examples>
+<desc>Stop only an event from bubbling by using the stopPropagation method.</desc>
+<code>$("form").bind("submit", function(event){
+  event.stopPropagation();
+});</code>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Binds a handler to a particular event (like click) for each matched element.' name='one'>
+<desc>Binds a handler to a particular event (like click) for each matched element.
+The handler is executed only once for each element. Otherwise, the same rules
+as described in bind() apply.
+	 The event handler is passed an event object that you can use to prevent
+default behaviour. To stop both default action and event bubbling, your handler
+has to return false.
+
+In most cases, you can define your event handlers as anonymous functions
+(see first example). In cases where that is not possible, you can pass additional
+data as the second paramter (and the handler function as the third), see 
+second example.</desc>
+<params type='String' name='type'>
+<desc>An event type</desc>
+</params>
+<params type='Object' name='data'>
+<desc>(optional) Additional data passed to the event handler as event.data</desc>
+</params>
+<params type='Function' name='fn'>
+<desc>A function to bind to the event on each of the set of matched elements</desc>
+</params>
+<examples>
+<code>$("p").one("click", function(){
+  alert( $(this).text() );
+});</code>
+<result>alert("Hello")</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='The opposite of bind, removes a bound event from each of the matched
+elements.' name='unbind'>
+<desc>The opposite of bind, removes a bound event from each of the matched
+elements.
+
+Without any arguments, all bound events are removed.
+
+If the type is provided, all bound events of that type are removed.
+
+If the function that was passed to bind is provided as the second argument,
+only that specific event handler is removed.</desc>
+<params type='String' name='type'>
+<desc>(optional) An event type</desc>
+</params>
+<params type='Function' name='fn'>
+<desc>(optional) A function to unbind from the event on each of the set of matched elements</desc>
+</params>
+<examples>
+<code>$("p").unbind()</code>
+<result>[ &lt;p&gt;Hello&lt;/p&gt; ]</result>
+<before>&lt;p onclick="alert('Hello');"&gt;Hello&lt;/p&gt;</before>
+</examples>
+<examples>
+<code>$("p").unbind( "click" )</code>
+<result>[ &lt;p&gt;Hello&lt;/p&gt; ]</result>
+<before>&lt;p onclick="alert('Hello');"&gt;Hello&lt;/p&gt;</before>
+</examples>
+<examples>
+<code>$("p").unbind( "click", function() { alert("Hello"); } )</code>
+<result>[ &lt;p&gt;Hello&lt;/p&gt; ]</result>
+<before>&lt;p onclick="alert('Hello');"&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Trigger a type of event on every matched element.' name='trigger'>
+<desc>Trigger a type of event on every matched element. This will also cause
+the default action of the browser with the same name (if one exists)
+to be executed. For example, passing 'submit' to the trigger()
+function will also cause the browser to submit the form. This
+default action can be prevented by returning false from one of
+the functions bound to the event.
+
+You can also trigger custom events registered with bind.</desc>
+<params type='String' name='type'>
+<desc>An event type to trigger.</desc>
+</params>
+<params type='Array' name='data'>
+<desc>(optional) Additional data to pass as arguments (after the event object) to the event handler</desc>
+</params>
+<examples>
+<code>$("p").trigger("click")</code>
+<result>alert('hello')</result>
+<before>&lt;p click="alert('hello')"&gt;Hello&lt;/p&gt;</before>
+</examples>
+<examples>
+<desc>Example of how to pass arbitrary data to an event</desc>
+<code>$("p").click(function(event, a, b) {
+  // when a normal click fires, a and b are undefined
+  // for a trigger like below a refers too "foo" and b refers to "bar"
+}).trigger("click", ["foo", "bar"]);</code>
+</examples>
+<examples>
+<code>$("p").bind("myEvent",function(event,message1,message2) {
+	alert(message1 + ' ' + message2);
+});
+$("p").trigger("myEvent",["Hello","World"]);</code>
+<result>alert('Hello World') // One for each paragraph</result>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Toggle between two function calls every other click.' name='toggle'>
+<desc>Toggle between two function calls every other click.
+Whenever a matched element is clicked, the first specified function 
+is fired, when clicked again, the second is fired. All subsequent 
+clicks continue to rotate through the two functions.
+
+Use unbind("click") to remove.</desc>
+<params type='Function' name='even'>
+<desc>The function to execute on every even click.</desc>
+</params>
+<params type='Function' name='odd'>
+<desc>The function to execute on every odd click.</desc>
+</params>
+<examples>
+<code>$("p").toggle(function(){
+  $(this).addClass("selected");
+},function(){
+  $(this).removeClass("selected");
+});</code>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='A method for simulating hovering (moving the mouse on, and off,
+an object).' name='hover'>
+<desc>A method for simulating hovering (moving the mouse on, and off,
+an object). This is a custom method which provides an 'in' to a 
+frequent task.
+
+Whenever the mouse cursor is moved over a matched 
+element, the first specified function is fired. Whenever the mouse 
+moves off of the element, the second specified function fires. 
+Additionally, checks are in place to see if the mouse is still within 
+the specified element itself (for example, an image inside of a div), 
+and if it is, it will continue to 'hover', and not move out 
+(a common error in using a mouseout event handler).</desc>
+<params type='Function' name='over'>
+<desc>The function to fire whenever the mouse is moved over a matched element.</desc>
+</params>
+<params type='Function' name='out'>
+<desc>The function to fire whenever the mouse is moved off of a matched element.</desc>
+</params>
+<examples>
+<code>$("p").hover(function(){
+  $(this).addClass("hover");
+},function(){
+  $(this).removeClass("hover");
+});</code>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to be executed whenever the DOM is ready to be
+traversed and manipulated.' name='ready'>
+<desc>Bind a function to be executed whenever the DOM is ready to be
+traversed and manipulated. This is probably the most important 
+function included in the event module, as it can greatly improve
+the response times of your web applications.
+
+In a nutshell, this is a solid replacement for using window.onload, 
+and attaching a function to that. By using this method, your bound function 
+will be called the instant the DOM is ready to be read and manipulated, 
+which is when what 99.99% of all JavaScript code needs to run.
+
+There is one argument passed to the ready event handler: A reference to
+the jQuery function. You can name that argument whatever you like, and
+can therefore stick with the $ alias without risk of naming collisions.
+
+Please ensure you have no code in your &lt;body&gt; onload event handler, 
+otherwise $(document).ready() may not fire.
+
+You can have as many $(document).ready events on your page as you like.
+The functions are then executed in the order they were added.</desc>
+<see>$.noConflict()</see>
+<see>$(Function)</see>
+<params type='Function' name='fn'>
+<desc>The function to be executed when the DOM is ready.</desc>
+</params>
+<examples>
+<code>$(document).ready(function(){ Your code here... });</code>
+</examples>
+<examples>
+<desc>Uses both the [[Core#.24.28_fn_.29|shortcut]] for $(document).ready() and the argument
+to write failsafe jQuery code using the $ alias, without relying on the
+global alias.</desc>
+<code>jQuery(function($) {
+  // Your code using failsafe $ alias here...
+});</code>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the scroll event of each matched element.' name='scroll'>
+<desc>Bind a function to the scroll event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the scroll event on each of the matched elements.</desc>
+</params>
+<examples>
+<code>$("p").scroll( function() { alert("Hello"); } );</code>
+<result>&lt;p onscroll="alert('Hello');"&gt;Hello&lt;/p&gt;</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the submit event of each matched element.' name='submit'>
+<desc>Bind a function to the submit event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the submit event on each of the matched elements.</desc>
+</params>
+<examples>
+<desc>Prevents the form submission when the input has no value entered.</desc>
+<code>$("#myform").submit( function() {
+  return $("input", this).val().length &gt; 0;
+} );</code>
+<before>&lt;form id="myform"&gt;&lt;input /&gt;&lt;/form&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Trigger the submit event of each matched element.' name='submit'>
+<desc>Trigger the submit event of each matched element. This causes all of the functions
+that have been bound to that submit event to be executed, and calls the browser's
+default submit action on the matching element(s). This default action can be prevented
+by returning false from one of the functions bound to the submit event.
+
+Note: This does not execute the submit method of the form element! If you need to
+submit the form via code, you have to use the DOM method, eg. $("form")[0].submit();</desc>
+<examples>
+<desc>Triggers all submit events registered to the matched form(s), and submits them.</desc>
+<code>$("form").submit();</code>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the focus event of each matched element.' name='focus'>
+<desc>Bind a function to the focus event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the focus event on each of the matched elements.</desc>
+</params>
+<examples>
+<code>$("p").focus( function() { alert("Hello"); } );</code>
+<result>&lt;p onfocus="alert('Hello');"&gt;Hello&lt;/p&gt;</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Trigger the focus event of each matched element.' name='focus'>
+<desc>Trigger the focus event of each matched element. This causes all of the functions
+that have been bound to thet focus event to be executed.
+
+Note: This does not execute the focus method of the underlying elements! If you need to
+focus an element via code, you have to use the DOM method, eg. $("#myinput")[0].focus();</desc>
+<examples>
+<code>$("p").focus();</code>
+<result>alert('Hello');</result>
+<before>&lt;p onfocus="alert('Hello');"&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the keydown event of each matched element.' name='keydown'>
+<desc>Bind a function to the keydown event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the keydown event on each of the matched elements.</desc>
+</params>
+<examples>
+<code>$("p").keydown( function() { alert("Hello"); } );</code>
+<result>&lt;p onkeydown="alert('Hello');"&gt;Hello&lt;/p&gt;</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the dblclick event of each matched element.' name='dblclick'>
+<desc>Bind a function to the dblclick event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the dblclick event on each of the matched elements.</desc>
+</params>
+<examples>
+<code>$("p").dblclick( function() { alert("Hello"); } );</code>
+<result>&lt;p ondblclick="alert('Hello');"&gt;Hello&lt;/p&gt;</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the keypress event of each matched element.' name='keypress'>
+<desc>Bind a function to the keypress event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the keypress event on each of the matched elements.</desc>
+</params>
+<examples>
+<code>$("p").keypress( function() { alert("Hello"); } );</code>
+<result>&lt;p onkeypress="alert('Hello');"&gt;Hello&lt;/p&gt;</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the error event of each matched element.' name='error'>
+<desc>Bind a function to the error event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the error event on each of the matched elements.</desc>
+</params>
+<examples>
+<code>$("p").error( function() { alert("Hello"); } );</code>
+<result>&lt;p onerror="alert('Hello');"&gt;Hello&lt;/p&gt;</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the blur event of each matched element.' name='blur'>
+<desc>Bind a function to the blur event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the blur event on each of the matched elements.</desc>
+</params>
+<examples>
+<code>$("p").blur( function() { alert("Hello"); } );</code>
+<result>&lt;p onblur="alert('Hello');"&gt;Hello&lt;/p&gt;</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Trigger the blur event of each matched element.' name='blur'>
+<desc>Trigger the blur event of each matched element. This causes all of the functions
+that have been bound to that blur event to be executed, and calls the browser's
+default blur action on the matching element(s). This default action can be prevented
+by returning false from one of the functions bound to the blur event.
+
+Note: This does not execute the blur method of the underlying elements! If you need to
+blur an element via code, you have to use the DOM method, eg. $("#myinput")[0].blur();</desc>
+<examples>
+<code>$("p").blur();</code>
+<result>alert('Hello');</result>
+<before>&lt;p onblur="alert('Hello');"&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the load event of each matched element.' name='load'>
+<desc>Bind a function to the load event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the load event on each of the matched elements.</desc>
+</params>
+<examples>
+<code>$("p").load( function() { alert("Hello"); } );</code>
+<result>&lt;p onload="alert('Hello');"&gt;Hello&lt;/p&gt;</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the select event of each matched element.' name='select'>
+<desc>Bind a function to the select event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the select event on each of the matched elements.</desc>
+</params>
+<examples>
+<code>$("p").select( function() { alert("Hello"); } );</code>
+<result>&lt;p onselect="alert('Hello');"&gt;Hello&lt;/p&gt;</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Trigger the select event of each matched element.' name='select'>
+<desc>Trigger the select event of each matched element. This causes all of the functions
+that have been bound to that select event to be executed, and calls the browser's
+default select action on the matching element(s). This default action can be prevented
+by returning false from one of the functions bound to the select event.</desc>
+<examples>
+<code>$("p").select();</code>
+<result>alert('Hello');</result>
+<before>&lt;p onselect="alert('Hello');"&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the mouseup event of each matched element.' name='mouseup'>
+<desc>Bind a function to the mouseup event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the mouseup event on each of the matched elements.</desc>
+</params>
+<examples>
+<code>$("p").mouseup( function() { alert("Hello"); } );</code>
+<result>&lt;p onmouseup="alert('Hello');"&gt;Hello&lt;/p&gt;</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the unload event of each matched element.' name='unload'>
+<desc>Bind a function to the unload event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the unload event on each of the matched elements.</desc>
+</params>
+<examples>
+<code>$("p").unload( function() { alert("Hello"); } );</code>
+<result>&lt;p onunload="alert('Hello');"&gt;Hello&lt;/p&gt;</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the change event of each matched element.' name='change'>
+<desc>Bind a function to the change event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the change event on each of the matched elements.</desc>
+</params>
+<examples>
+<code>$("p").change( function() { alert("Hello"); } );</code>
+<result>&lt;p onchange="alert('Hello');"&gt;Hello&lt;/p&gt;</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the mouseout event of each matched element.' name='mouseout'>
+<desc>Bind a function to the mouseout event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the mouseout event on each of the matched elements.</desc>
+</params>
+<examples>
+<code>$("p").mouseout( function() { alert("Hello"); } );</code>
+<result>&lt;p onmouseout="alert('Hello');"&gt;Hello&lt;/p&gt;</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the keyup event of each matched element.' name='keyup'>
+<desc>Bind a function to the keyup event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the keyup event on each of the matched elements.</desc>
+</params>
+<examples>
+<code>$("p").keyup( function() { alert("Hello"); } );</code>
+<result>&lt;p onkeyup="alert('Hello');"&gt;Hello&lt;/p&gt;</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the click event of each matched element.' name='click'>
+<desc>Bind a function to the click event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the click event on each of the matched elements.</desc>
+</params>
+<examples>
+<code>$("p").click( function() { alert("Hello"); } );</code>
+<result>&lt;p onclick="alert('Hello');"&gt;Hello&lt;/p&gt;</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Trigger the click event of each matched element.' name='click'>
+<desc>Trigger the click event of each matched element. This causes all of the functions
+that have been bound to thet click event to be executed.</desc>
+<examples>
+<code>$("p").click();</code>
+<result>alert('Hello');</result>
+<before>&lt;p onclick="alert('Hello');"&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the resize event of each matched element.' name='resize'>
+<desc>Bind a function to the resize event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the resize event on each of the matched elements.</desc>
+</params>
+<examples>
+<code>$("p").resize( function() { alert("Hello"); } );</code>
+<result>&lt;p onresize="alert('Hello');"&gt;Hello&lt;/p&gt;</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the mousemove event of each matched element.' name='mousemove'>
+<desc>Bind a function to the mousemove event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the mousemove event on each of the matched elements.</desc>
+</params>
+<examples>
+<code>$("p").mousemove( function() { alert("Hello"); } );</code>
+<result>&lt;p onmousemove="alert('Hello');"&gt;Hello&lt;/p&gt;</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the mousedown event of each matched element.' name='mousedown'>
+<desc>Bind a function to the mousedown event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the mousedown event on each of the matched elements.</desc>
+</params>
+<examples>
+<code>$("p").mousedown( function() { alert("Hello"); } );</code>
+<result>&lt;p onmousedown="alert('Hello');"&gt;Hello&lt;/p&gt;</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Events' type='jQuery' short='Bind a function to the mouseover event of each matched element.' name='mouseover'>
+<desc>Bind a function to the mouseover event of each matched element.</desc>
+<params type='Function' name='fn'>
+<desc>A function to bind to the mousedown event on each of the matched elements.</desc>
+</params>
+<examples>
+<code>$("p").mouseover( function() { alert("Hello"); } );</code>
+<result>&lt;p onmouseover="alert('Hello');"&gt;Hello&lt;/p&gt;</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Ajax' type='jQuery' short='Load HTML from a remote file and inject it into the DOM, only if it&apos;s
+been modified by the server.' name='loadIfModified'>
+<desc>Load HTML from a remote file and inject it into the DOM, only if it's
+been modified by the server.</desc>
+<params type='String' name='url'>
+<desc>The URL of the HTML file to load.</desc>
+</params>
+<params type='Map' name='params'>
+<desc>(optional) Key/value pairs that will be sent to the server.</desc>
+</params>
+<params type='Function' name='callback'>
+<desc>(optional) A function to be executed whenever the data is loaded (parameters: responseText, status and response itself).</desc>
+</params>
+<examples>
+<code>$("#feeds").loadIfModified("feeds.html");</code>
+<result>&lt;div id="feeds"&gt;&lt;b&gt;45&lt;/b&gt; feeds found.&lt;/div&gt;</result>
+<before>&lt;div id="feeds"&gt;&lt;/div&gt;</before>
+</examples>
+</method>
+<method cat='Ajax' type='jQuery' short='Load HTML from a remote file and inject it into the DOM.' name='load'>
+<desc>Load HTML from a remote file and inject it into the DOM.
+
+Note: Avoid to use this to load scripts, instead use $.getScript.
+IE strips script tags when there aren't any other characters in front of it.</desc>
+<params type='String' name='url'>
+<desc>The URL of the HTML file to load.</desc>
+</params>
+<params type='Object' name='params'>
+<desc>(optional) A set of key/value pairs that will be sent as data to the server.</desc>
+</params>
+<params type='Function' name='callback'>
+<desc>(optional) A function to be executed whenever the data is loaded (parameters: responseText, status and response itself).</desc>
+</params>
+<examples>
+<code>$("#feeds").load("feeds.html");</code>
+<result>&lt;div id="feeds"&gt;&lt;b&gt;45&lt;/b&gt; feeds found.&lt;/div&gt;</result>
+<before>&lt;div id="feeds"&gt;&lt;/div&gt;</before>
+</examples>
+<examples>
+<desc>Same as above, but with an additional parameter
+and a callback that is executed when the data was loaded.</desc>
+<code>$("#feeds").load("feeds.html",
+  {limit: 25},
+  function() { alert("The last 25 entries in the feed have been loaded"); }
+);</code>
+</examples>
+</method>
+<method cat='Ajax' type='String' short='Serializes a set of input elements into a string of data.' name='serialize'>
+<desc>Serializes a set of input elements into a string of data.
+This will serialize all given elements.
+
+A serialization similar to the form submit of a browser is
+provided by the [http://www.malsup.com/jquery/form/ Form Plugin].
+It also takes multiple-selects 
+into account, while this method recognizes only a single option.</desc>
+<examples after='name=John&amp;amp;location=Boston'>
+<desc>Serialize a selection of input elements to a string</desc>
+<before>&lt;input type='text' name='name' value='John'/&gt;
+&lt;input type='text' name='location' value='Boston'/&gt;</before>
+<code>$("input[@type=text]").serialize();</code>
+</examples>
+</method>
+<method cat='Ajax' type='jQuery' short='Evaluate all script tags inside this jQuery.' private='1' name='evalScripts'>
+<desc>Evaluate all script tags inside this jQuery. If they have a src attribute,
+the script is loaded, otherwise it's content is evaluated.</desc>
+</method>
+<method cat='Ajax' type='jQuery' short='Attach a function to be executed whenever an AJAX request begins
+and there is none already active.' name='ajaxStart'>
+<desc>Attach a function to be executed whenever an AJAX request begins
+and there is none already active.</desc>
+<params type='Function' name='callback'>
+<desc>The function to execute.</desc>
+</params>
+<examples>
+<desc>Show a loading message whenever an AJAX request starts
+(and none is already active).</desc>
+<code>$("#loading").ajaxStart(function(){
+  $(this).show();
+});</code>
+</examples>
+</method>
+<method cat='Ajax' type='jQuery' short='Attach a function to be executed whenever all AJAX requests have ended.' name='ajaxStop'>
+<desc>Attach a function to be executed whenever all AJAX requests have ended.</desc>
+<params type='Function' name='callback'>
+<desc>The function to execute.</desc>
+</params>
+<examples>
+<desc>Hide a loading message after all the AJAX requests have stopped.</desc>
+<code>$("#loading").ajaxStop(function(){
+  $(this).hide();
+});</code>
+</examples>
+</method>
+<method cat='Ajax' type='jQuery' short='Attach a function to be executed whenever an AJAX request completes.' name='ajaxComplete'>
+<desc>Attach a function to be executed whenever an AJAX request completes.
+
+The XMLHttpRequest and settings used for that request are passed
+as arguments to the callback.</desc>
+<params type='Function' name='callback'>
+<desc>The function to execute.</desc>
+</params>
+<examples>
+<desc>Show a message when an AJAX request completes.</desc>
+<code>$("#msg").ajaxComplete(function(request, settings){
+  $(this).append("&lt;li&gt;Request Complete.&lt;/li&gt;");
+});</code>
+</examples>
+</method>
+<method cat='Ajax' type='jQuery' short='Attach a function to be executed whenever an AJAX request completes
+successfully.' name='ajaxSuccess'>
+<desc>Attach a function to be executed whenever an AJAX request completes
+successfully.
+
+The XMLHttpRequest and settings used for that request are passed
+as arguments to the callback.</desc>
+<params type='Function' name='callback'>
+<desc>The function to execute.</desc>
+</params>
+<examples>
+<desc>Show a message when an AJAX request completes successfully.</desc>
+<code>$("#msg").ajaxSuccess(function(request, settings){
+  $(this).append("&lt;li&gt;Successful Request!&lt;/li&gt;");
+});</code>
+</examples>
+</method>
+<method cat='Ajax' type='jQuery' short='Attach a function to be executed whenever an AJAX request fails.' name='ajaxError'>
+<desc>Attach a function to be executed whenever an AJAX request fails.
+
+The XMLHttpRequest and settings used for that request are passed
+as arguments to the callback. A third argument, an exception object,
+is passed if an exception occured while processing the request.</desc>
+<params type='Function' name='callback'>
+<desc>The function to execute.</desc>
+</params>
+<examples>
+<desc>Show a message when an AJAX request fails.</desc>
+<code>$("#msg").ajaxError(function(request, settings){
+  $(this).append("&lt;li&gt;Error requesting page " + settings.url + "&lt;/li&gt;");
+});</code>
+</examples>
+</method>
+<method cat='Ajax' type='jQuery' short='Attach a function to be executed before an AJAX request is sent.' name='ajaxSend'>
+<desc>Attach a function to be executed before an AJAX request is sent.
+
+The XMLHttpRequest and settings used for that request are passed
+as arguments to the callback.</desc>
+<params type='Function' name='callback'>
+<desc>The function to execute.</desc>
+</params>
+<examples>
+<desc>Show a message before an AJAX request is sent.</desc>
+<code>$("#msg").ajaxSend(function(request, settings){
+  $(this).append("&lt;li&gt;Starting request at " + settings.url + "&lt;/li&gt;");
+});</code>
+</examples>
+</method>
+<method cat='Ajax' type='XMLHttpRequest' short='Load a remote page using an HTTP GET request.' name='$.get'>
+<desc>Load a remote page using an HTTP GET request.
+
+This is an easy way to send a simple GET request to a server
+without having to use the more complex $.ajax function. It
+allows a single callback function to be specified that will
+be executed when the request is complete (and only if the response
+has a successful response code). If you need to have both error
+and success callbacks, you may want to use $.ajax.</desc>
+<params type='String' name='url'>
+<desc>The URL of the page to load.</desc>
+</params>
+<params type='Map' name='params'>
+<desc>(optional) Key/value pairs that will be sent to the server.</desc>
+</params>
+<params type='Function' name='callback'>
+<desc>(optional) A function to be executed whenever the data is loaded successfully.</desc>
+</params>
+<examples>
+<code>$.get("test.cgi");</code>
+</examples>
+<examples>
+<code>$.get("test.cgi", { name: "John", time: "2pm" } );</code>
+</examples>
+<examples>
+<code>$.get("test.cgi", function(data){
+  alert("Data Loaded: " + data);
+});</code>
+</examples>
+<examples>
+<code>$.get("test.cgi",
+  { name: "John", time: "2pm" },
+  function(data){
+    alert("Data Loaded: " + data);
+  }
+);</code>
+</examples>
+</method>
+<method cat='Ajax' type='XMLHttpRequest' short='Load a remote page using an HTTP GET request, only if it hasn&apos;t
+been modified since it was last retrieved.' name='$.getIfModified'>
+<desc>Load a remote page using an HTTP GET request, only if it hasn't
+been modified since it was last retrieved.</desc>
+<params type='String' name='url'>
+<desc>The URL of the page to load.</desc>
+</params>
+<params type='Map' name='params'>
+<desc>(optional) Key/value pairs that will be sent to the server.</desc>
+</params>
+<params type='Function' name='callback'>
+<desc>(optional) A function to be executed whenever the data is loaded successfully.</desc>
+</params>
+<examples>
+<code>$.getIfModified("test.html");</code>
+</examples>
+<examples>
+<code>$.getIfModified("test.html", { name: "John", time: "2pm" } );</code>
+</examples>
+<examples>
+<code>$.getIfModified("test.cgi", function(data){
+  alert("Data Loaded: " + data);
+});</code>
+</examples>
+<examples>
+<code>$.getifModified("test.cgi",
+  { name: "John", time: "2pm" },
+  function(data){
+    alert("Data Loaded: " + data);
+  }
+);</code>
+</examples>
+</method>
+<method cat='Ajax' type='XMLHttpRequest' short='Loads, and executes, a remote JavaScript file using an HTTP GET request.' name='$.getScript'>
+<desc>Loads, and executes, a remote JavaScript file using an HTTP GET request.
+
+Warning: Safari &lt;= 2.0.x is unable to evaluate scripts in a global
+context synchronously. If you load functions via getScript, make sure
+to call them after a delay.</desc>
+<params type='String' name='url'>
+<desc>The URL of the page to load.</desc>
+</params>
+<params type='Function' name='callback'>
+<desc>(optional) A function to be executed whenever the data is loaded successfully.</desc>
+</params>
+<examples>
+<code>$.getScript("test.js");</code>
+</examples>
+<examples>
+<code>$.getScript("test.js", function(){
+  alert("Script loaded and executed.");
+});</code>
+</examples>
+</method>
+<method cat='Ajax' type='XMLHttpRequest' short='Load JSON data using an HTTP GET request.' name='$.getJSON'>
+<desc>Load JSON data using an HTTP GET request.</desc>
+<params type='String' name='url'>
+<desc>The URL of the page to load.</desc>
+</params>
+<params type='Map' name='params'>
+<desc>(optional) Key/value pairs that will be sent to the server.</desc>
+</params>
+<params type='Function' name='callback'>
+<desc>A function to be executed whenever the data is loaded successfully.</desc>
+</params>
+<examples>
+<code>$.getJSON("test.js", function(json){
+  alert("JSON Data: " + json.users[3].name);
+});</code>
+</examples>
+<examples>
+<code>$.getJSON("test.js",
+  { name: "John", time: "2pm" },
+  function(json){
+    alert("JSON Data: " + json.users[3].name);
+  }
+);</code>
+</examples>
+</method>
+<method cat='Ajax' type='XMLHttpRequest' short='Load a remote page using an HTTP POST request.' name='$.post'>
+<desc>Load a remote page using an HTTP POST request.</desc>
+<params type='String' name='url'>
+<desc>The URL of the page to load.</desc>
+</params>
+<params type='Map' name='params'>
+<desc>(optional) Key/value pairs that will be sent to the server.</desc>
+</params>
+<params type='Function' name='callback'>
+<desc>(optional) A function to be executed whenever the data is loaded successfully.</desc>
+</params>
+<examples>
+<code>$.post("test.cgi");</code>
+</examples>
+<examples>
+<code>$.post("test.cgi", { name: "John", time: "2pm" } );</code>
+</examples>
+<examples>
+<code>$.post("test.cgi", function(data){
+  alert("Data Loaded: " + data);
+});</code>
+</examples>
+<examples>
+<code>$.post("test.cgi",
+  { name: "John", time: "2pm" },
+  function(data){
+    alert("Data Loaded: " + data);
+  }
+);</code>
+</examples>
+</method>
+<method cat='Ajax' type='undefined' short='Set the timeout of all AJAX requests to a specific amount of time.' name='$.ajaxTimeout'>
+<desc>Set the timeout of all AJAX requests to a specific amount of time.
+This will make all future AJAX requests timeout after a specified amount
+of time.
+
+Set to null or 0 to disable timeouts (default).
+
+You can manually abort requests with the XMLHttpRequest's (returned by
+all ajax functions) abort() method.
+
+Deprecated. Use $.ajaxSetup instead.</desc>
+<params type='Number' name='time'>
+<desc>How long before an AJAX request times out.</desc>
+</params>
+<examples>
+<desc>Make all AJAX requests timeout after 5 seconds.</desc>
+<code>$.ajaxTimeout( 5000 );</code>
+</examples>
+</method>
+<method cat='Ajax' type='undefined' short='Setup global settings for AJAX requests.' name='$.ajaxSetup'>
+<desc>Setup global settings for AJAX requests.
+
+See $.ajax for a description of all available options.</desc>
+<params type='Map' name='settings'>
+<desc>Key/value pairs to use for all AJAX requests</desc>
+</params>
+<examples>
+<desc>Sets the defaults for AJAX requests to the url "/xmlhttp/",
+disables global handlers and uses POST instead of GET. The following
+AJAX requests then sends some data without having to set anything else.</desc>
+<code>$.ajaxSetup( {
+  url: "/xmlhttp/",
+  global: false,
+  type: "POST"
+} );
+$.ajax({ data: myData });</code>
+</examples>
+</method>
+<method cat='Ajax' type='XMLHttpRequest' see='ajaxSetup(Map)' short='Load a remote page using an HTTP request.' name='$.ajax'>
+<desc>Load a remote page using an HTTP request.
+
+This is jQuery's low-level AJAX implementation. See $.get, $.post etc. for
+higher-level abstractions that are often easier to understand and use,
+but don't offer as much functionality (such as error callbacks).
+
+$.ajax() returns the XMLHttpRequest that it creates. In most cases you won't
+need that object to manipulate directly, but it is available if you need to
+abort the request manually.
+
+'''Note:''' If you specify the dataType option described below, make sure
+the server sends the correct MIME type in the response (eg. xml as "text/xml").
+Sending the wrong MIME type can lead to unexpected problems in your script.
+See [[Specifying the Data Type for AJAX Requests]] for more information.
+
+Supported datatypes are (see dataType option):
+
+"xml": Returns a XML document that can be processed via jQuery.
+
+"html": Returns HTML as plain text, included script tags are evaluated.
+
+"script": Evaluates the response as Javascript and returns it as plain text.
+
+"json": Evaluates the response as JSON and returns a Javascript Object
+
+$.ajax() takes one argument, an object of key/value pairs, that are
+used to initalize and handle the request. These are all the key/values that can
+be used:
+
+(String) url - The URL to request.
+
+(String) type - The type of request to make ("POST" or "GET"), default is "GET".
+
+(String) dataType - The type of data that you're expecting back from
+the server. No default: If the server sends xml, the responseXML, otherwise
+the responseText is passed to the success callback.
+
+(Boolean) ifModified - Allow the request to be successful only if the
+response has changed since the last request. This is done by checking the
+Last-Modified header. Default value is false, ignoring the header.
+
+(Number) timeout - Local timeout to override global timeout, eg. to give a
+single request a longer timeout while all others timeout after 1 second.
+See $.ajaxTimeout() for global timeouts.
+
+(Boolean) global - Whether to trigger global AJAX event handlers for
+this request, default is true. Set to false to prevent that global handlers
+like ajaxStart or ajaxStop are triggered.
+
+(Function) error - A function to be called if the request fails. The
+function gets passed tree arguments: The XMLHttpRequest object, a
+string describing the type of error that occurred and an optional
+exception object, if one occured.
+
+(Function) success - A function to be called if the request succeeds. The
+function gets passed one argument: The data returned from the server,
+formatted according to the 'dataType' parameter.
+
+(Function) complete - A function to be called when the request finishes. The
+function gets passed two arguments: The XMLHttpRequest object and a
+string describing the type of success of the request.
+
+(Object|String) data - Data to be sent to the server. Converted to a query
+string, if not already a string. Is appended to the url for GET-requests.
+See processData option to prevent this automatic processing.
+
+(String) contentType - When sending data to the server, use this content-type.
+Default is "application/x-www-form-urlencoded", which is fine for most cases.
+
+(Boolean) processData - By default, data passed in to the data option as an object
+other as string will be processed and transformed into a query string, fitting to
+the default content-type "application/x-www-form-urlencoded". If you want to send
+DOMDocuments, set this option to false.
+
+(Boolean) async - By default, all requests are sent asynchronous (set to true).
+If you need synchronous requests, set this option to false.
+
+(Function) beforeSend - A pre-callback to set custom headers etc., the
+XMLHttpRequest is passed as the only argument.</desc>
+<params type='Map' name='properties'>
+<desc>Key/value pairs to initialize the request with.</desc>
+</params>
+<examples>
+<desc>Load and execute a JavaScript file.</desc>
+<code>$.ajax({
+  type: "GET",
+  url: "test.js",
+  dataType: "script"
+})</code>
+</examples>
+<examples>
+<desc>Save some data to the server and notify the user once its complete.</desc>
+<code>$.ajax({
+  type: "POST",
+  url: "some.php",
+  data: "name=John&amp;location=Boston",
+  success: function(msg){
+    alert( "Data Saved: " + msg );
+  }
+});</code>
+</examples>
+<examples>
+<desc>Loads data synchronously. Blocks the browser while the requests is active.
+It is better to block user interaction by other means when synchronization is
+necessary.</desc>
+<code>var html = $.ajax({
+ url: "some.php",
+ async: false
+}).responseText;</code>
+</examples>
+<examples>
+<desc>Sends an xml document as data to the server. By setting the processData
+option to false, the automatic conversion of data to strings is prevented.</desc>
+<code>var xmlDocument = [create xml document];
+$.ajax({
+  url: "page.php",
+  processData: false,
+  data: xmlDocument,
+  success: handleResponse
+});</code>
+</examples>
+</method>
+<method cat='Effects' type='jQuery' short='Displays each of the set of matched elements if they are hidden.' name='show'>
+<desc>Displays each of the set of matched elements if they are hidden.</desc>
+<examples>
+<code>$("p").show()</code>
+<result>[ &lt;p style="display: block"&gt;Hello&lt;/p&gt; ]</result>
+<before>&lt;p style="display: none"&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Effects' type='jQuery' see='hide(String|Number,Function)' short='Show all matched elements using a graceful animation and firing an
+optional callback after completion.' name='show'>
+<desc>Show all matched elements using a graceful animation and firing an
+optional callback after completion.
+
+The height, width, and opacity of each of the matched elements 
+are changed dynamically according to the specified speed.</desc>
+<params type='String|Number' name='speed'>
+<desc>A string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</desc>
+</params>
+<params type='Function' name='callback'>
+<desc>(optional) A function to be executed whenever the animation completes.</desc>
+</params>
+<examples>
+<code>$("p").show("slow");</code>
+</examples>
+<examples>
+<code>$("p").show("slow",function(){
+  alert("Animation Done.");
+});</code>
+</examples>
+</method>
+<method cat='Effects' type='jQuery' short='Hides each of the set of matched elements if they are shown.' name='hide'>
+<desc>Hides each of the set of matched elements if they are shown.</desc>
+<examples>
+<code>$("p").hide()</code>
+<result>[ &lt;p style="display: none"&gt;Hello&lt;/p&gt; ]</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Effects' type='jQuery' see='show(String|Number,Function)' short='Hide all matched elements using a graceful animation and firing an
+optional callback after completion.' name='hide'>
+<desc>Hide all matched elements using a graceful animation and firing an
+optional callback after completion.
+
+The height, width, and opacity of each of the matched elements 
+are changed dynamically according to the specified speed.</desc>
+<params type='String|Number' name='speed'>
+<desc>A string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</desc>
+</params>
+<params type='Function' name='callback'>
+<desc>(optional) A function to be executed whenever the animation completes.</desc>
+</params>
+<examples>
+<code>$("p").hide("slow");</code>
+</examples>
+<examples>
+<code>$("p").hide("slow",function(){
+  alert("Animation Done.");
+});</code>
+</examples>
+</method>
+<method cat='Effects' type='jQuery' short='Toggles each of the set of matched elements.' name='toggle'>
+<desc>Toggles each of the set of matched elements. If they are shown,
+toggle makes them hidden. If they are hidden, toggle
+makes them shown.</desc>
+<examples>
+<code>$("p").toggle()</code>
+<result>[ &lt;p style="display: none"&gt;Hello&lt;/p&gt;, &lt;p style="display: block"&gt;Hello Again&lt;/p&gt; ]</result>
+<before>&lt;p&gt;Hello&lt;/p&gt;&lt;p style="display: none"&gt;Hello Again&lt;/p&gt;</before>
+</examples>
+</method>
+<method cat='Effects' type='jQuery' short='Reveal all matched elements by adjusting their height and firing an
+optional callback after completion.' name='slideDown'>
+<desc>Reveal all matched elements by adjusting their height and firing an
+optional callback after completion.
+
+Only the height is adjusted for this animation, causing all matched
+elements to be revealed in a "sliding" manner.</desc>
+<see>slideUp(String|Number,Function)</see>
+<see>slideToggle(String|Number,Function)</see>
+<params type='String|Number' name='speed'>
+<desc>(optional) A string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</desc>
+</params>
+<params type='Function' name='callback'>
+<desc>(optional) A function to be executed whenever the animation completes.</desc>
+</params>
+<examples>
+<code>$("p").slideDown("slow");</code>
+</examples>
+<examples>
+<code>$("p").slideDown("slow",function(){
+  alert("Animation Done.");
+});</code>
+</examples>
+</method>
+<method cat='Effects' type='jQuery' short='Hide all matched elements by adjusting their height and firing an
+optional callback after completion.' name='slideUp'>
+<desc>Hide all matched elements by adjusting their height and firing an
+optional callback after completion.
+
+Only the height is adjusted for this animation, causing all matched
+elements to be hidden in a "sliding" manner.</desc>
+<see>slideDown(String|Number,Function)</see>
+<see>slideToggle(String|Number,Function)</see>
+<params type='String|Number' name='speed'>
+<desc>(optional) A string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</desc>
+</params>
+<params type='Function' name='callback'>
+<desc>(optional) A function to be executed whenever the animation completes.</desc>
+</params>
+<examples>
+<code>$("p").slideUp("slow");</code>
+</examples>
+<examples>
+<code>$("p").slideUp("slow",function(){
+  alert("Animation Done.");
+});</code>
+</examples>
+</method>
+<method cat='Effects' type='jQuery' short='Toggle the visibility of all matched elements by adjusting their height and firing an
+optional callback after completion.' name='slideToggle'>
+<desc>Toggle the visibility of all matched elements by adjusting their height and firing an
+optional callback after completion.
+
+Only the height is adjusted for this animation, causing all matched
+elements to be hidden in a "sliding" manner.</desc>
+<see>slideDown(String|Number,Function)</see>
+<see>slideUp(String|Number,Function)</see>
+<params type='String|Number' name='speed'>
+<desc>(optional) A string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</desc>
+</params>
+<params type='Function' name='callback'>
+<desc>(optional) A function to be executed whenever the animation completes.</desc>
+</params>
+<examples>
+<code>$("p").slideToggle("slow");</code>
+</examples>
+<examples>
+<code>$("p").slideToggle("slow",function(){
+  alert("Animation Done.");
+});</code>
+</examples>
+</method>
+<method cat='Effects' type='jQuery' short='Fade in all matched elements by adjusting their opacity and firing an
+optional callback after completion.' name='fadeIn'>
+<desc>Fade in all matched elements by adjusting their opacity and firing an
+optional callback after completion.
+
+Only the opacity is adjusted for this animation, meaning that
+all of the matched elements should already have some form of height
+and width associated with them.</desc>
+<see>fadeOut(String|Number,Function)</see>
+<see>fadeTo(String|Number,Number,Function)</see>
+<params type='String|Number' name='speed'>
+<desc>(optional) A string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</desc>
+</params>
+<params type='Function' name='callback'>
+<desc>(optional) A function to be executed whenever the animation completes.</desc>
+</params>
+<examples>
+<code>$("p").fadeIn("slow");</code>
+</examples>
+<examples>
+<code>$("p").fadeIn("slow",function(){
+  alert("Animation Done.");
+});</code>
+</examples>
+</method>
+<method cat='Effects' type='jQuery' short='Fade out all matched elements by adjusting their opacity and firing an
+optional callback after completion.' name='fadeOut'>
+<desc>Fade out all matched elements by adjusting their opacity and firing an
+optional callback after completion.
+
+Only the opacity is adjusted for this animation, meaning that
+all of the matched elements should already have some form of height
+and width associated with them.</desc>
+<see>fadeIn(String|Number,Function)</see>
+<see>fadeTo(String|Number,Number,Function)</see>
+<params type='String|Number' name='speed'>
+<desc>(optional) A string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</desc>
+</params>
+<params type='Function' name='callback'>
+<desc>(optional) A function to be executed whenever the animation completes.</desc>
+</params>
+<examples>
+<code>$("p").fadeOut("slow");</code>
+</examples>
+<examples>
+<code>$("p").fadeOut("slow",function(){
+  alert("Animation Done.");
+});</code>
+</examples>
+</method>
+<method cat='Effects' type='jQuery' short='Fade the opacity of all matched elements to a specified opacity and firing an
+optional callback after completion.' name='fadeTo'>
+<desc>Fade the opacity of all matched elements to a specified opacity and firing an
+optional callback after completion.
+
+Only the opacity is adjusted for this animation, meaning that
+all of the matched elements should already have some form of height
+and width associated with them.</desc>
+<see>fadeIn(String|Number,Function)</see>
+<see>fadeOut(String|Number,Function)</see>
+<params type='String|Number' name='speed'>
+<desc>A string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</desc>
+</params>
+<params type='Number' name='opacity'>
+<desc>The opacity to fade to (a number from 0 to 1).</desc>
+</params>
+<params type='Function' name='callback'>
+<desc>(optional) A function to be executed whenever the animation completes.</desc>
+</params>
+<examples>
+<code>$("p").fadeTo("slow", 0.5);</code>
+</examples>
+<examples>
+<code>$("p").fadeTo("slow", 0.5, function(){
+  alert("Animation Done.");
+});</code>
+</examples>
+</method>
+<method cat='Effects' type='jQuery' short='A function for making your own, custom animations.' name='animate'>
+<desc>A function for making your own, custom animations. The key aspect of
+this function is the object of style properties that will be animated,
+and to what end. Each key within the object represents a style property
+that will also be animated (for example: "height", "top", or "opacity").
+
+Note that properties should be specified using camel case
+eg. marginLeft instead of margin-left.
+
+The value associated with the key represents to what end the property
+will be animated. If a number is provided as the value, then the style
+property will be transitioned from its current state to that new number.
+Otherwise if the string "hide", "show", or "toggle" is provided, a default
+animation will be constructed for that property.</desc>
+<params type='Hash' name='params'>
+<desc>A set of style attributes that you wish to animate, and to what end.</desc>
+</params>
+<params type='String|Number' name='speed'>
+<desc>(optional) A string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</desc>
+</params>
+<params type='String' name='easing'>
+<desc>(optional) The name of the easing effect that you want to use (Plugin Required).</desc>
+</params>
+<params type='Function' name='callback'>
+<desc>(optional) A function to be executed whenever the animation completes.</desc>
+</params>
+<examples>
+<code>$("p").animate({
+  height: 'toggle', opacity: 'toggle'
+}, "slow");</code>
+</examples>
+<examples>
+<code>$("p").animate({
+  left: 50, opacity: 'show'
+}, 500);</code>
+</examples>
+<examples>
+<desc>An example of using an 'easing' function to provide a different style of animation. This will only work if you have a plugin that provides this easing function (Only 'linear' is provided by default, with jQuery).</desc>
+<code>$("p").animate({
+  opacity: 'show'
+}, "slow", "easein");</code>
+</examples>
+</method>
+</docs>
