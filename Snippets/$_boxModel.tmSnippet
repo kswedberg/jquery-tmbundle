@@ -3,17 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.ajaxError(function(${1:request, settings}) {
-  ${2://stuff to do when an AJAX call returns an error};
-});
-$0</string>
+	<string>\$.boxModel</string>
 	<key>name</key>
-	<string>ajaxError</string>
+	<string>$.boxModel</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.ajaxError</string>
+	<string>$.boxModel</string>
 	<key>uuid</key>
-	<string>4400D01A-8061-4624-B6E2-999285BA25DD</string>
+	<string>72AB4B46-DB63-411A-B179-2EC1AFC098AF</string>
 </dict>
 </plist>

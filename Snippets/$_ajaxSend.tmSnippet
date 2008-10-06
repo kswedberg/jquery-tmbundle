@@ -8,11 +8,11 @@
 });
 $0</string>
 	<key>name</key>
-	<string>$.ajaxSend</string>
+	<string>ajaxSend</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>$.ajaxSend</string>
+	<string>.ajaxSend</string>
 	<key>uuid</key>
 	<string>E4DFA4E2-0A94-4696-9A0D-6A7CE102E3B1</string>
 </dict>

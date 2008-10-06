@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.ajaxError(function(${1:request, settings}) {
-  ${2://stuff to do when an AJAX call returns an error};
+	<string>.slideDown(${1/(^[0-9]+$)|.+/(?1::')/}${1:slow/400/fast}${1/(^[0-9]+$)|.+/(?1::')/}, function() {
+	${0://Stuff to do *after* the animation takes place};
 });
-$0</string>
+</string>
 	<key>name</key>
-	<string>ajaxError</string>
+	<string>slideDown (with callback)</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.ajaxError</string>
+	<string>.slideDown</string>
 	<key>uuid</key>
-	<string>4400D01A-8061-4624-B6E2-999285BA25DD</string>
+	<string>3E97CCBD-C903-4263-9FBB-A9F63B1F9F34</string>
 </dict>
 </plist>

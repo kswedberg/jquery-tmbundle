@@ -3,17 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.ajaxError(function(${1:request, settings}) {
-  ${2://stuff to do when an AJAX call returns an error};
+	<string>.toggle(function() {
+	${1:// Stuff to do every *odd* time the element is clicked;}
+}, function() {
+	${2:// Stuff to do every *even* time the element is clicked;}
 });
 $0</string>
 	<key>name</key>
-	<string>ajaxError</string>
+	<string>toggle (event)</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.ajaxError</string>
+	<string>.toggle</string>
 	<key>uuid</key>
-	<string>4400D01A-8061-4624-B6E2-999285BA25DD</string>
+	<string>507957DA-32C6-4C15-996F-4C2215B1B7DD</string>
 </dict>
 </plist>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$.trim('${1:string}')$0</string>
+	<string>\$.trim(${1:'${2:string}'})$0</string>
 	<key>name</key>
 	<string>$.trim</string>
 	<key>scope</key>
