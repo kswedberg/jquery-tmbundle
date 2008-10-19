@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>;(function(\$) {
+${2:// ${3:What does the $1 plugin do?}}
+\$.fn.${1:pluginName} = function(options) {
+  var opts = \$.extend({}, \$.fn.$1.defaults, options);
+
+  return this.each(function() {
+    var \$this = \$(this);
+
+  ${5:  ${6:// Support for the Metadata Plugin.}
+    var o = \$.meta ? \$.extend({\}, opts, \$this.data()) : opts;
+  }
+
+  });
+
+  // private function for debugging
+  function debug(\$obj) {
+    if (window.console &amp;&amp; window.console.log) {
+      window.console.log(\$obj);
+    }
+  }
+};
+
+// default options
+\$.fn.$1.defaults = {
+  ${4:defaultOne:true,
+  defaultTwo:false,
+  defaultThree:'yay!'}
+};
+
+})(jQuery);
+</string>
+	<key>name</key>
+	<string>plugin</string>
+	<key>scope</key>
+	<string>source.js.jquery</string>
+	<key>tabTrigger</key>
+	<string>plugin</string>
+	<key>uuid</key>
+	<string>02F87930-5CDC-414A-BA7F-D74CCFD2CBA3</string>
+</dict>
+</plist>
