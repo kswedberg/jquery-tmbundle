@@ -212,7 +212,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\.(addClass|after|append|attr|background|before|bind|blur|change|click|color|css|dblclick|domManip|each|empty|end|error|extend|fadeIn|fadeOut|fadeTo|float|focus|get|height|hide|hover|href|html|id|init|keydown|keypress|keyup|left|length|load|mousedown|mousemove|mouseout|mouseover|mouseup|name|oneblur|onechange|oneclick|onedblclick|oneerror|onefocus|onekeydown|onekeypress|onekeyup|oneload|onemousedown|onemousemove|onemouseout|onemouseover|onemouseup|onereset|oneresize|onescroll|oneselect|onesubmit|oneunload|overflow|position|prepend|pushStack|ready|rel|removeClass|reset|resize|scroll|select|show|size|slideDown|slideUp|src|submit|text|title|toggle|toggleClass|top|trigger|unbind|unblur|unchange|unclick|undblclick|unerror|unfocus|unkeydown|unkeypress|unkeyup|unload|unmousedown|unmousemove|unmouseout|unmouseover|unmouseup|unreset|unresize|unscroll|unselect|unsubmit|ununload|val|width|wrap)\b</string>
+			<string>\.(addClass|after|append|attr|background|before|bind|blur|change|css|dblclick|domManip|each|empty|end|error|extend|fadeIn|fadeOut|fadeTo|float|focus|get|height|hide|hover|href|html|init|keydown|keypress|keyup|left|length|load|mousedown|mouseenter|mouseleave|mousemove|mouseout|mouseover|mouseup|offset|one|overflow|position|prepend|pushStack|ready|removeClass|reset|resize|scroll|select|serialize|serializeArray|show|size|slideDown|slideUp|src|submit|text|toggle|toggleClass|top|trigger|triggerHandler|unbind|val|width|wrap)\b</string>
 			<key>name</key>
 			<string>support.function.js.jquery</string>
 		</dict>

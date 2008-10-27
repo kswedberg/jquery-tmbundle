@@ -10,7 +10,7 @@
 require 'rexml/document'
 require 'tempfile'
 include REXML
-file = File.open ENV['TM_BUNDLE_SUPPORT'] + '/jquery-docs-xml.xml'
+file = File.open ENV['TM_BUNDLE_SUPPORT'] + '/jquery-docs-xml-126.xml'
 
 doc = Document.new(file)
 root = doc.root
