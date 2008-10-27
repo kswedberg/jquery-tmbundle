@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.wrap('${1:&lt;div class="extra-wrapper"&gt;&lt;/div&gt;}')$0</string>
+	<string>.wrapInner('${1:&lt;div class="extra-wrapper"&gt;&lt;/div&gt;}')$0</string>
 	<key>name</key>
-	<string>wrap</string>
+	<string>wrapInner</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
 	<string>.wrap</string>
 	<key>uuid</key>
-	<string>DC55B23C-6CAF-4770-8CAF-3D9A63D4FB5B</string>
+	<string>8FA889A5-84F4-4020-B459-9872D82716AD</string>
 </dict>
 </plist>
