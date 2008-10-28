@@ -1,3 +1,7 @@
 h1. jQuery Bundle for TextMate
 
 This is a TextMate bundle to help with jQuery functions.
+
+For installation instructions see the "wiki page":http://github.com/kswedberg/jquery-tmbundle/wikis/home
+
+You can "report a bug or request a feature here":http://github.com/kswedberg/jquery-tmbundle/wikis/reports-requests
