@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.css('${1:property}'${2/(.+)/(?1:, :)/}${2/(^[0-9]+$)|.+/(?1::')/}${2:value}${2/(^[0-9]+$)|.+/(?1::')/})$0</string>
+	<string>.slice(${1:start}${2/(.+)/(?1:, :)/}${2:end})$0</string>
 	<key>name</key>
-	<string>css</string>
+	<string>slice</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.css</string>
+	<string>.slice</string>
 	<key>uuid</key>
-	<string>55BFEE67-1062-48BD-86BB-9AAB92DECD75</string>
+	<string>4BDF4129-8CB5-4361-AD71-A0ABDDB4D5A5</string>
 </dict>
 </plist>

@@ -3,14 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.css('${1:property}'${2/(.+)/(?1:, :)/}${2/(^[0-9]+$)|.+/(?1::')/}${2:value}${2/(^[0-9]+$)|.+/(?1::')/})$0</string>
+	<string>\$.map(${1:array}, function(${2:item}${3:, ${4:index}}) {
+  ${5:return ${6:something};}
+});</string>
 	<key>name</key>
-	<string>css</string>
+	<string>$.map</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.css</string>
+	<string>$.map</string>
 	<key>uuid</key>
-	<string>55BFEE67-1062-48BD-86BB-9AAB92DECD75</string>
+	<string>BB9B591F-761E-4853-8A64-F4F4A157B8CD</string>
 </dict>
 </plist>
