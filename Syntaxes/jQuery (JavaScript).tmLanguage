@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>comment</key>
-	<string>jQuery Javascript Framework. By Jonathan Chaffer &amp; Karl Swedberg.</string>
+	<string>jQuery Javascript Library. TextMate bundle by Jonathan Chaffer &amp; Karl Swedberg. Dual licensed under MIT (http://www.opensource.org/licenses/mit-license.php) and GPL (http://www.gnu.org/licenses/gpl.html) licenses.</string>
 	<key>foldingStartMarker</key>
 	<string>(^.*{[^}]*$|^.*\([^\)]*$|^.*/\*(?!.*\*/).*$)</string>
 	<key>foldingStopMarker</key>
