@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.val(${1/(.+)/(?1:':)/}${1:text}${1/(.+)/(?1:':)/})$0</string>
+	<string>.data('${1:data}'${2/(.+)/(?1:, :)/}${2/(^[0-9]+$)|.+/(?1::')/}${2:value}${2/(^[0-9]+$)|.+/(?1::')/})$0</string>
 	<key>name</key>
 	<string>data</string>
 	<key>scope</key>
