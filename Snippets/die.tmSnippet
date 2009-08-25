@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.die('${1:event name}')$0</string>
+	<string>.die('${1:click/dblclick/mousedown/mouseup/mousemove/mouseover/mouseout/keydown/keypress/keyup}')$0</string>
 	<key>name</key>
 	<string>die</string>
 	<key>scope</key>
