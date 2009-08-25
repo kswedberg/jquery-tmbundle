@@ -4,7 +4,7 @@
 <dict>
 	<key>content</key>
 	<string>\$.ajax({
-  url: '${1:mydomain.com/url}',
+  url: '${1:/url}',
   type: '${2:POST}',
 ${3/(.+)/(?1:  dataType\: ':)/}${3:xml/html/script/json}${3/(.+)/(?1:',
 :)/}${4/(.+)/(?1:  data\: $.param\( $\(':)/}${4:Element or Expression}${4/(.+)/(?1:'\) \),
