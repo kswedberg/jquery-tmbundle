@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$.unique(${1:DOMelementArray});
+	<string>\$.inArray(${1:value}, ${2:array});
 $0</string>
 	<key>name</key>
-	<string>$.unique</string>
+	<string>$.inArray</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>$.unique</string>
+	<string>$.inArray</string>
 	<key>uuid</key>
-	<string>735C92F0-245C-439D-A1E5-221EBBA7E264</string>
+	<string>0BCBEC09-C3D0-4484-9B0C-BBC472B57E90</string>
 </dict>
 </plist>

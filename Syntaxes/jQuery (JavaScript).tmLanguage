@@ -114,7 +114,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\b(add|ancestors|appendTo|children|filter|find|insertAfter|insertBefore|next|not|parent|parents|prependTo|prev|remove|siblings)\s*(\()</string>
+			<string>\b(andSelf|add|appendTo|children|filter|find|insertAfter|insertBefore|next|not|parent|parents|prependTo|prev|remove|siblings)\s*(\()</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -212,7 +212,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\.(addClass|after|append|attr|background|before|bind|blur|change|css|dblclick|domManip|each|empty|end|error|extend|fadeIn|fadeOut|fadeTo|float|focus|get|height|hide|hover|href|html|init|keydown|keypress|keyup|left|length|live|load|mousedown|mouseenter|mouseleave|mousemove|mouseout|mouseover|mouseup|offset|one|overflow|position|prepend|pushStack|ready|removeClass|reset|resize|scroll|select|serialize|serializeArray|show|size|slideDown|slideUp|src|submit|text|toggle|toggleClass|top|trigger|triggerHandler|unbind|val|width|wrap|wrapAll|wrapInner)\b</string>
+			<string>\.(addClass|after|animate|append|attr|background|before|bind|blur|change|css|die|dblclick|domManip|each|empty|end|error|extend|fadeIn|fadeOut|fadeTo|float|focus|get|height|hide|hover|href|html|init|keydown|keypress|keyup|left|length|live|load|mousedown|mouseenter|mouseleave|mousemove|mouseout|mouseover|mouseup|offset|one|overflow|position|prepend|pushStack|ready|removeClass|reset|resize|scroll|select|serialize|serializeArray|show|size|slideDown|slideUp|src|submit|text|toggle|toggleClass|top|trigger|triggerHandler|unbind|val|width|wrap|wrapAll|wrapInner)\b</string>
 			<key>name</key>
 			<string>support.function.js.jquery</string>
 		</dict>
