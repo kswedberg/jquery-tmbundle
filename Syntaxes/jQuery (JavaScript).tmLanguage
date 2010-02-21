@@ -5,7 +5,7 @@
 	<key>comment</key>
 	<string>jQuery Javascript Library. TextMate bundle by Jonathan Chaffer &amp; Karl Swedberg. Dual licensed under MIT (http://www.opensource.org/licenses/mit-license.php) and GPL (http://www.gnu.org/licenses/gpl.html) licenses.</string>
 	<key>foldingStartMarker</key>
-	<string>(^.*{[^}]*$|^.*\([^\)]*$|^.*/\*(?!.*\*/).*$)</string>
+	<string>(^.*\{[^}]*$|^.*\([^\)]*$|^.*/\*(?!.*\*/).*$)</string>
 	<key>foldingStopMarker</key>
 	<string>(^\s*\}|^\s*\)|^(?!.*/\*).*\*/)</string>
 	<key>keyEquivalent</key>
@@ -16,7 +16,7 @@
 	<array>
 		<dict>
 			<key>begin</key>
-			<string>(\$)(\()</string>
+			<string>(\$|jQuery)(\()</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -212,7 +212,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\.(addClass|after|animate|append|attr|background|before|bind|blur|change|css|die|dblclick|domManip|each|empty|end|error|extend|fadeIn|fadeOut|fadeTo|float|focus|get|height|hide|hover|href|html|init|keydown|keypress|keyup|left|length|live|load|mousedown|mouseenter|mouseleave|mousemove|mouseout|mouseover|mouseup|offset|one|overflow|position|prepend|pushStack|ready|removeClass|reset|resize|scroll|select|serialize|serializeArray|show|size|slideDown|slideUp|src|submit|text|toggle|toggleClass|top|trigger|triggerHandler|unbind|val|width|wrap|wrapAll|wrapInner)\b</string>
+			<string>\.(addClass|after|animate|append|attr|background|before|bind|blur|change|css|delegate|detach|die|dblclick|domManip|each|empty|end|error|extend|fadeIn|fadeOut|fadeTo|float|focus|get|height|hide|hover|href|html|init|keydown|keypress|keyup|left|length|live|load|mousedown|mouseenter|mouseleave|mousemove|mouseout|mouseover|mouseup|offset|one|overflow|position|prepend|pushStack|ready|removeClass|reset|resize|scroll|select|serialize|serializeArray|show|size|slideDown|slideUp|src|submit|text|toggle|toggleClass|top|trigger|triggerHandler|unbind|undelegate|val|width|wrap|wrapAll|wrapInner)\b</string>
 			<key>name</key>
 			<string>support.function.js.jquery</string>
 		</dict>

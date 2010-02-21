@@ -10,20 +10,20 @@
 require 'rexml/document'
 require 'tempfile'
 include REXML
-file = File.open ENV['TM_BUNDLE_SUPPORT'] + '/jquery-docs-xml-126.xml'
+file = File.open ENV['TM_BUNDLE_SUPPORT'] + '/jquery-docs-xml-142.xml'
 
 doc = Document.new(file)
 root = doc.root
 name = ENV['TM_CURRENT_WORD']
-methods = ''
-root.elements.each("method[@name='#{name}']") { |e| methods += e.to_s }
+entries = ''
+root.elements.each("//entry[@name='#{name}']") { |e| entries += e.to_s }
 
-stylefile = ENV['TM_BUNDLE_SUPPORT'] + '/docs.xsl'
+stylefile = ENV['TM_BUNDLE_SUPPORT'] + '/docs-142.xsl'
 
 tf = Tempfile.new('docs')
 tf.puts('&lt;?xml version="1.0" encoding="UTF-8"?&gt;' + "\n")
 tf.puts('&lt;docs&gt;' + "\n")
-tf.puts methods
+tf.puts entries
 tf.puts('&lt;/docs&gt;' + "\n")
 tf.close
 xmlfile = tf.path
