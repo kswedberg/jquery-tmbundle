@@ -158,7 +158,7 @@ background: #fafafa;
 border-right: 1px solid #aaa;
 border-left: 1px solid #aaa;
 border-bottom: 1px solid #aaa;
-margin: -26px 0 0 0;
+margin: 1em 0 0 0;
 }
 #jq-primaryContent fieldset.toc legend{
 font-size:1.4em;
@@ -302,11 +302,7 @@ font-weight: normal;
 .api-jquery-com #jq-primaryContent #method-list li a.title-link{
   padding: 0px;
 }
-/*
-.api-jquery-com #jq-primaryContent #method-list li a.title-link:hover {
-  background: #ddd;
-}
-*/
+
 .api-jquery-com #jq-primaryContent #method-list li {
   padding: 10px;
   border-bottom: 1px solid #EEEEEE;
@@ -561,6 +557,50 @@ ul.categories{
   <div id="jq-content">
     <div id="jq-primaryContent">
 
+      <xsl:if test="count(//entry) &gt; 1">
+      <fieldset class="toc">
+        <legend>Contents:</legend>
+        <ul class="toc-list">
+        	<xsl:for-each select="//entry">
+        		<xsl:variable name="entry-name" select="@name" />
+        		<li>
+        			<a href="#{concat(@name,position())}">
+      				<xsl:value-of select="@name" /><xsl:if test="@type='method'">(<xsl:if test="signature/argument"><xsl:text> </xsl:text>
+      					<xsl:for-each select="signature[1]/argument">
+      						<xsl:if test="position() &gt; 1">
+      							<xsl:text>, </xsl:text>
+      						</xsl:if>
+      						<xsl:if test="@optional">[<xsl:text>&#160;</xsl:text></xsl:if>
+      	  						<xsl:value-of select="@name" />
+      						<xsl:if test="@optional"><xsl:text>&#160;</xsl:text>]</xsl:if>
+      	  				</xsl:for-each>
+      				<xsl:text>&#160;</xsl:text></xsl:if>)</xsl:if>
+        				<xsl:text> </xsl:text>
+        			</a>
+
+      			<xsl:if test="@type='method'">
+      	  			<ul>
+      	  				<xsl:for-each select="signature">
+      	  					<li>
+      	  							<xsl:if test="not(contains($entry-name, '.')) and $entry-name != 'jQuery'">.</xsl:if><xsl:value-of select="$entry-name" />(<xsl:if test="argument"><xsl:text> </xsl:text>
+      	  								<xsl:for-each select="argument">
+      	  									<xsl:if test="position() &gt; 1">
+      	  										<xsl:text>, </xsl:text>
+      	  									</xsl:if>
+      										<xsl:if test="@optional">[ </xsl:if>
+      	  									<xsl:value-of select="@name" />
+      										<xsl:if test="@optional"> ]</xsl:if>
+      	  								</xsl:for-each><xsl:text> </xsl:text></xsl:if>)
+      	  					</li>
+      	  				</xsl:for-each>
+      	  			</ul>
+      			</xsl:if>
+        		</li>
+        	</xsl:for-each>
+        </ul>
+      </fieldset>
+      </xsl:if>
+
   	<xsl:for-each select="//entry">
     <xsl:variable name="entry-name" select="@name" />
     <xsl:variable name="entry-type" select="@type" />
@@ -601,7 +641,7 @@ ul.categories{
           <xsl:when test="$entry-type='selector'">
             <xsl:if test="./sample">
               <h4 class="name">
-                <span class="versionAdded">version added: <a href="/version/{signature/added}/"><xsl:value-of select="signature/added" /></a></span>
+                <span class="versionAdded">version added: <xsl:value-of select="signature/added" /></span>
                 <xsl:text>jQuery('</xsl:text><xsl:value-of select="sample" /><xsl:text>')</xsl:text>
               </h4>
             </xsl:if>

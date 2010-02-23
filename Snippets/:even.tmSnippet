@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>:even</string>
 	<key>keyEquivalent</key>
-	<string>^~:</string>
+	<string>^:</string>
 	<key>name</key>
 	<string>:even</string>
 	<key>scope</key>

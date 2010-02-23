@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>:gt(${1:n})$0</string>
 	<key>keyEquivalent</key>
-	<string>^~:</string>
+	<string>^:</string>
 	<key>name</key>
 	<string>:gt(n)</string>
 	<key>scope</key>

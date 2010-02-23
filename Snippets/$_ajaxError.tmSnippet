@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.ajaxError(function(${1:request, settings}) {
+	<string>.ajaxError(function(${1:event, xhr, settings, thrownError}) {
   ${2://stuff to do when an AJAX call returns an error};
 });
 $0</string>

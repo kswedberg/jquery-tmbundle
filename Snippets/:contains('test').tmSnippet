@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>:contains('${1:test}')$0</string>
 	<key>keyEquivalent</key>
-	<string>^~:</string>
+	<string>^:</string>
 	<key>name</key>
 	<string>:contains('test')</string>
 	<key>scope</key>

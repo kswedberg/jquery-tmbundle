@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$.browser.${1:safari/opera/msie/mozilla}</string>
+	<string>\$.browser${1/(.+)/(?1:.:)/}${1:webkit/opera/msie/mozilla}${1/(.+)/(?1: :)/}$0</string>
 	<key>name</key>
 	<string>$.browser</string>
 	<key>scope</key>

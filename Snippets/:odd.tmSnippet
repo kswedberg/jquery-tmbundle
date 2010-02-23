@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>:odd</string>
 	<key>keyEquivalent</key>
-	<string>^~:</string>
+	<string>^:</string>
 	<key>name</key>
 	<string>:odd</string>
 	<key>scope</key>

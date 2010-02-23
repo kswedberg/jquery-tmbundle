@@ -32,7 +32,7 @@
 
   </signature>
 <longdesc>
-  <p>Undelegate is a way of removing event handlers that have been bound using <a href="/delegate">.delegate()</a>. It works virtually identically to <a href="/die">.die()</a> with the addition of a selector filter argument (which is required for delegation to work).</p>
+  <p>Undelegate is a way of removing event handlers that have been bound using <a href="http://api.jquery.com/delegate">.delegate()</a>. It works virtually identically to <a href="http://api.jquery.com/die">.die()</a> with the addition of a selector filter argument (which is required for delegation to work).</p>
 </longdesc>
             <example>
                 <desc>Can bind and unbind events to the colored button.</desc>
@@ -115,7 +115,7 @@ $("body").undelegate("p", "click", foo); // ... foo will no longer be called.]]>
   </signature>
 
 <longdesc>
-  <p>Delegate is an alternative to using the <a href="/live">.live()</a> method, allowing for each binding of event delegation to specific DOM elements. For example the following delegate code:</p>
+  <p>Delegate is an alternative to using the <a href="http://api.jquery.com/live">.live()</a> method, allowing for each binding of event delegation to specific DOM elements. For example the following delegate code:</p>
 
 <pre>$("table").delegate("td", "hover", function(){
 	$(this).toggleClass("hover");
@@ -129,7 +129,7 @@ $("body").undelegate("p", "click", foo); // ... foo will no longer be called.]]>
 	});
 });</pre>
 
-<p>See also the <a href="/undelegate">.undelegate()</a> method for a way of removing event handlers added in <a href="/delegate">.delegate()</a>.</p>
+<p>See also the <a href="http://api.jquery.com/undelegate">.undelegate()</a> method for a way of removing event handlers added in <a href="http://api.jquery.com/delegate">.delegate()</a>.</p>
 </longdesc>
   <example>
     <desc>Click a paragraph to add another. Note that .delegate() binds the click event to all paragraphs - even new ones.</desc>
@@ -286,8 +286,8 @@ $("#test").click( jQuery.proxy( obj, "test" ) );
   </signature>
 <longdesc><p>This method is a shortcut for <code>.bind('focusout', handler)</code>.</p>
 
-<p>The <code>focusout</code> event is sent to an element when it, or any element inside of it, loses focus. This is distinct from the <a href="/blur">blur</a> event in that it supports detecting the loss of focus from parent elements (in other words, it supports events bubbling).</p>
-<p>This event will likely be used together with the <a href="/focusin">focusin</a> event.</p></longdesc>
+<p>The <code>focusout</code> event is sent to an element when it, or any element inside of it, loses focus. This is distinct from the <a href="http://api.jquery.com/blur">blur</a> event in that it supports detecting the loss of focus from parent elements (in other words, it supports events bubbling).</p>
+<p>This event will likely be used together with the <a href="http://api.jquery.com/focusin">focusin</a> event.</p></longdesc>
   <example>
   <desc>Watch for a loss of focus to occur within the paragraphs on the page.</desc>
 
@@ -320,9 +320,9 @@ $("p").focusout(function() {
     </argument>
   </signature>
 <longdesc><p>This method is a shortcut for <code>.bind('focusin', handler)</code>.</p>
-<p>The <code>focusin</code> event is sent to an element when it, or any element inside of it, gains focus. This is distinct from the <a href="/focus">focus</a> event in that it supports detecting the focus event on parent elements.</p>
+<p>The <code>focusin</code> event is sent to an element when it, or any element inside of it, gains focus. This is distinct from the <a href="http://api.jquery.com/focus">focus</a> event in that it supports detecting the focus event on parent elements.</p>
 
-<p>This event will likely be used together with the <a href="/focusout">focusout</a> event.</p></longdesc>
+<p>This event will likely be used together with the <a href="http://api.jquery.com/focusout">focusout</a> event.</p></longdesc>
                 <example>
                     <desc>Watch for a focus to occur within the paragraphs on the page.</desc>
                     <css><![CDATA[span {display:none;}]]></css>
@@ -723,7 +723,7 @@ $("div").click(function(event) {
     <signature>
         <added>1.3</added>
     </signature>
-    <desc>  Returns whether <a href="/event.stopPropagation">event.stopPropagation()</a> was ever called on this event object. </desc>
+    <desc>  Returns whether <a href="http://api.jquery.com/event.stopPropagation">event.stopPropagation()</a> was ever called on this event object. </desc>
     <longdesc>    </longdesc>
 
     <example>
@@ -746,8 +746,8 @@ $("div").click(function(event) {
     <desc> This method prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event.   </desc>
     <longdesc>  <p>We can use <code>.isPropagationStopped()</code> to determine if this method has been called by an event handler that was triggered by this event. </p>
 
-    <p>This method works for custom events triggered with <a href="/trigger">trigger()</a>, as well.</p>
-<p>Note that this will not prevent other handlers <em>on the same element</em> from running. Use the method <a href="/event.isPropagationStopped">event.isPropagationStopped()</a> to know whether this method was ever called (on that event object). </p> </longdesc>
+    <p>This method works for custom events triggered with <a href="http://api.jquery.com/trigger">trigger()</a>, as well.</p>
+<p>Note that this will not prevent other handlers <em>on the same element</em> from running. Use the method <a href="http://api.jquery.com/event.isPropagationStopped">event.isPropagationStopped()</a> to know whether this method was ever called (on that event object). </p> </longdesc>
     <example>
         <desc>Kill the bubbling on the click event.</desc>
 
@@ -765,7 +765,7 @@ $("div").click(function(event) {
         <added>1.3</added>
 
     </signature>
-    <desc>Returns whether <a href="/event.preventDefault">event.preventDefault()</a> was ever called on this event object. </desc>
+    <desc>Returns whether <a href="http://api.jquery.com/event.preventDefault">event.preventDefault()</a> was ever called on this event object. </desc>
     <longdesc>   </longdesc>
     <example>
         <desc>Checks whether event.preventDefault() was called.</desc>
@@ -2213,7 +2213,7 @@ $("button").click(function(e) {
 <pre>alert('Size: ' + $('li').size());</pre>
 <p>This will alert the count of items:</p>
 <p><span class="output">Size: 2</span></p>
-<p>The <a href="/length/">.length</a> property is a slightly faster way to get this information.</p>
+<p>The <a href="http://api.jquery.com/length/">.length</a> property is a slightly faster way to get this information.</p>
 </longdesc>
                 <example>
                     <desc>Count the divs. Click to add more.</desc>
@@ -3013,7 +3013,7 @@ jQuery("div > p").hide();]]></results>
                  <signature><added>1.1.4</added> </signature>
 
                 <desc>Selects all elements that are the last child of their parent.</desc>
-                <longdesc><p>While <a href="/last-selector">:last</a> matches only a single element, <code>:last-child</code> can match more than one: one for each parent.</p></longdesc>
+                <longdesc><p>While <a href="http://api.jquery.com/last-selector">:last</a> matches only a single element, <code>:last-child</code> can match more than one: one for each parent.</p></longdesc>
                 <example>
                     <desc>Finds the last span in each matched div and adds some css plus a hover state.</desc>
 
@@ -3052,7 +3052,7 @@ jQuery("div > p").hide();]]></results>
                  <signature><added>1.1.4</added> </signature>
 
                 <desc>Selects all elements that are the first child of their parent.</desc>
-                <longdesc><p>While <a href="/first-selector">:first</a> matches only a single element, the <code>:first-child</code> selector can match more than one: one for each parent. This is equivalent to <code>:nth-child(1)</code>.</p></longdesc>
+                <longdesc><p>While <a href="http://api.jquery.com/first-selector">:first</a> matches only a single element, the <code>:first-child</code> selector can match more than one: one for each parent. This is equivalent to <code>:nth-child(1)</code>.</p></longdesc>
                 <example>
                     <desc>Finds the first span in each matched div to underline and add a hover state.</desc>
 
@@ -3774,7 +3774,7 @@ $("div:contains('John')").css("text-decoration", "underline");]]>
                 <sample>:odd</sample>
                  <signature><added>1.0</added> </signature>
 
-                <desc>Selects odd elements, zero-indexed.  See also <a href="/Selectors/even">even</a>.</desc>
+                <desc>Selects odd elements, zero-indexed.  See also <a href="http://api.jquery.com/Selectors/even">even</a>.</desc>
                 <longdesc><p>In particular, note that the <em>0-based indexing</em> means that, counter-intuitively, <code>:odd</code> selects the second element, fourth element, and so on within the matched set.</p></longdesc>
                 <example>
                     <desc>Finds odd table rows, matching the second, fourth and so on (index 1, 3, 5 etc.).</desc>
@@ -3800,7 +3800,7 @@ $("div:contains('John')").css("text-decoration", "underline");]]>
                 <sample>:even</sample>
                  <signature><added>1.0</added> </signature>
 
-                <desc>Selects even elements, zero-indexed.  See also <a href="/Selectors/odd">odd</a>.</desc>
+                <desc>Selects even elements, zero-indexed.  See also <a href="http://api.jquery.com/Selectors/odd">odd</a>.</desc>
                 <longdesc><p>In particular, note that the <em>0-based indexing</em> means that, counter-intuitively, <code>:even</code> selects the first element, third element, and so on within the matched set.</p></longdesc>
                 <example>
                     <desc>Finds even table rows, matching the first, third and so on (index 0, 2, 4 etc.).</desc>
@@ -4078,7 +4078,7 @@ body { font-size:14px; }
       </signature>
     <desc>Selects the combined results of all the specified selectors.</desc>
 
-    <longdesc><p>You can specify any number of selectors to combine into a single result.  This multiple expression combinator is an efficient way to select disparate elements. The order of the DOM elements in the returned jQuery object may not be identical, as they will be in document order. An alternative to this combinator is the .<a href="/add">add()</a> method.</p></longdesc>
+    <longdesc><p>You can specify any number of selectors to combine into a single result.  This multiple expression combinator is an efficient way to select disparate elements. The order of the DOM elements in the returned jQuery object may not be identical, as they will be in document order. An alternative to this combinator is the .<a href="http://api.jquery.com/add">add()</a> method.</p></longdesc>
     <example>
       <desc>Finds the elements that match any of these three selectors.</desc>
       <code><![CDATA[$("div,span,p.myClass").css("border","3px solid red");]]></code>
@@ -5274,7 +5274,7 @@ $('#target').blur(function() {
 
 <p>Calling <code>$(selector).hover(handlerIn, handlerOut)</code> is shorthand for:</p>
 <pre>$(selector).mouseenter(handlerIn).mouseleave(handlerOut);</pre>
-<p>See the discussions for <code><a href="/mouseenter">.mouseenter()</a></code> and <code><a href="/mouseleave">.mouseleave()</a></code> for more details.</p>
+<p>See the discussions for <code><a href="http://api.jquery.com/mouseenter">.mouseenter()</a></code> and <code><a href="http://api.jquery.com/mouseleave">.mouseleave()</a></code> for more details.</p>
 </longdesc>
 <example>
 
@@ -5344,7 +5344,7 @@ $("li.fade").hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
 <p>Calling <code>$(selector).hover(handlerInOut)</code> is shorthand for:</p>
 
 <pre>$(selector).bind("mouseenter mouseleave",handlerInOut);</pre>
-<p>See the discussions for <code><a href="/mouseenter">.mouseenter()</a></code> and <code><a href="/mouseleave">.mouseleave()</a></code> for more details.</p>
+<p>See the discussions for <code><a href="http://api.jquery.com/mouseenter">.mouseenter()</a></code> and <code><a href="http://api.jquery.com/mouseleave">.mouseleave()</a></code> for more details.</p>
 </longdesc>
   <example>
     <desc>Slide the next sibling LI up or down on hover, and toggle a class.</desc>
@@ -5618,7 +5618,7 @@ padding:0;
   $('#outer').mouseout();
 });</pre>
 <p>After this code executes, clicks on <span class="output">Trigger the handler</span> will also append the message.</p>
-<p>This event type can cause many headaches due to event bubbling. For instance, when the mouse pointer moves out of the <span class="output">Inner</span> element in this example, a <code>mouseout</code> event will be sent to that, then trickle up to <span class="output">Outer</span>. This can trigger the bound <code>mouseout</code> handler at inopportune times. See the discussion for <code>.<a href="/mouseleave">mouseleave</a>()</code> for a useful alternative.</p>
+<p>This event type can cause many headaches due to event bubbling. For instance, when the mouse pointer moves out of the <span class="output">Inner</span> element in this example, a <code>mouseout</code> event will be sent to that, then trickle up to <span class="output">Outer</span>. This can trigger the bound <code>mouseout</code> handler at inopportune times. See the discussion for <code>.<a href="http://api.jquery.com/mouseleave">mouseleave</a>()</code> for a useful alternative.</p>
 
 </longdesc>
                 <example>
@@ -6150,7 +6150,7 @@ It is not possible to cancel the <code>unload</code> event with <code>.preventDe
 <p>As soon as the image has been loaded, the handler is called.</p>
 <p>In general, it is not necessary to wait for all images to be fully loaded. If code can be executed earlier, it is usually best to place it in a handler sent to the <code>.ready()</code> method.
 </p>
-<blockquote><p>The Ajax module also has a method named <code><a href="/load">.load()</a></code>. Which one is fired depends on the set of arguments passed.</p></blockquote>
+<blockquote><p>The Ajax module also has a method named <code><a href="http://api.jquery.com/load">.load()</a></code>. Which one is fired depends on the set of arguments passed.</p></blockquote>
 
 </longdesc>
                 <example>
@@ -6206,7 +6206,7 @@ It is not possible to cancel the <code>unload</code> event with <code>.preventDe
 });</pre>
 <p>If <code>.ready()</code> is called after the DOM has been initialized, the new handler passed in will be executed immediately.</p>
 <h4>Aliasing the jQuery Namespace</h4>
-<p>When using another JavaScript library, we may wish to call <code><a href="/jQuery.noConflict">$.noConflict()</a></code> to avoid namespace difficulties. When this function is called, the <code>$</code> shortcut is no longer available, forcing us to write <code>jQuery</code> each time we would normally write <code>$</code>. However, the handler passed to the <code>.ready()</code> method can take an argument, which is passed the global <code>jQuery</code> object. This means we can rename the object within the context of our <code>.ready()</code> handler without affecting other code:</p>
+<p>When using another JavaScript library, we may wish to call <code><a href="http://api.jquery.com/jQuery.noConflict">$.noConflict()</a></code> to avoid namespace difficulties. When this function is called, the <code>$</code> shortcut is no longer available, forcing us to write <code>jQuery</code> each time we would normally write <code>$</code>. However, the handler passed to the <code>.ready()</code> method can take an argument, which is passed the global <code>jQuery</code> object. This means we can rename the object within the context of our <code>.ready()</code> handler without affecting other code:</p>
 
 <pre>jQuery(document).ready(function($) {
   // Code using $ as usual goes here.
@@ -6497,10 +6497,10 @@ if (jQuery.browser.msie) {
     <li>If a matching element is found, the original handler is called on it.</li>
   </ol>
   <p>Because the test in step 5 is not performed until the event occurs, elements can be added at any time and still respond to events.</p>
-  <p>See the discussion for <code><a href="/bind">.bind()</a></code> for more information on event binding.</p>
+  <p>See the discussion for <code><a href="http://api.jquery.com/bind">.bind()</a></code> for more information on event binding.</p>
   <h4 id="multiple-events">Multiple Events</h4>
 
-  <p>As of jQuery 1.4.1 <code>.live()</code> can accept multiple, space-separated events, similar to the functionality provided in <a href="/bind">.bind()</a>. For example, we can "live bind" the <code>mouseover</code> and <code>mouseout</code> events at the same time like so: </p>
+  <p>As of jQuery 1.4.1 <code>.live()</code> can accept multiple, space-separated events, similar to the functionality provided in <a href="http://api.jquery.com/bind">.bind()</a>. For example, we can "live bind" the <code>mouseover</code> and <code>mouseout</code> events at the same time like so: </p>
 <pre>$('.hoverme').live('mouseover mouseout', function(event) {
   if (event.type == 'mouseover') {
     // do something on mouseover
@@ -6510,7 +6510,7 @@ if (jQuery.browser.msie) {
 });</pre>
   <h4 id="event-data">Event Data</h4>
 
-  <p>As of jQuery 1.4, the optional <code>eventData</code> parameter allows us to pass additional information to the handler. One handy use of this parameter is to work around issues caused by closures. See the <code>.bind()</code> method's "<a href="/bind/#passing-event-data">Passing Event Data</a>" discussion for more information.</p>
+  <p>As of jQuery 1.4, the optional <code>eventData</code> parameter allows us to pass additional information to the handler. One handy use of this parameter is to work around issues caused by closures. See the <code>.bind()</code> method's "<a href="http://api.jquery.com/bind/#passing-event-data">Passing Event Data</a>" discussion for more information.</p>
   <h4 id="event-context">Event Context</h4>
   <p>As of jQuery 1.4, live events can be bound to a DOM element "context" rather than to the default document root. To set this context, we use the <a href="http://api.jquery.com/jquery/#selector-context"><code>jQuery()</code> function's second argument</a>, passing in a single DOM element (as opposed to a jQuery collection or a selector).</p>
 
@@ -6620,7 +6620,7 @@ if (jQuery.browser.msie) {
     <li>Events created with <code>.triggerHandler()</code> do not bubble up the DOM hierarchy; if they are not handled by the target element directly, they do nothing.</li>
     <li>Instead of returning the jQuery object (to allow chaining), <code>.triggerHandler()</code> returns whatever value was returned by the last handler it caused to be executed. If no handlers are triggered, it returns <code>undefined</code></li>
     </ul>
-    <p>For more information on this method, see the discussion for <code><a href="/trigger">.trigger()</a></code>.</p>
+    <p>For more information on this method, see the discussion for <code><a href="http://api.jquery.com/trigger">.trigger()</a></code>.</p>
 
   </longdesc>
   <example>
@@ -6675,7 +6675,7 @@ $("<span>Focused!</span>").appendTo("body").fadeOut(1000);
 $('#foo').trigger('custom', ['Custom', 'Event']);
 </pre>
     <p>The event object is always passed as the first parameter to an event handler, but if additional parameters are specified during a <code>.trigger()</code> call as they are here, these parameters will be passed along to the handler as well.</p>
-    <p>Note the difference between the extra parameters we're passing here and the <code>eventData</code> parameter to the <a href="/bind/">.bind()</a> method. Both are mechanisms for passing information to an event handler, but the <code>extraParameters</code> argument to <code>.trigger()</code> allows information to be determined at the time the event is triggered, while the <code>eventData</code> argument to <code>.bind()</code> requires the information to be already computed at the time the handler is bound.</p>
+    <p>Note the difference between the extra parameters we're passing here and the <code>eventData</code> parameter to the <a href="http://api.jquery.com/bind/">.bind()</a> method. Both are mechanisms for passing information to an event handler, but the <code>extraParameters</code> argument to <code>.trigger()</code> allows information to be determined at the time the event is triggered, while the <code>eventData</code> argument to <code>.bind()</code> requires the information to be already computed at the time the handler is bound.</p>
 
   </longdesc>
    <example>
@@ -7469,7 +7469,7 @@ $("p").unbind("click", foo); // ... foo will no longer be called.]]></code>
 <desc>Attach a handler to an event for the elements.</desc>
 <longdesc><p>The <code>.bind()</code> method is the primary means of attaching behavior to a document. All JavaScript event types, such as <code>focus</code>, <code>mouseover</code>, and <code>resize</code>, are allowed for <code>eventType.</code></p>
 
-<p>The jQuery library provides shortcut methods for binding the standard event types, such as <code>.click()</code> for <code>.bind('click')</code>. A description of each can be found in the discussion of its shortcut method: <a href="/blur">blur</a>, <a href="/focus">focus</a>, <a href="/focusin">focusin</a>, <a href="/focusout">focusout</a>, <a href="/load">load</a>, <a href="/resize">resize</a>, <a href="/scroll">scroll</a>, <a href="/unload">unload</a>, <a href="/click">click</a>, <a href="/dblclick">dblclick</a>, <a href="/mousedown">mousedown</a>, <a href="/mouseup">mouseup</a>, <a href="/mousemove">mousemove</a>, <a href="/mouseover">mouseover</a>, <a href="/mouseout">mouseout</a>, <a href="/mouseenter">mouseenter</a>, <a href="/mouseleave">mouseleave</a>, <a href="/change">change</a>, <a href="/select">select</a>, <a href="/submit">submit</a>, <a href="/keydown">keydown</a>, <a href="/keypress">keypress</a>, <a href="/keyup">keyup</a>,  <a href="/error">error</a></p>
+<p>The jQuery library provides shortcut methods for binding the standard event types, such as <code>.click()</code> for <code>.bind('click')</code>. A description of each can be found in the discussion of its shortcut method: <a href="http://api.jquery.com/blur">blur</a>, <a href="http://api.jquery.com/focus">focus</a>, <a href="http://api.jquery.com/focusin">focusin</a>, <a href="http://api.jquery.com/focusout">focusout</a>, <a href="http://api.jquery.com/load">load</a>, <a href="http://api.jquery.com/resize">resize</a>, <a href="http://api.jquery.com/scroll">scroll</a>, <a href="http://api.jquery.com/unload">unload</a>, <a href="http://api.jquery.com/click">click</a>, <a href="http://api.jquery.com/dblclick">dblclick</a>, <a href="http://api.jquery.com/mousedown">mousedown</a>, <a href="http://api.jquery.com/mouseup">mouseup</a>, <a href="http://api.jquery.com/mousemove">mousemove</a>, <a href="http://api.jquery.com/mouseover">mouseover</a>, <a href="http://api.jquery.com/mouseout">mouseout</a>, <a href="http://api.jquery.com/mouseenter">mouseenter</a>, <a href="http://api.jquery.com/mouseleave">mouseleave</a>, <a href="http://api.jquery.com/change">change</a>, <a href="http://api.jquery.com/select">select</a>, <a href="http://api.jquery.com/submit">submit</a>, <a href="http://api.jquery.com/keydown">keydown</a>, <a href="http://api.jquery.com/keypress">keypress</a>, <a href="http://api.jquery.com/keyup">keyup</a>,  <a href="http://api.jquery.com/error">error</a></p>
 
 <p>Any string is legal for <code>eventType</code>; if the string is not the name of a native JavaScript event, then the handler is bound to a custom event. These events are never called by the browser, but may be triggered manually from other JavaScript code using <code>.trigger()</code> or <code>.triggerHandler()</code>.</p>
 <p>If the <code>eventType</code> string contains a period (<code>.</code>) character, then the event is namespaced. The period character separates the event from its namespace. For example, in the call <code>.bind('click.name', handler)</code>, the string <code>click</code> is the event type, and the string <code>name</code> is the namespace. Namespacing allows us to unbind or trigger some events of a type without affecting others. See the discussion of <code>.unbind()</code> for more information.</p>
@@ -7513,9 +7513,9 @@ $('#foo').bind({
 <p>After this code is executed, when the user clicks inside the element with an ID of <code>foo</code>, its text contents will be shown as an alert.
 </p>
 
-<h4 id="event-object"><a href="/category/events/event-object/">The Event object</a></h4>
+<h4 id="event-object"><a href="http://api.jquery.com/category/events/event-object/">The Event object</a></h4>
 <p>The <code>handler</code> callback function can also take parameters. When the function is called, the JavaScript event object will be passed to the first parameter.</p>
-<p>The event object is often unnecessary and the parameter omitted, as sufficient context is usually available when the handler is bound to know exactly what needs to be done when the handler is triggered. However, at times it becomes necessary to gather more information about the user's environment at the time the event was initiated. <a href="/category/events/event-object/">View the full Event Object</a>.</p>
+<p>The event object is often unnecessary and the parameter omitted, as sufficient context is usually available when the handler is bound to know exactly what needs to be done when the handler is triggered. However, at times it becomes necessary to gather more information about the user's environment at the time the event was initiated. <a href="http://api.jquery.com/category/events/event-object/">View the full Event Object</a>.</p>
 
 <p>Returning <code>false</code> from a handler is equivalent to calling both <code>.preventDefault()</code> and <code>.stopPropagation()</code> on the event object.</p>
 <p>Using the event object in a handler looks like this:</p>
@@ -7968,7 +7968,7 @@ $('div.foo').click(function() {
 $('&lt;input&gt;');
 </pre>
 
-<p>As of jQuery 1.4, we can pass a map of properties to the second argument. This argument accepts a superset of properties that can be passed to the <a href="/attr">.attr()</a> method. Furthermore, any <a href="/category/events/">event type</a> can be passed in, and the following jQuery methods can be called: <a href="/val">val</a>, <a href="/css">css</a>, <a href="/html">html</a>, <a href="/text">text</a>, <a href="/data">data</a>, <a href="/width">width</a>, <a href="/height">height</a>, or <a href="/offset">offset</a>.</p>
+<p>As of jQuery 1.4, we can pass a map of properties to the second argument. This argument accepts a superset of properties that can be passed to the <a href="http://api.jquery.com/attr">.attr()</a> method. Furthermore, any <a href="http://api.jquery.com/category/events/">event type</a> can be passed in, and the following jQuery methods can be called: <a href="http://api.jquery.com/val">val</a>, <a href="http://api.jquery.com/css">css</a>, <a href="http://api.jquery.com/html">html</a>, <a href="http://api.jquery.com/text">text</a>, <a href="http://api.jquery.com/data">data</a>, <a href="http://api.jquery.com/width">width</a>, <a href="http://api.jquery.com/height">height</a>, or <a href="http://api.jquery.com/offset">offset</a>.</p>
 
     </longdesc>
     <example>
@@ -9405,7 +9405,7 @@ div { background:blue; }
 });
 </pre>
 		<p>This example fetches the requested HTML snippet and inserts it on the page.</p>
-		<p>Pages fetched with <code>POST</code> are never cached, so the <code>cache</code> and <code>ifModified</code> options in <code><a href="/jQuery.ajaxSetup">jQuery.ajaxSetup()</a></code> have no effect on these requests.</p></longdesc>
+		<p>Pages fetched with <code>POST</code> are never cached, so the <code>cache</code> and <code>ifModified</code> options in <code><a href="http://api.jquery.com/jQuery.ajaxSetup">jQuery.ajaxSetup()</a></code> have no effect on these requests.</p></longdesc>
 
                 <example>
                     <desc>Request the test.php page, but ignore the return results.</desc>
@@ -10133,7 +10133,7 @@ $.each(close, function(i){
 
   <p>Using this structure, the example inserts the first string and second number from the file onto the page.</p>
   <p>If there is a syntax error in the JSON file, the request will usually fail silently. Avoid frequent hand-editing of JSON data for this reason.</p>
-  <p>If the specified URL is on a remote server, the request is treated as JSONP instead. See the discussion of the <code>jsonp</code> data type in <code><a href="/jQuery.ajax">$.ajax()</a></code> for more details.</p></longdesc>
+  <p>If the specified URL is on a remote server, the request is treated as JSONP instead. See the discussion of the <code>jsonp</code> data type in <code><a href="http://api.jquery.com/jQuery.ajax">$.ajax()</a></code> for more details.</p></longdesc>
   <example>
 
     <desc>Loads the four most recent cat pictures from the Flickr JSONP API.</desc>
@@ -10340,7 +10340,7 @@ alert("The last 25 entries in the feed have been loaded");
   <signature>
     <added>1.0</added>
     <argument name="settings" type="Map">
-      <desc>A set of key/value pairs that configure the Ajax request. All options are optional. A default can be set for any option with <a href="/jQuery.ajaxSetup">$.ajaxSetup()</a>.</desc>
+      <desc>A set of key/value pairs that configure the Ajax request. All options are optional. A default can be set for any option with <a href="http://api.jquery.com/jQuery.ajaxSetup">$.ajaxSetup()</a>.</desc>
     </argument>
 
     <option default="true" name="async" type="Boolean">
@@ -10420,7 +10420,7 @@ alert("The last 25 entries in the feed have been loaded");
         <desc>Set a local timeout (in milliseconds) for the request. This will override the global timeout, if one is set via <a href='/jQuery.ajaxSetup'>$.ajaxSetup</a>. For example, you could use this property to give a single request a longer timeout than all other requests that you've set to time out in one second. See <a href='/jQuery.ajaxSetup'>$.ajaxSetup</a>() for global timeouts.</desc>
       </option>
       <option name="traditional" type="Boolean">
-        <desc>Set this to true if you wish to use the traditional style of <a href="/jQuery.param">param serialization</a>.</desc>
+        <desc>Set this to true if you wish to use the traditional style of <a href="http://api.jquery.com/jQuery.param">param serialization</a>.</desc>
 
       </option>
       <option default="'GET'" name="type" type="String">
@@ -10439,12 +10439,12 @@ alert("The last 25 entries in the feed have been loaded");
     </signature>
 
     <desc>Perform an asynchronous HTTP (Ajax) request.</desc>
-    <longdesc><p>The <code>$.ajax()</code> function underlies all Ajax requests sent by jQuery.  It is often unnecessary to directly call this function, as several higher-level alternatives like <code><a href="/jQuery.get">$.get()</a></code> and <code><a href="/load">.load()</a></code> are available and are easier to use. If less common options are required, though, <code>$.ajax()</code> can be used more flexibly.</p>
+    <longdesc><p>The <code>$.ajax()</code> function underlies all Ajax requests sent by jQuery.  It is often unnecessary to directly call this function, as several higher-level alternatives like <code><a href="http://api.jquery.com/jQuery.get">$.get()</a></code> and <code><a href="http://api.jquery.com/load">.load()</a></code> are available and are easier to use. If less common options are required, though, <code>$.ajax()</code> can be used more flexibly.</p>
 
       <p>At its simplest, the <code>$.ajax()</code> function can be called with no arguments:</p>
       <pre>$.ajax();</pre>
 
-      <p><strong>Note:</strong> Default settings can be set globally by using the <code><a href="/jQuery.ajaxSetup">$.ajaxSetup()</a></code> function.</p>
+      <p><strong>Note:</strong> Default settings can be set globally by using the <code><a href="http://api.jquery.com/jQuery.ajaxSetup">$.ajaxSetup()</a></code> function.</p>
 
       <p>This example, using no options, loads the contents of the current page, but does nothing with the result. To use the result, we can implement one of the callback functions.</p>
 
@@ -10469,7 +10469,7 @@ alert("The last 25 entries in the feed have been loaded");
   }
 });</pre>
 
-	    <p>Such a simple example would generally be better served by using <code><a href="/load">.load()</a></code> or <code><a href="/jQuery.get">$.get()</a></code>.</p>
+	    <p>Such a simple example would generally be better served by using <code><a href="http://api.jquery.com/load">.load()</a></code> or <code><a href="http://api.jquery.com/jQuery.get">$.get()</a></code>.</p>
 				
       <h4 id="data-types">Data Types</h4>
       <p>The <code>$.ajax()</code> function relies on the server to provide information about the retrieved data. If the server reports the return data as XML, the result can be traversed using normal XML methods or jQuery's selectors. If another type is detected, such as HTML in the example above, the data is treated as text.</p>
@@ -10493,10 +10493,10 @@ alert("The last 25 entries in the feed have been loaded");
 
 				
 					<h4 id="advanced-options">Advanced Options</h4>
-					<p>The <code>global</code> option prevents handlers registered using <code><a href="/ajaxSend">.ajaxSend()</a></code>, <code><a href="/ajaxError">.ajaxError()</a></code>, and similar methods from firing when this request would trigger them. This can be useful to, for example, suppress a loading indicator that was implemented with <code><a href="/jQuery.ajaxSend">.ajaxSend()</a></code> if the requests are frequent and brief. See the descriptions of these methods below for more details.</p>
+					<p>The <code>global</code> option prevents handlers registered using <code><a href="http://api.jquery.com/ajaxSend">.ajaxSend()</a></code>, <code><a href="http://api.jquery.com/ajaxError">.ajaxError()</a></code>, and similar methods from firing when this request would trigger them. This can be useful to, for example, suppress a loading indicator that was implemented with <code><a href="http://api.jquery.com/jQuery.ajaxSend">.ajaxSend()</a></code> if the requests are frequent and brief. See the descriptions of these methods below for more details.</p>
 					<p>If the server performs HTTP authentication before providing a response, the user name and password pair can be sent via the <code>username</code> and <code>password</code> options.</p>
 
-					<p>Ajax requests are time-limited, so errors can be caught and handled to provide a better user experience. Request timeouts are usually either left at their default or set as a global default using <code><a href="/jQuery.ajaxSetup">$.ajaxSetup()</a></code> rather than being overridden for specific requests with the <code>timeout</code> option.</p>
+					<p>Ajax requests are time-limited, so errors can be caught and handled to provide a better user experience. Request timeouts are usually either left at their default or set as a global default using <code><a href="http://api.jquery.com/jQuery.ajaxSetup">$.ajaxSetup()</a></code> rather than being overridden for specific requests with the <code>timeout</code> option.</p>
 					<p>By default, requests are always issued, but the browser may serve results out of its cache. To disallow use of the cached results, set <code>cache</code> to <code>false</code>. To cause the request to report failure if the asset has not been modified since the last request, set <code>ifModified</code> to <code>true</code>.</p>
 
 					<p>The <code>scriptCharset</code> allows the character set to be explicitly specified for requests that use a <code>&lt;script&gt;</code> tag (that is, a type of <code>script</code> or <code>jsonp</code>). This is useful if the script and host page have differing character sets.</p>
@@ -11338,7 +11338,7 @@ $("p:last").text( "innerHeight:" + p.innerHeight() );]]></code>
   <desc>Create a serialized representation of an array or object, suitable for use in a URL query string or Ajax request. </desc>
 
   <longdesc>
-    <p>This function is used internally to convert form element values into a serialized string representation (See <a href="/serialize/">.serialize()</a> for more information).</p>
+    <p>This function is used internally to convert form element values into a serialized string representation (See <a href="http://api.jquery.com/serialize/">.serialize()</a> for more information).</p>
     <p>As of jQuery 1.3, the return value of a function is used instead of the function as a String.</p>
 
     <p>As of jQuery 1.4, the <code>$.param()</code> method serializes deep objects recursively to accommodate modern scripting languages and frameworks such as PHP and Ruby on Rails. You can disable this functionality globally by setting <code>jQuery.ajaxSettings.traditional = true;</code>.</p>
@@ -12479,7 +12479,7 @@ empty == { validate: true, limit: 5, name: "bar" }]]></results>
 
   <longdesc> 
 
-    <p>The <code>$.each()</code> function is not the same as <a href="/each/">.each()</a>, which is used to iterate, exclusively, over a jQuery object. The <code>$.each()</code> function can be used to iterate over any collection, whether it is a map (JavaScript object) or an array. In the case of an array, the callback is passed an array index and a corresponding array value each time.</p>
+    <p>The <code>$.each()</code> function is not the same as <a href="http://api.jquery.com/each/">.each()</a>, which is used to iterate, exclusively, over a jQuery object. The <code>$.each()</code> function can be used to iterate over any collection, whether it is a map (JavaScript object) or an array. In the case of an array, the callback is passed an array index and a corresponding array value each time.</p>
 
 <pre>$.each([52, 97], function(index, value) { 
   alert(index + ': ' + value); 
@@ -12553,7 +12553,7 @@ $.each(map, function(key, value) {
 </entry>             <entry type='property' name="jQuery.boxModel" return="Boolean">
 
                 <signature><added>1.0</added></signature>
-                <desc><strong>Deprecated in jQuery 1.3 (see <a href="/jQuery.support">jQuery.support</a>)</strong>. States if the current page, in the user's browser, is being rendered using the <a href="http://www.w3.org/TR/REC-CSS2/box.html">W3C CSS Box Model</a>.</desc>
+                <desc><strong>Deprecated in jQuery 1.3 (see <a href="http://api.jquery.com/jQuery.support">jQuery.support</a>)</strong>. States if the current page, in the user's browser, is being rendered using the <a href="http://www.w3.org/TR/REC-CSS2/box.html">W3C CSS Box Model</a>.</desc>
                 <longdesc></longdesc>
                 <example>
                     <desc>Returns the box model for the iframe.</desc>
@@ -14383,7 +14383,7 @@ $('input:radio[name=bar]:checked').val(); // get the value from a set of radio b
         <code>Demonstration Box list item 1 list item 2</code>
 
       </p>
-      <p>The <code>.text()</code> method cannot be used on input elements.  For input field text, use the <a href="/val">.val()</a> method.</p>
+      <p>The <code>.text()</code> method cannot be used on input elements.  For input field text, use the <a href="http://api.jquery.com/val">.val()</a> method.</p>
       <p>As of jQuery 1.4, the <code>.text()</code> method returns the value of text and CDATA nodes as well as element nodes.</p>
 
     </longdesc>
@@ -14444,7 +14444,7 @@ $('input:radio[name=bar]:checked').val(); // get the value from a set of radio b
 &lt;/div&gt;</pre>
 	<p>It will appear on a rendered page as though the tags were exposed, like this:</p>
 	<pre>&lt;p&gt;This is a test&lt;/p&gt;</pre>
-	<p>The <code>.text()</code> method cannot be used on input elements.  For input field text, use the <a href="/val">.val()</a> method.</p>
+	<p>The <code>.text()</code> method cannot be used on input elements.  For input field text, use the <a href="http://api.jquery.com/val">.val()</a> method.</p>
 
   <p>As of jQuery 1.4, the <code>.text()</code> method allows us to set the text content by passing in a function.</p>
 <pre>$('ul li').text(function(index) {

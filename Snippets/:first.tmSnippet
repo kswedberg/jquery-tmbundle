@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>:first</string>
 	<key>keyEquivalent</key>
-	<string>^~:</string>
+	<string>^:</string>
 	<key>name</key>
 	<string>:first</string>
 	<key>scope</key>

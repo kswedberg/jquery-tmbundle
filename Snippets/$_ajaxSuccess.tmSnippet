@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.ajaxSuccess(function() {
+	<string>.ajaxSuccess(function(event, xhr, settings) {
 	${1:// executes whenever an AJAX request completes successfully}
 });$0</string>
 	<key>name</key>

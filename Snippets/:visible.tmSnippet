@@ -6,7 +6,7 @@
 	<string>:visible
 </string>
 	<key>keyEquivalent</key>
-	<string>^~:</string>
+	<string>^:</string>
 	<key>name</key>
 	<string>:visible</string>
 	<key>scope</key>

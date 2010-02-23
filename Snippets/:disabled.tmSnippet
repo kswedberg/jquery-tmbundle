@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>:disabled</string>
 	<key>keyEquivalent</key>
-	<string>^:</string>
+	<string>^~:</string>
 	<key>name</key>
 	<string>:disabled</string>
 	<key>scope</key>
