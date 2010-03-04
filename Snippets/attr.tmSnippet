@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.attr('${1:attribute}'${2/(.+)/(?1:, :)/}${2/(^[0-9]+$)|.+/(?1::')/}${2:value}${2/(^[0-9]+$)|.+/(?1::')/})$0</string>
+	<string>.attr('${1:attribute}'${2/(^,).*|.+/(?1::, )/}${2/(^([0-9]+$|,.*))|.+/(?1::')/}${2:value}${2/(^([0-9]+$|,.*))|.+/(?1::')/})$0</string>
 	<key>name</key>
 	<string>attr</string>
 	<key>scope</key>

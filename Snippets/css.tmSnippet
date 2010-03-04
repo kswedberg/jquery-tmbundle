@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.css('${1:property}'${2/(.+)/(?1:, :)/}${2/(^[0-9]+$)|.+/(?1::')/}${2:value}${2/(^[0-9]+$)|.+/(?1::')/})$0</string>
+	<string>.css('${1:property}'${2/(^,).*|.+/(?1::, )/}${2/(^([0-9]+$|,.*))|.+/(?1::')/}${2:value}${2/(^([0-9]+$|,.*))|.+/(?1::')/})$0</string>
 	<key>name</key>
 	<string>css</string>
 	<key>scope</key>
