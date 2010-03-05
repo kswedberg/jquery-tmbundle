@@ -114,7 +114,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\b(andSelf|add|appendTo|children|filter|find|insertAfter|insertBefore|next|not|parent|parents|prependTo|prev|remove|siblings)\s*(\()</string>
+			<string>\b(add|appendTo|children|closest|detach|filter|find|has|index|insertAfter|insertBefore|is|next|nextAll|nextUntil|not|parent|parents|parentsUntil|prependTo|prev|prevAll|prevUntil|remove|replaceAll|siblings)\s*(\()</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -212,7 +212,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\.(addClass|after|animate|append|attr|background|before|bind|blur|change|css|delegate|detach|die|dblclick|domManip|each|empty|end|error|extend|fadeIn|fadeOut|fadeTo|float|focus|get|height|hide|hover|href|html|init|keydown|keypress|keyup|left|length|live|load|mousedown|mouseenter|mouseleave|mousemove|mouseout|mouseover|mouseup|offset|one|overflow|position|prepend|pushStack|ready|removeClass|reset|resize|scroll|select|serialize|serializeArray|show|size|slideDown|slideUp|src|submit|text|toggle|toggleClass|top|trigger|triggerHandler|unbind|undelegate|val|width|wrap|wrapAll|wrapInner)\b</string>
+			<string>\.(add|addClass|after|ajaxComplete|ajaxError|ajaxSend|ajaxStart|ajaxStop|ajaxSuccess|andSelf|animate|append|appendTo|attr|before|bind|blur|change|children|clearQueue|click|clone|closest|contents|css|data|dblclick|delay|delegate|dequeue|detach|die|domManip|each|empty|end|eq|error|extend|fadeIn|fadeOut|fadeTo|filter|find|first|focus|focusin|focusout|get|has|hasClass|height|hide|hover|html|index|innerHeight|innerWidth|insertAfter|insertBefore|is|keydown|keypress|keyup|last|live|load|map|mousedown|mouseenter|mouseleave|mousemove|mouseout|mouseover|mouseup|next|nextAll|nextUntil|not|offset|offsetParent|one|outerHeight|outerWidth|parent|parents|parentsUntil|position|prepend|prependTo|prev|prevAll|prevUntil|push|pushStack|queue|ready|remove|removeAttr|removeClass|removeData|replaceAll|replaceWith|resize|scroll|scrollLeft|scrollTop|select|serialize|serializeArray|show|siblings|size|slice|slideDown|slideToggle|slideUp|stop|submit|text|toArray|toggle|toggleClass|trigger|triggerHandler|unbind|undelegate|unload|unwrap|val|width|wrap|wrapAll|wrapInner)\b</string>
+			<key>name</key>
+			<string>support.function.js.jquery</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\$|jQuery)\.(Event|ajax|ajaxSetup|bindReady|clean|cleanData|contains|css|data|dequeue|each|error|extend|filter|find|fx|get|getJSON|getScript|globalEval|grep|inArray|isArray|isEmptyObject|isFunction|isPlainObject|isXMLDoc|makeArray|map|merge|noConflict|noop|param|parseJSON|post|proxy|queue|ready|removeData|sibling|text|triggerGlobal|trim|unique)\b</string>
 			<key>name</key>
 			<string>support.function.js.jquery</string>
 		</dict>

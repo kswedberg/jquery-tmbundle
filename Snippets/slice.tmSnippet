@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.slice(${1:start}${2/(.+)/(?1:, :)/}${2:end})$0</string>
+	<string>.slice(${1:start}${2/^([^,]|\d).*$|.+/(?1:, :)/}${2:end})$0</string>
 	<key>name</key>
 	<string>slice</string>
 	<key>scope</key>

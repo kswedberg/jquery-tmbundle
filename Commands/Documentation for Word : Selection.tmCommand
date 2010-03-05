@@ -14,9 +14,13 @@ file = File.open ENV['TM_BUNDLE_SUPPORT'] + '/jquery-docs-xml-142.xml'
 
 doc = Document.new(file)
 root = doc.root
-name = ENV['TM_CURRENT_WORD']
+
+# wrd = "#{ENV[TM_SELECTED_TEXT]}:-{ENV[TM_CURRENT_WORD]}"
+wrd = STDIN.read
+wrd = wrd.sub(/^\$/,'jQuery')
+
 entries = ''
-root.elements.each("//entry[@name='#{name}']") { |e| entries += e.to_s }
+root.elements.each("//entry[@name='#{wrd}']") { |e| entries += e.to_s }
 
 stylefile = ENV['TM_BUNDLE_SUPPORT'] + '/docs-142.xsl'
 
@@ -41,7 +45,7 @@ puts `xsltproc "#{stylefile}" "#{xmlfile}"`
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>scope</key>
-	<string>source.js.jquery support.function.js.jquery</string>
+	<string>source.js.jquery</string>
 	<key>uuid</key>
 	<string>690646D5-AC38-4EB9-8C41-776E4F55CB59</string>
 </dict>

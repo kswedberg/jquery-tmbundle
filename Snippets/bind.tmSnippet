@@ -4,7 +4,7 @@
 <dict>
 	<key>content</key>
 	<string>.bind('${1:event name}', function(${2:event}) {
-	${0:// Act on the event}
+  ${0:// Act on the event}
 });</string>
 	<key>name</key>
 	<string>bind</string>
