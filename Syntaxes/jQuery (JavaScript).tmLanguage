@@ -16,7 +16,7 @@
 	<array>
 		<dict>
 			<key>begin</key>
-			<string>(\$|jQuery)(\()</string>
+			<string>(\$|jQuery)(\((?!('|")&lt;))</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -211,6 +211,100 @@
 			</array>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>(\$|jQuery)(\((?=('|")&lt;))</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.class.js.jquery</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.class.js</string>
+				</dict>
+			</dict>
+			<key>contentName</key>
+			<string>meta.markup.jquery</string>
+			<key>end</key>
+			<string>(\))</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.class.js</string>
+				</dict>
+			</dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>'</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.markup.begin.js</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>'</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.markup.end.js</string>
+						</dict>
+					</dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#html-markup</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>"</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.markup.begin.js</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>"</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.markup.end.js</string>
+						</dict>
+					</dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#html-markup</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>source.js</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -330,6 +424,22 @@
 					<string>(:)\b(active|after|before|first-letter|first-line|hover|link|visited)\b</string>
 					<key>name</key>
 					<string>entity.other.attribute-name.pseudo-class.css</string>
+				</dict>
+			</array>
+		</dict>
+		<key>html-markup</key>
+		<dict>
+			<key>begin</key>
+			<string>(?=&lt;)</string>
+			<key>end</key>
+			<string>(?=['])</string>
+			<key>name</key>
+			<string>meta.markup.html</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>text.html.basic</string>
 				</dict>
 			</array>
 		</dict>
