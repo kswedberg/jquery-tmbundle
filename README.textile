@@ -11,8 +11,8 @@ h2. License
 
 This bundle is dual-licensed under MIT and GPL licenses (just like jQuery).
 
-* http://www.opensource.org/licenses/mit-license.php
-* http://www.gnu.org/licenses/gpl.html
+* "http://www.opensource.org/licenses/mit-license.php":http://www.opensource.org/licenses/mit-license.php
+* "http://www.gnu.org/licenses/gpl.html":http://www.gnu.org/licenses/gpl.html
 
 Use it, change it, fork it, sell it. Do what you will, but please leave the author attribution.
 
@@ -42,12 +42,12 @@ h2. Download
 
 If you'd like to avoid the command line altogether, you can download the bundle and install it:
 
-# download the zip from http://github.com/kswedberg/jquery-tmbundle/zipball/master
+# download the zip from "http://github.com/kswedberg/jquery-tmbundle/zipball/master":http://github.com/kswedberg/jquery-tmbundle/zipball/master
 # find the zip file on your local machine and double-click to unzip it
-# change the file name from "kswedberg-jquery-tmbundle-really_long_alpha_numeric_sequence" to JavaScript jQuery.tmbundle (with a dot rather than a hyphen).
-# double-click the JavaScript jQuery.tmbundle file
-# open TextMate and select the following menu item: Bundles > Bundle Editor > Reload Bundles
-# show the Bundle Editor (Bundles > Bundle Editor > Show Bundle Editor)
+# change the file name from _kswedberg-jquery-tmbundle-really_long_alpha_numeric_sequence_ to _JavaScript jQuery.tmbundle_ (with a dot rather than a hyphen).
+# double-click the _JavaScript jQuery.tmbundle_ file
+# open TextMate and select the following menu item: _Bundles > Bundle Editor > Reload Bundles_
+# show the Bundle Editor (_Bundles > Bundle Editor > Show Bundle Editor_)
 # scroll through the list of bundles to confirm that the bundle has been properly installed
 
 h2. Other Stuff
