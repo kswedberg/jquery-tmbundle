@@ -114,7 +114,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\b(add|appendTo|children|closest|detach|filter|find|has|index|insertAfter|insertBefore|is|next|nextAll|nextUntil|not|parent|parents|parentsUntil|prependTo|prev|prevAll|prevUntil|remove|replaceAll|siblings)\s*(\()</string>
+			<string>\b(add|appendTo|children|closest|detach|filter|find|has|index|insertAfter|insertBefore|is|next|nextAll|nextUntil|not|parent|parents|parentsUntil|prependTo|prev|prevAll|prevUntil|remove|replaceAll|siblings)\s*(\((?!('|")&lt;))</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -265,7 +265,7 @@
 					<array>
 						<dict>
 							<key>include</key>
-							<string>#html-markup</string>
+							<string>#html-markup-single</string>
 						</dict>
 					</array>
 				</dict>
@@ -294,7 +294,101 @@
 					<array>
 						<dict>
 							<key>include</key>
-							<string>#html-markup</string>
+							<string>#html-markup-double</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>source.js</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\b(add|after|append|before|html|prepend|replaceWith|wrap|wrapAll|wrapInner)\s*(\((?=('|")&lt;))</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.function.js.jquery</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.class.js</string>
+				</dict>
+			</dict>
+			<key>contentName</key>
+			<string>meta.markup.jquery</string>
+			<key>end</key>
+			<string>(\))</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.class.js</string>
+				</dict>
+			</dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>'</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.markup.begin.js</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>'</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.markup.end.js</string>
+						</dict>
+					</dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#html-markup-single</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>"</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.markup.begin.js</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>"</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.markup.end.js</string>
+						</dict>
+					</dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#html-markup-double</string>
 						</dict>
 					</array>
 				</dict>
@@ -427,12 +521,8 @@
 				</dict>
 			</array>
 		</dict>
-		<key>html-markup</key>
+		<key>html-markup-double</key>
 		<dict>
-			<key>begin</key>
-			<string>(?=&lt;)</string>
-			<key>end</key>
-			<string>(?=['])</string>
 			<key>name</key>
 			<string>meta.markup.html</string>
 			<key>patterns</key>
@@ -440,6 +530,30 @@
 				<dict>
 					<key>include</key>
 					<string>text.html.basic</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\\(")</string>
+					<key>name</key>
+					<string>constant.character.escape.js</string>
+				</dict>
+			</array>
+		</dict>
+		<key>html-markup-single</key>
+		<dict>
+			<key>name</key>
+			<string>meta.markup.html</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>text.html.basic</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\\(')</string>
+					<key>name</key>
+					<string>constant.character.escape.js</string>
 				</dict>
 			</array>
 		</dict>
