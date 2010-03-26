@@ -2,6 +2,10 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="/*">
+<xsl:if test="count(//entry) = 0">
+<h2>Sorry, that doesn't appear to be a jQuery method.</h2>
+</xsl:if>
+<xsl:if test="count(//entry)">
 <html>
 <head>
 	<title>jQuery API</title>
@@ -556,7 +560,6 @@ ul.categories{
   
   <div id="jq-content">
     <div id="jq-primaryContent">
-
       <xsl:if test="count(//entry) &gt; 1">
       <fieldset class="toc">
         <legend>Contents:</legend>
@@ -773,6 +776,7 @@ ul.categories{
   </div>
 </body>
 </html>
+</xsl:if>
 </xsl:template>
 
 </xsl:stylesheet>

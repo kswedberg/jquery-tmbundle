@@ -15,12 +15,20 @@ file = File.open ENV['TM_BUNDLE_SUPPORT'] + '/jquery-docs-xml-142.xml'
 doc = Document.new(file)
 root = doc.root
 
-# wrd = "#{ENV[TM_SELECTED_TEXT]}:-{ENV[TM_CURRENT_WORD]}"
-wrd = STDIN.read
-wrd = wrd.sub(/^\$/,'jQuery')
+sel_text = ENV['TM_SELECTED_TEXT']
+
+if sel_text.nil?
+  cur_line = ENV['TM_CURRENT_LINE']
+  cur_word = ENV['TM_CURRENT_WORD']
+  matcher = cur_line.match(/(jQuery|\$)(\.#{cur_word})/)
+  lookup_word = matcher ? 'jQuery' + matcher[2] : cur_word
+else
+  lookup_word = sel_text
+end
+lookup_word = lookup_word.sub('$','jQuery')
 
 entries = ''
-root.elements.each("//entry[@name='#{wrd}']") { |e| entries += e.to_s }
+root.elements.each("//entry[@name='#{lookup_word}']") { |e| entries += e.to_s }
 
 stylefile = ENV['TM_BUNDLE_SUPPORT'] + '/docs-142.xsl'
 
@@ -32,7 +40,14 @@ tf.puts('&lt;/docs&gt;' + "\n")
 tf.close
 xmlfile = tf.path
 
-puts `xsltproc "#{stylefile}" "#{xmlfile}"`
+output = `xsltproc "#{stylefile}" "#{xmlfile}"`
+
+if output.length &lt; 100
+  url = "https://developer.mozilla.org/en?search=title:" + lookup_word
+  puts "&lt;meta http-equiv='Refresh' content='0;URL=#{url}'&gt;"
+else
+  puts output
+end
 </string>
 	<key>fallbackInput</key>
 	<string>word</string>
