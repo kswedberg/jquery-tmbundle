@@ -3,16 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.filter(function(index) {
-  ${1:return ${2:something};}
-})</string>
+	<string>.scrollTop(${1:value})$0</string>
 	<key>name</key>
-	<string>filter (function)</string>
+	<string>scrollTop</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.filter</string>
+	<string>.scrollTop</string>
 	<key>uuid</key>
-	<string>6869C810-2005-41A1-95B1-AC626ED91169</string>
+	<string>1453771D-8ED8-4883-8DCA-7C86AECDFE53</string>
 </dict>
 </plist>

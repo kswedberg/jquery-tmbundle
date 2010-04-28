@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.unbind('${1:event name}')$0</string>
+	<string>.unbind('${1:event name(s)}'${2/(^,).*|.+/(?1::, )/}${2/(^([0-9]+$|,.*))|.+/(?1::')/}${2:functionName}${2/(^([0-9]+$|,.*))|.+/(?1::')/})$0</string>
 	<key>name</key>
 	<string>unbind</string>
 	<key>scope</key>

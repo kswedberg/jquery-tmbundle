@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.filter(function(index) {
+	<string>.replaceWith(function(index, currentContents) {
   ${1:return ${2:something};}
 })</string>
 	<key>name</key>
-	<string>filter (function)</string>
+	<string>replaceWith (function)</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.filter</string>
+	<string>. replaceWith</string>
 	<key>uuid</key>
-	<string>6869C810-2005-41A1-95B1-AC626ED91169</string>
+	<string>CFD436F3-16EC-4512-B13B-4B09B706390E</string>
 </dict>
 </plist>

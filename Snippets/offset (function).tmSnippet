@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.filter(function(index) {
-  ${1:return ${2:something};}
+	<string>.offset(function(index, currentCoordinates) {
+  ${1:return ${2:someObject};}
 })</string>
 	<key>name</key>
-	<string>filter (function)</string>
+	<string>offset (function)</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.filter</string>
+	<string>.offset</string>
 	<key>uuid</key>
-	<string>6869C810-2005-41A1-95B1-AC626ED91169</string>
+	<string>84A8367E-2034-4045-94FE-AE37D0762A28</string>
 </dict>
 </plist>

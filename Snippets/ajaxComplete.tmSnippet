@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.filter(function(index) {
-  ${1:return ${2:something};}
-})</string>
+	<string>.ajaxComplete(function(event, xhr, settings) {
+	${1:// executes whenever an AJAX request completes}
+});$0</string>
 	<key>name</key>
-	<string>filter (function)</string>
+	<string>ajaxComplete</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.filter</string>
+	<string>.ajaxComplete</string>
 	<key>uuid</key>
-	<string>6869C810-2005-41A1-95B1-AC626ED91169</string>
+	<string>E91FC8E4-860A-4B3E-83EB-5A3503C8C457</string>
 </dict>
 </plist>

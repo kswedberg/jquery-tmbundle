@@ -3,16 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.filter(function(index) {
-  ${1:return ${2:something};}
-})</string>
+	<string>.innerWidth()$0</string>
 	<key>name</key>
-	<string>filter (function)</string>
+	<string>innerWidth</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.filter</string>
+	<string>.innerWidth</string>
 	<key>uuid</key>
-	<string>6869C810-2005-41A1-95B1-AC626ED91169</string>
+	<string>39ABBC12-22E7-478B-9704-D2555E8BB0B9</string>
 </dict>
 </plist>

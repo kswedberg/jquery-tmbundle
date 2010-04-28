@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$.ajaxStop(function() {
+	<string>.ajaxStop(function() {
   ${1://stuff to do when all AJAX calls have completed};
 });
 $0</string>

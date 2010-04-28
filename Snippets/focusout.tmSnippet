@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.filter(function(index) {
-  ${1:return ${2:something};}
-})</string>
+	<string>.focusout(${1:function() {
+	${0:// Act on the event}
+\}});</string>
 	<key>name</key>
-	<string>filter (function)</string>
+	<string>focusout</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.filter</string>
+	<string>.focusout</string>
 	<key>uuid</key>
-	<string>6869C810-2005-41A1-95B1-AC626ED91169</string>
+	<string>9841CD91-7185-4BF8-B3D8-234C62835C88</string>
 </dict>
 </plist>
