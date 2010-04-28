@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.add('${1:selector expression}')$0</string>
+	<string>.add('${1:selector/elements/html}')$0</string>
 	<key>name</key>
 	<string>add</string>
 	<key>scope</key>
