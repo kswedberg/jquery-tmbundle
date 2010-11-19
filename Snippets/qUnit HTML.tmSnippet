@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;!DOCTYPE HTML&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html;charset=UTF-8"&gt;
+  &lt;title&gt;${1:}&lt;/title&gt;
+  &lt;link rel="stylesheet" href="${2:}qunit.css" type="text/css" media="screen"&gt;
+  &lt;script src="${3:http://code.jquery.com/jquery-latest.js}"&gt;&lt;/script&gt;
+  &lt;script src="${4:}qunit.js"&gt;&lt;/script&gt;
+  &lt;script src="${5:myscript.js}"&gt;&lt;/script&gt;${6:
+  &lt;script src="${7:test.js}"&gt;&lt;/script&gt;}
+	
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1 id="qunit-header"&gt;${8:$1}&lt;/h1&gt;
+  &lt;h2 id="qunit-banner"&gt;&lt;/h2&gt;
+  &lt;div id="qunit-testrunner-toolbar"&gt;&lt;/div&gt;
+  &lt;h2 id="qunit-userAgent"&gt;&lt;/h2&gt;
+  &lt;ol id="qunit-tests"&gt;&lt;/ol&gt;
+  &lt;div id="qunit-fixture"&gt;
+	  ${9:&lt;!-- my test markup goes here --&gt;}
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</string>
+	<key>name</key>
+	<string>QUnit HTML</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>qhtml</string>
+	<key>uuid</key>
+	<string>A3107EF3-17D8-4453-9DB3-4F5CE1B502D9</string>
+</dict>
+</plist>
