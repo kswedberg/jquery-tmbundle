@@ -3,33 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>;(function(\$) {
+	<string>(function(\$) {
 ${2:// ${3:What does the $1 plugin do?}}
 \$.fn.${1:pluginName} = function(options) {
-  var opts = \$.extend({}, \$.fn.$1.defaults, options);
 
-  return this.each(function() {
-    var \$this = \$(this);
+  if (!this.length) { return this; }
 
-  ${5:  ${6:// Support for the Metadata Plugin.}
-    var o = \$.meta ? \$.extend({\}, opts, \$this.data()) : opts;
-  }
+  var opts = \$.extend(${5:true, }{}, \$.fn.$1.defaults, options);
 
+  this.each(function() {
+    var ${6:\$this} = \$(this);
+    $0
   });
 
-  // private function for debugging
-  function debug(\$obj) {
-    if (window.console &amp;&amp; window.console.log) {
-      window.console.log(\$obj);
-    }
-  }
+  return this;
 };
 
 // default options
 \$.fn.$1.defaults = {
-  ${4:defaultOne:true,
-  defaultTwo:false,
-  defaultThree:'yay!'}
+  ${4:defaultOne: true,
+  defaultTwo: false,
+  defaultThree: 'yay!'}
 };
 
 })(jQuery);
