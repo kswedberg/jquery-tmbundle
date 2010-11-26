@@ -3,7 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.click(${1:function() {
+	<string>.click(${1:function(event) {
+	${2:event.preventDefault();}
 	${0:// Act on the event}
 \}});</string>
 	<key>name</key>
