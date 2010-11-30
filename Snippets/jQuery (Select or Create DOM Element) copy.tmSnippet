@@ -3,16 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.map(function(${1:index}${2:, ${3:elem}}) {
-  ${4:return ${5:something};}
-})</string>
+	<string>\jQuery(${1/(.+)/(?1:':)/}${1:string/element/array/function/jQuery object/string, context}${1/(.+)/(?1:':)/})$0</string>
 	<key>name</key>
-	<string>map (function)</string>
+	<string>jQuery (Select or Create DOM Element)</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.map</string>
+	<string>jQuery</string>
 	<key>uuid</key>
-	<string>52D63CE1-3DCB-4449-9ED9-503C597EA7E4</string>
+	<string>CD3ABABC-389D-4DEF-AE97-C42B8BD8D4CF</string>
 </dict>
 </plist>

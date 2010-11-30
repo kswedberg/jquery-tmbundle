@@ -3,16 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.map(function(${1:index}${2:, ${3:elem}}) {
-  ${4:return ${5:something};}
-})</string>
+	<string>jQuery.noop()${0:;}${1:}</string>
 	<key>name</key>
-	<string>map (function)</string>
+	<string>jQuery.noop</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.map</string>
+	<string>jQuery.noop</string>
 	<key>uuid</key>
-	<string>52D63CE1-3DCB-4449-9ED9-503C597EA7E4</string>
+	<string>390F8483-BB8F-45F1-B2EB-C943AC5B24CA</string>
 </dict>
 </plist>

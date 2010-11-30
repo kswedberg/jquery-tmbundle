@@ -3,16 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.map(function(${1:index}${2:, ${3:elem}}) {
-  ${4:return ${5:something};}
-})</string>
+	<string>jQuery.isEmptyObject('${1:object}')$0</string>
 	<key>name</key>
-	<string>map (function)</string>
+	<string>jQuery.isEmptyObject</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.map</string>
+	<string>jQuery.isEmptyObject</string>
 	<key>uuid</key>
-	<string>52D63CE1-3DCB-4449-9ED9-503C597EA7E4</string>
+	<string>C91FAB3B-AB50-4113-B29A-A93B79930A56</string>
 </dict>
 </plist>

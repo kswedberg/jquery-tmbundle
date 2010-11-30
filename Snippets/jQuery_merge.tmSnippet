@@ -3,16 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.map(function(${1:index}${2:, ${3:elem}}) {
-  ${4:return ${5:something};}
-})</string>
+	<string>jQuery.merge(${1:array1}, ${2:array2});
+$0</string>
 	<key>name</key>
-	<string>map (function)</string>
+	<string>jQuery.merge</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.map</string>
+	<string>jQuery.merge</string>
 	<key>uuid</key>
-	<string>52D63CE1-3DCB-4449-9ED9-503C597EA7E4</string>
+	<string>55304395-C690-4D69-B696-1837C5A5B03D</string>
 </dict>
 </plist>

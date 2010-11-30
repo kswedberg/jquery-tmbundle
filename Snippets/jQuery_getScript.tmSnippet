@@ -3,16 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.map(function(${1:index}${2:, ${3:elem}}) {
-  ${4:return ${5:something};}
-})</string>
+	<string>jQuery.getScript('${1:path/to/file}'${2/(.+)/(?1:, function\(data, textStatus\) {
+  :)/}${2://optional stuff to do after getScript}${2/(.+)/(?1:
+}:)/});
+$0</string>
 	<key>name</key>
-	<string>map (function)</string>
+	<string>jQuery.getScript</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.map</string>
+	<string>jQuery.getScript</string>
 	<key>uuid</key>
-	<string>52D63CE1-3DCB-4449-9ED9-503C597EA7E4</string>
+	<string>E7A389DC-77F8-4D48-9B4E-35C966A9722B</string>
 </dict>
 </plist>
