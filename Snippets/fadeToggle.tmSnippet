@@ -9,7 +9,7 @@
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.slideToggle</string>
+	<string>.fadeToggle</string>
 	<key>uuid</key>
 	<string>86620E27-4C87-42B0-9462-0278EFDCFD4C</string>
 </dict>
