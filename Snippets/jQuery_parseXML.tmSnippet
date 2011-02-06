@@ -3,15 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.clone(${1:withDataAndEvents}${2/(^,).*|.+/(?1::, )/}${2:deepWithDataAndEvents})$0
-</string>
+	<string>jQuery.parseXML(${1:data});${0:}</string>
 	<key>name</key>
-	<string>clone</string>
+	<string>jQuery.parseXML</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.clone</string>
+	<string>jQuery.parseXML</string>
 	<key>uuid</key>
-	<string>EBABC1B0-8C15-40BF-9A63-3C133170C8F6</string>
+	<string>71C02AD2-0CD3-44EA-931A-D9A3C04D6C47</string>
 </dict>
 </plist>

@@ -444,7 +444,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(\$|jQuery)(\.)(Event|ajax|ajaxSetup|bindReady|clean|cleanData|contains|css|data|dequeue|each|error|extend|get|getJSON|getScript|globalEval|grep|inArray|isArray|isEmptyObject|isFunction|isPlainObject|isXMLDoc|makeArray|map|merge|noConflict|noop|param|parseJSON|parseXML|post|proxy|queue|ready|removeData|sibling|sub|text|triggerGlobal|trim|unique|when)\b</string>
+			<string>(\$|jQuery)(\.)(Event|ajax|ajaxSetup|bindReady|clean|cleanData|contains|css|data|dequeue|each|error|extend|Event|get|getJSON|getScript|globalEval|grep|inArray|isArray|isEmptyObject|isFunction|isPlainObject|isWindow|isXMLDoc|makeArray|map|merge|noConflict|noop|param|parseJSON|parseXML|post|proxy|queue|ready|removeData|sibling|sub|text|triggerGlobal|trim|type|unique|when)\b</string>
 			<key>name</key>
 			<string>support.function.js.jquery</string>
 		</dict>
