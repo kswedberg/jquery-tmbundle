@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.mouseup(${1:function() {
+	<string>.mouseup(${1:function(${2:event}) {
 	${0:// Act on the event}
 \}});</string>
 	<key>name</key>
