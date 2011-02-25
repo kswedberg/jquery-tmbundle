@@ -1,5 +1,4 @@
 <?xml version="1.0" ?><api>
-  <?xml version="1.0" ?><api>
       <entries>
 
       <entry type='method' name="jQuery.parseXML" return="XMLDocument">

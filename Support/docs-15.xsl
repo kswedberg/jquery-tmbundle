@@ -42,7 +42,7 @@ ul, ol {
 }
 #jq-primaryContent {
 position: relative;
-width: 632px;
+width: 732px;
 margin: 0 auto;
 color: #222;
 min-height: 500px;
@@ -291,7 +291,7 @@ font-weight: normal;
   padding-right:15px;
   position:relative;
   top:-6px;
-  width:591px;
+  width:691px;
 }
 .api-jquery-com #jq-primaryContent #method-list li a.title-link{
   padding: 0px;
@@ -475,7 +475,7 @@ ul.categories{
   -moz-border-radius: 2px;
   border-radius: 2px;
   margin: 0px;
-  font-size: 1.1em;
+  font-size: .95em;
 }
 
 .demo {
