@@ -29,7 +29,7 @@ ${2:// ${3:What does the $1 plugin do?}}
 })(jQuery);
 </string>
 	<key>name</key>
-	<string>plugin (method)</string>
+	<string>plugin (method basic)</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
