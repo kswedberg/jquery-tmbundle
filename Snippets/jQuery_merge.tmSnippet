@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>jQuery.merge(${1:array1}, ${2:array2});
+	<string>jQuery.merge(${1:array1}, ${2:array2})
 $0</string>
 	<key>name</key>
 	<string>jQuery.merge</string>

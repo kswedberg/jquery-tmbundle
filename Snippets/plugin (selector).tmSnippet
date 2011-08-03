@@ -7,10 +7,10 @@
   \$.extend(\$.expr[':'], {
     ${1:selectorName}: function(element, index, matches, set) {
       $0
-      return something;
+      return something
     }
-  });
-})(jQuery);
+  })
+})(jQuery)
 </string>
 	<key>name</key>
 	<string>plugin (selector)</string>

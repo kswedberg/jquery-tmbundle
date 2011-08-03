@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$.inArray(${1:value}, ${2:array});$0</string>
+	<string>\$.inArray(${1:value}, ${2:array})$0</string>
 	<key>name</key>
 	<string>$.inArray</string>
 	<key>scope</key>

@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>.submit(${1:function(${2:event}) {
 	${0:// Act on the event}
-\}});</string>
+\}})</string>
 	<key>name</key>
 	<string>submit</string>
 	<key>scope</key>

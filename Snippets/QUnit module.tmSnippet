@@ -10,7 +10,7 @@
   teardown\: function\(\) {
     :)/}${7://teardown for $1}${7/(.+)/(?1:
   }:)/}
-\}});
+\}})
 $0</string>
 	<key>name</key>
 	<string>QUnit module</string>

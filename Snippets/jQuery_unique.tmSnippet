@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>jQuery.unique(${1:DOMelementArray});
+	<string>jQuery.unique(${1:DOMelementArray})
 $0</string>
 	<key>name</key>
 	<string>jQuery.unique</string>

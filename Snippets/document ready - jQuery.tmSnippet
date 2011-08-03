@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>jQuery(document).ready(function() {
 	${0:// Stuff to do as soon as the DOM is ready;}
-});
+})
 </string>
 	<key>name</key>
 	<string>document ready - jQuery</string>

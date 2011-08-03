@@ -7,7 +7,7 @@
 	${1:// Stuff to do every *odd* time the element is clicked;}
 }, function() {
 	${2:// Stuff to do every *even* time the element is clicked;}
-});
+})
 $0</string>
 	<key>name</key>
 	<string>toggle (event)</string>

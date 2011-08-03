@@ -17,7 +17,7 @@ ${2/(.+)/(?1:  type\: ':)/}${2:POST}${2/(.+)/(?1:',
 :)/}${7/(.+)/(?1:  error\: function\(xhr, textStatus, errorThrown\) {
     :)/}${7://called when there is an error}
 ${7/(.+)/(?1:  }
-:)/}});
+:)/}})
 $0</string>
 	<key>name</key>
 	<string>$.ajax</string>

@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>.each(function(index) {
   ${0:this.innerHTML = this + " is the element, " + index + " is the position";}
-});</string>
+})</string>
 	<key>name</key>
 	<string>each</string>
 	<key>scope</key>
