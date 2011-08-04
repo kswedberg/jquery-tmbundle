@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>test('${1:description}'${2/(.+)/(?1:, :)/}${2:numberexpected}${3:, ${4:function() {
   $0
-\}}});</string>
+\}}})</string>
 	<key>name</key>
 	<string>QUnit test</string>
 	<key>scope</key>

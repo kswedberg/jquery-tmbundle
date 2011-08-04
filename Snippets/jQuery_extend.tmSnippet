@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>jQuery.extend(${1:true, }${2:target object}, ${3:object1});
+	<string>jQuery.extend(${1:true, }${2:target object}, ${3:object1})
 $0</string>
 	<key>name</key>
 	<string>jQuery.extend</string>

@@ -5,8 +5,7 @@
 	<key>content</key>
 	<string>.show(${1/(^[0-9]+$)|.+/(?1::')/}${1:slow/400/fast}${1/(^[0-9]+$)|.+/(?1::')/}, function() {
 	${0://Stuff to do *after* the animation takes place};
-});
-</string>
+})</string>
 	<key>name</key>
 	<string>show (with callback)</string>
 	<key>scope</key>

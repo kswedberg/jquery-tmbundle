@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>.ajaxComplete(function(event, xhr, settings) {
 	${1:// executes whenever an AJAX request completes}
-});$0</string>
+})$0</string>
 	<key>name</key>
 	<string>ajaxComplete</string>
 	<key>scope</key>

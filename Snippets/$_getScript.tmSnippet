@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>\$.getScript('${1:path/to/file}'${2/(.+)/(?1:, function\(data, textStatus\) {
   :)/}${2://optional stuff to do after getScript}${2/(.+)/(?1:
-}:)/});
+}:)/})
 $0</string>
 	<key>name</key>
 	<string>$.getScript</string>

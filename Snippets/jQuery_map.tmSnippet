@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>jQuery.map(${1:array}, function(${2:item}${3:, ${4:index}}) {
   ${5:return ${6:something};}
-});</string>
+})</string>
 	<key>name</key>
 	<string>jQuery.map</string>
 	<key>scope</key>

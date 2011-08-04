@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>.load(${1:function() {
 	${0:// Act on the event}
-\}});</string>
+\}})</string>
 	<key>name</key>
 	<string>load</string>
 	<key>scope</key>

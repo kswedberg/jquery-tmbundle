@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>.live('${1:event type(s)}', function(${2:event}) {
 	${0:// Act on the event}
-});</string>
+})</string>
 	<key>name</key>
 	<string>live</string>
 	<key>scope</key>
