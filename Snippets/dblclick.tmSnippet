@@ -4,6 +4,7 @@
 <dict>
 	<key>content</key>
 	<string>.dblclick(${1:function(${2:event}) {
+	${3:event.preventDefault()}
 	${0:// Act on the event}
 \}})</string>
 	<key>name</key>
