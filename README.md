@@ -6,6 +6,7 @@ This is a TextMate bundle to help with jQuery functions.
 
 * Karl Swedberg
 * Jonathan Chaffer
+* Caio Gondim
 
 ## License
 
