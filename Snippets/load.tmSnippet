@@ -7,7 +7,7 @@
 	${0:// Act on the event}
 \}})</string>
 	<key>name</key>
-	<string>load</string>
+	<string>.load() Event</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>

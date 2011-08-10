@@ -8,7 +8,7 @@
 }:)/})
 $0</string>
 	<key>name</key>
-	<string>$.getJSON</string>
+	<string>$.getJSON()</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>

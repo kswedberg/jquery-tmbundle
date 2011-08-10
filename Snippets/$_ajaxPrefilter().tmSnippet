@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.ajaxStart(function() {
-  ${1://stuff to do when an AJAX call is started and no other AJAX calls are in progress};
+	<string>\$.ajaxPrefilter(${1/(.+)/(?1:':)/}${1:dataTypes}${1/(.+)/(?1:', :)/}function(${2:options, originalOptions, jqXHR}) {
+  ${3:// Modify options, control originalOptions, store jqXHR, etc}
 })
 $0</string>
 	<key>name</key>
-	<string>.ajaxStart()</string>
+	<string>$.ajaxPrefilter()</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.ajaxStart</string>
+	<string>$.ajaxPrefilter</string>
 	<key>uuid</key>
-	<string>8BCA3039-B2E0-493F-9E2F-4156D4703214</string>
+	<string>9776B553-C9EF-4695-A05D-6C10E40442A7</string>
 </dict>
 </plist>

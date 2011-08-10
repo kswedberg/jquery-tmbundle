@@ -10,7 +10,7 @@
 }:)/})
 $0</string>
 	<key>name</key>
-	<string>load (AHAH)</string>
+	<string>.load() AJAX</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>

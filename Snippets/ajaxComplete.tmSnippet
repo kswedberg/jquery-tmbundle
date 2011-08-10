@@ -7,7 +7,7 @@
 	${1:// executes whenever an AJAX request completes}
 })$0</string>
 	<key>name</key>
-	<string>ajaxComplete</string>
+	<string>.ajaxComplete()</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>

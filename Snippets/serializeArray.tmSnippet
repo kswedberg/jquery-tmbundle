@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>.serializeArray()$0</string>
 	<key>name</key>
-	<string>serializeArray</string>
+	<string>.serializeArray()</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>

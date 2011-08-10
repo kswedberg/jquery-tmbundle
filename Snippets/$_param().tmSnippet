@@ -3,17 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.ajaxStart(function() {
-  ${1://stuff to do when an AJAX call is started and no other AJAX calls are in progress};
-})
-$0</string>
+	<string>.param('${1:obj}'${2/(^,).*|.+/(?1::, )/}${2/(^([0-9]+$|,.*))|.+/(?1::')/}${2:traditional}${2/(^([0-9]+$|,.*))|.+/(?1::')/})$0</string>
 	<key>name</key>
-	<string>.ajaxStart()</string>
+	<string>$.param()</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.ajaxStart</string>
+	<string>$.param</string>
 	<key>uuid</key>
-	<string>8BCA3039-B2E0-493F-9E2F-4156D4703214</string>
+	<string>9E800FBE-AB0B-45C1-A2EA-E4EDB77C8146</string>
 </dict>
 </plist>

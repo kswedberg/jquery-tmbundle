@@ -8,7 +8,7 @@
 }:)/})
 $0</string>
 	<key>name</key>
-	<string>$.getScript</string>
+	<string>$.getScript()</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>

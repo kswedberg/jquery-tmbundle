@@ -8,7 +8,7 @@
 }:)/})
 $0</string>
 	<key>name</key>
-	<string>$.post</string>
+	<string>$.post()</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
