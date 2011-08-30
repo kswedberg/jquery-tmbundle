@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[.appendTo('${1:selector expression}')$0]]></content>
+	<tabTrigger>.appendTo</tabTrigger>
+	<description>.appendTo</description>
+</snippet>

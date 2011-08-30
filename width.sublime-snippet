@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[.width(${1:integer})$0]]></content>
+	<tabTrigger>.width</tabTrigger>
+	<description>.width</description>
+</snippet>

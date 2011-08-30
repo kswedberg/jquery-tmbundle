@@ -1,6 +1,4 @@
 <snippet>
-	<content><![CDATA[
-.fadeIn(${1/(^[0-9]+$)|.+/(?1::')/}${1:slow/400/fast}${1/(^[0-9]+$)|.+/(?1::')/})$0
-		]]></content>
+	<content><![CDATA[.fadeIn(${1/(^[0-9]+$)|.+/(?1::')/}${1:slow/400/fast}${1/(^[0-9]+$)|.+/(?1::')/})$0]]></content>
 	<tabTrigger>.fadeIn</tabTrigger>
 </snippet>

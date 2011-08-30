@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[.clone(${1:withDataAndEvents}${2/(^,).*|.+/(?1::, )/}${2:deepWithDataAndEvents})$0]]></content>
+	<tabTrigger>.clone</tabTrigger>
+	<description>.clone</description>
+</snippet>

@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[.closest('${1:selector expression}')$0]]></content>
+	<tabTrigger>.closest</tabTrigger>
+	<description>.closest</description>
+</snippet>

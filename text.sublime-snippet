@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[.text(${1:'some text'})$0]]></content>
+	<tabTrigger>.text</tabTrigger>
+	<description>.text</description>
+</snippet>

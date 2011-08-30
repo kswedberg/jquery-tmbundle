@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[.hasClass('${1:className}')$0]]></content>
+	<tabTrigger>.hasClass</tabTrigger>
+	<description>.hasClass</description>
+</snippet>
