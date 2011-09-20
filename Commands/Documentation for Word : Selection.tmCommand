@@ -43,7 +43,7 @@ xmlfile = tf.path
 output = `xsltproc "#{stylefile}" "#{xmlfile}"`
 
 if output.length &lt; 100
-  url = "https://developer.mozilla.org/en?search=title:" + lookup_word
+  url = "https://developer.mozilla.org/en-US/search?q=" + lookup_word
   puts "&lt;meta http-equiv='Refresh' content='0;URL=#{url}'&gt;"
 else
   puts output
