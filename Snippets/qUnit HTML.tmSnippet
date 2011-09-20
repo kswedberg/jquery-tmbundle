@@ -6,7 +6,7 @@
 	<string>&lt;!DOCTYPE HTML&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
-  &lt;meta http-equiv="Content-Type" content="text/html;charset=UTF-8"&gt;
+  &lt;meta charset="UTF-8"&gt;
   &lt;title&gt;${1:}&lt;/title&gt;
   &lt;link rel="stylesheet" href="${2:}qunit.css" type="text/css" media="screen"&gt;
   &lt;script src="${3:http://code.jquery.com/jquery-latest.js}"&gt;&lt;/script&gt;

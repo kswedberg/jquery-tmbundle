@@ -1,4 +1,4 @@
-# jQuery Bundle for TextMate
+# jQuery Bundle for TextMate ![Project status](http://stillmaintained.com/kswedberg/jquery-tmbundle.png)
 
 This is a TextMate bundle to help with jQuery functions.
 

@@ -25,21 +25,23 @@
           dataId = +new Date;
 
           data = {
-            cluetip: $1,
+            $1: true,
             options: opts,
             id: dataId
           };
 
-          $10.data('$1', data);
           ${14:
           // create element and append to body
-          var $1 = \$('&lt;div /&gt;', {
+          var \$$1 = \$('&lt;div /&gt;', {
             'class': '$1'
           \}).appendTo( 'body' );
 
-          $1.data( '$1', {target: $10, id: dataId\} );
+          // Associate created element with invoking element
+          \$$1.data( '$1', {target: $10, id: dataId\} );
+          // And vice versa
+          data.$1 = \$$1;
 }
-
+          $10.data('$1', data);
         } // !data.$1
 
         $0
@@ -76,7 +78,7 @@
 
         // deep extend (merge) default settings, per-call options, and options set with:
         // html10 data-$1 options JSON and \$('selector').$1( 'options', {} );
-        opts = \$.extend( true, {}, \$.fn.cluetip.defaults, opts, options || {} );
+        opts = \$.extend( true, {}, \$.fn.$1.defaults, opts, options || {} );
         data.options = opts;
         \$.data( this, '$1', data );
       });
