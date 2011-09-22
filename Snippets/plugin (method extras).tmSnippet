@@ -14,7 +14,7 @@
 
       this.each(function() {
         var data, dataId, opts,
-            ${10:\$this} = $(this);
+            ${10:\$this} = \$(this);
 
         $10.$1('options', options);
         data = $10.data('$1') || {};
