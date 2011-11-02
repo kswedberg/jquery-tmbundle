@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>.off('${1:event name(s)}'${2/(^,).*|.+/(?1::, )/}${2/(^([0-9]+$|,.*))|.+/(?1::)/}${2:functionName}${2/(^([0-9]+$|,.*))|.+/(?1::)/})$0</string>
+	<key>name</key>
+	<string>off</string>
+	<key>scope</key>
+	<string>source.js.jquery</string>
+	<key>tabTrigger</key>
+	<string>.off</string>
+	<key>uuid</key>
+	<string>C5376FFB-4C58-4C83-9DDF-48D83D92AD43</string>
+</dict>
+</plist>

@@ -175,6 +175,8 @@
 			<dict>
 				<key>items</key>
 				<array>
+					<string>DB0109CE-92FA-4769-8D0C-409B8100A6E1</string>
+					<string>C5376FFB-4C58-4C83-9DDF-48D83D92AD43</string>
 					<string>3EA8B62B-6824-4DC6-A6EE-50574652692E</string>
 					<string>10B60336-F026-4BE3-8EF5-684848FF57F0</string>
 					<string>66067A03-7E50-4859-96EC-38ECC77CE5B4</string>
@@ -211,6 +213,10 @@
 					<string>330C5149-0338-40A3-94AF-337463115D7F</string>
 					<string>882D10A6-D7B7-4FB4-A176-9FC4C600329A</string>
 					<string>507957DA-32C6-4C15-996F-4C2215B1B7DD</string>
+					<string>------------------------------------</string>
+					<string>21BC6976-0B75-4932-B871-D091E4007A71</string>
+					<string>B86C1672-2BC5-4351-B994-CE481C34816F</string>
+					<string>F0A91B9F-E6DA-47A0-9663-B556184A6AEE</string>
 				</array>
 				<key>name</key>
 				<string>Events</string>
@@ -454,6 +460,9 @@
 		<string>F05AB37C-5774-4957-BF9F-1C01FD6F03D5</string>
 		<string>6B5CE7C0-634F-4AA8-9EB0-D2BA18EF329E</string>
 		<string>07B15183-8554-4164-9C41-0D5968BBA746</string>
+		<string>21BC6976-0B75-4932-B871-D091E4007A71</string>
+		<string>B86C1672-2BC5-4351-B994-CE481C34816F</string>
+		<string>F0A91B9F-E6DA-47A0-9663-B556184A6AEE</string>
 		<string>35C0448C-A6C1-4740-AEA8-A05EA45CACFD</string>
 		<string>541384FE-405C-41B4-BECF-655478ADE086</string>
 		<string>334E57BB-0425-4CFC-97D4-C828417E3F6D</string>
@@ -501,6 +510,8 @@
 		<string>46DE694F-8FC0-432C-8AA3-DFAF7A438027</string>
 		<string>EBE28EE0-2B8E-46DF-86B1-430862EE69AC</string>
 		<string>5826C882-45C3-45DD-A9F2-0EF523890CAE</string>
+		<string>DB0109CE-92FA-4769-8D0C-409B8100A6E1</string>
+		<string>C5376FFB-4C58-4C83-9DDF-48D83D92AD43</string>
 		<string>4686D84C-E4BE-4460-A4BF-C494D9660802</string>
 		<string>9A978B70-4581-415A-8824-FA443F81865E</string>
 		<string>84A8367E-2034-4045-94FE-AE37D0762A28</string>
