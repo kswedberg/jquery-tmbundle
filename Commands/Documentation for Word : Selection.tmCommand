@@ -10,7 +10,7 @@
 require 'rexml/document'
 require 'tempfile'
 include REXML
-file = File.open ENV['TM_BUNDLE_SUPPORT'] + '/jquery-docs-xml-15.xml'
+file = File.open ENV['TM_BUNDLE_SUPPORT'] + '/jquery-docs-xml-17.xml'
 
 doc = Document.new(file)
 root = doc.root
@@ -30,7 +30,7 @@ lookup_word = lookup_word.sub('$','jQuery')
 entries = ''
 root.elements.each("//entry[@name='#{lookup_word}']") { |e| entries += e.to_s }
 
-stylefile = ENV['TM_BUNDLE_SUPPORT'] + '/docs-15.xsl'
+stylefile = ENV['TM_BUNDLE_SUPPORT'] + '/docs-17.xsl'
 
 tf = Tempfile.new('docs')
 tf.puts('&lt;?xml version="1.0" encoding="UTF-8"?&gt;' + "\n")
