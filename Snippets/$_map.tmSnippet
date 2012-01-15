@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$.map(${1:array}, function(${2:item}${3:, ${4:index}}) {
+	<string>map(${1:array}, function(${2:item}${3:, ${4:index}}) {
   ${5:return ${6:something};}
 });</string>
 	<key>name</key>
-	<string>$.map</string>
+	<string>map</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>$.map</string>
+	<string>map</string>
 	<key>uuid</key>
 	<string>BB9B591F-761E-4853-8A64-F4F4A157B8CD</string>
 </dict>

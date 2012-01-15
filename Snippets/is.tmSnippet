@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.is('${1:selector expression}')$0</string>
+	<string>is('${1:selector expression}')$0</string>
 	<key>name</key>
 	<string>is</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.is</string>
+	<string>is</string>
 	<key>uuid</key>
 	<string>C05B289F-F527-4440-8851-A81ED1B39532</string>
 </dict>

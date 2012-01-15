@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.ajaxComplete(function(event, xhr, settings) {
+	<string>ajaxComplete(function(event, xhr, settings) {
 	${1:// executes whenever an AJAX request completes}
 });$0</string>
 	<key>name</key>
@@ -11,7 +11,7 @@
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.ajaxComplete</string>
+	<string>ajaxComplete</string>
 	<key>uuid</key>
 	<string>E91FC8E4-860A-4B3E-83EB-5A3503C8C457</string>
 </dict>

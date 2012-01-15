@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.innerWidth()$0</string>
+	<string>innerWidth()$0</string>
 	<key>name</key>
 	<string>innerWidth</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.innerWidth</string>
+	<string>innerWidth</string>
 	<key>uuid</key>
 	<string>39ABBC12-22E7-478B-9704-D2555E8BB0B9</string>
 </dict>

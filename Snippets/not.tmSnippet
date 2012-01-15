@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.not('${1:selector expression}')$0</string>
+	<string>not('${1:selector expression}')$0</string>
 	<key>name</key>
 	<string>not</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.not</string>
+	<string>not</string>
 	<key>uuid</key>
 	<string>5826C882-45C3-45DD-A9F2-0EF523890CAE</string>
 </dict>

@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.dequeue(${1/(.+)/(?1:':)/}${1:queueName}${1/(.+)/(?1:':)/})$0</string>
+	<string>dequeue(${1/(.+)/(?1:':)/}${1:queueName}${1/(.+)/(?1:':)/})$0</string>
 	<key>name</key>
 	<string>dequeue</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.dequeue</string>
+	<string>dequeue</string>
 	<key>uuid</key>
 	<string>7D4C1B97-E159-4660-9C79-82A59472EB3B</string>
 </dict>

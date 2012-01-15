@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$.get('${1:/path/to/file}'${2/(.+)/(?1:, {:)/}${2:param1: 'value1'}${2/(.+)/(?1:}:)/}${3/(.+)/(?1:, function\(data, textStatus, xhr\) {
+	<string>get('${1:/path/to/file}'${2/(.+)/(?1:, {:)/}${2:param1: 'value1'}${2/(.+)/(?1:}:)/}${3/(.+)/(?1:, function\(data, textStatus, xhr\) {
   :)/}${3://optional stuff to do after success}${3/(.+)/(?1:
 }:)/});
 $0</string>
 	<key>name</key>
-	<string>$.get</string>
+	<string>get</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>$.get</string>
+	<string>get</string>
 	<key>uuid</key>
 	<string>E05CC813-D20E-4F7B-AA32-AC555F47BA1F</string>
 </dict>

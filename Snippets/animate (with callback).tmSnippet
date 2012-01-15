@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.animate({${2:param1}: ${3:value1}${4:, ${5:param2}: ${6:value2}}}, ${7:speed}, function() {
+	<string>animate({${2:param1}: ${3:value1}${4:, ${5:param2}: ${6:value2}}}, ${7:speed}, function() {
   ${0:// stuff to do after animation is complete}
 })</string>
 	<key>name</key>
@@ -11,7 +11,7 @@
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.animate</string>
+	<string>animate</string>
 	<key>uuid</key>
 	<string>7957412E-C631-4BFC-88FA-0EC46CE5495B</string>
 </dict>

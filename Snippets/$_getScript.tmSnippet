@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$.getScript('${1:path/to/file}'${2/(.+)/(?1:, function\(data, textStatus\) {
+	<string>getScript('${1:path/to/file}'${2/(.+)/(?1:, function\(data, textStatus\) {
   :)/}${2://optional stuff to do after getScript}${2/(.+)/(?1:
 }:)/});
 $0</string>
 	<key>name</key>
-	<string>$.getScript</string>
+	<string>getScript</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>$.getScript</string>
+	<string>getScript</string>
 	<key>uuid</key>
 	<string>1E41CC95-3D42-4CC9-BD69-BA86FB8FE34A</string>
 </dict>

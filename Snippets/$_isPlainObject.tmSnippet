@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$.isPlainObject('${1:object}')$0</string>
+	<string>isPlainObject('${1:object}')$0</string>
 	<key>name</key>
-	<string>$.isPlainObject</string>
+	<string>isPlainObject</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>$.isPlainObject</string>
+	<string>isPlainObject</string>
 	<key>uuid</key>
 	<string>5E59FB11-96D7-4994-974C-3E5006DDC6B6</string>
 </dict>

@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.clearQueue(${1/(.+)/(?1:':)/}${1:queueName}${1/(.+)/(?1:':)/})$0</string>
+	<string>clearQueue(${1/(.+)/(?1:':)/}${1:queueName}${1/(.+)/(?1:':)/})$0</string>
 	<key>name</key>
 	<string>clearqueue</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.clearQueue</string>
+	<string>clearQueue</string>
 	<key>uuid</key>
 	<string>A8809BA2-3BE5-4EF3-BBA4-E5EFCD89221A</string>
 </dict>

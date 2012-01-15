@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.mouseup(${1:function(${2:event}) {
+	<string>mouseup(${1:function(${2:event}) {
 	${0:// Act on the event}
 \}});</string>
 	<key>name</key>
@@ -11,7 +11,7 @@
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.mouseup</string>
+	<string>mouseup</string>
 	<key>uuid</key>
 	<string>A07D7480-0C24-4FD9-A816-9BD5F16059CE</string>
 </dict>

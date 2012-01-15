@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$.isEmptyObject('${1:object}')$0</string>
+	<string>isEmptyObject('${1:object}')$0</string>
 	<key>name</key>
-	<string>$.isEmptyObject</string>
+	<string>isEmptyObject</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>$.isEmptyObject</string>
+	<string>isEmptyObject</string>
 	<key>uuid</key>
 	<string>F0D657BB-CC78-4991-85FA-37B3CA734F10</string>
 </dict>

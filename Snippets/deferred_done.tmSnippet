@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.done(${1:doneCallbacks})$0</string>
+	<string>done(${1:doneCallbacks})$0</string>
 	<key>name</key>
 	<string>deferred.done</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.done</string>
+	<string>done</string>
 	<key>uuid</key>
 	<string>79F89635-37BB-4BA9-8415-981C8598013B</string>
 </dict>

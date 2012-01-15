@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.attr('${1:attribute}'${2/(^,).*|.+/(?1::, )/}${2/(^([0-9]+$|,.*))|.+/(?1::')/}${2:value}${2/(^([0-9]+$|,.*))|.+/(?1::')/})$0</string>
+	<string>attr('${1:attribute}'${2/(^,).*|.+/(?1::, )/}${2/(^([0-9]+$|,.*))|.+/(?1::')/}${2:value}${2/(^([0-9]+$|,.*))|.+/(?1::')/})$0</string>
 	<key>name</key>
 	<string>attr</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.attr</string>
+	<string>attr</string>
 	<key>uuid</key>
 	<string>97E5547D-95E2-4185-86CE-500FA11B21B6</string>
 </dict>

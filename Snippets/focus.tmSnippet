@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.focus(${1:function(${2:event}) {
+	<string>focus(${1:function(${2:event}) {
 	${0:// Act on the event}
 \}});</string>
 	<key>name</key>
@@ -11,7 +11,7 @@
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.focus</string>
+	<string>focus</string>
 	<key>uuid</key>
 	<string>EECF47F6-EA86-4954-AC05-8875798A6B64</string>
 </dict>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.hover(function() {
+	<string>hover(function() {
 	${1:// Stuff to do when the mouse enters the element;}
 }, function() {
 	${2:// Stuff to do when the mouse leaves the element;}
@@ -13,7 +13,7 @@
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.hover</string>
+	<string>hover</string>
 	<key>uuid</key>
 	<string>F74520FC-AFC5-468D-BBC5-318526497E0B</string>
 </dict>

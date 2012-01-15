@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.each(function(index) {
+	<string>each(function(index) {
   ${0:this.innerHTML = this + " is the element, " + index + " is the position";}
 });</string>
 	<key>name</key>
@@ -11,7 +11,7 @@
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.each</string>
+	<string>each</string>
 	<key>uuid</key>
 	<string>E11A7E2B-FC5B-43BB-9F1F-C6E309A62520</string>
 </dict>

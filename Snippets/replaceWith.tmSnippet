@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.replaceWith('${1:htmlString/DOMElement/jQueryObject}')$0</string>
+	<string>replaceWith('${1:htmlString/DOMElement/jQueryObject}')$0</string>
 	<key>name</key>
 	<string>replaceWith</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.replaceWith</string>
+	<string>replaceWith</string>
 	<key>uuid</key>
 	<string>B56142AB-FA50-49B7-88DD-1335AF7B893D</string>
 </dict>

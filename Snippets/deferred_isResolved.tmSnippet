@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.isResolved()$0</string>
+	<string>isResolved()$0</string>
 	<key>name</key>
 	<string>deferred.isResolved</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.isResolved</string>
+	<string>isResolved</string>
 	<key>uuid</key>
 	<string>9E2BF3EE-B220-454A-9132-0EE3A5E5F0C4</string>
 </dict>

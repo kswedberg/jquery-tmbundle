@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.fadeTo(${1/(^[0-9]+$)|.+/(?1::')/}${1:slow/400/fast}${1/(^[0-9]+$)|.+/(?1::')/}, ${2:0.5}, function() {
+	<string>fadeTo(${1/(^[0-9]+$)|.+/(?1::')/}${1:slow/400/fast}${1/(^[0-9]+$)|.+/(?1::')/}, ${2:0.5}, function() {
 	${0://Stuff to do *after* the animation takes place};
 });
 </string>
@@ -12,7 +12,7 @@
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.fadeTo</string>
+	<string>fadeTo</string>
 	<key>uuid</key>
 	<string>ABF4209E-5639-4B38-9C21-11988EAD08F9</string>
 </dict>

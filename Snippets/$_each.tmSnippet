@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$.each(${1:array/object}, function(${2:index}${3:, ${4:val}}) {
+	<string>each(${1:array/object}, function(${2:index}${3:, ${4:val}}) {
   ${0://iterate through array or object}
 });</string>
 	<key>name</key>
-	<string>$.each</string>
+	<string>each</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>$.each</string>
+	<string>each</string>
 	<key>uuid</key>
 	<string>AFF18100-5A9C-42D8-8B90-434A36E41849</string>
 </dict>

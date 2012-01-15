@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.on('${1:event name}'${2/(^,).*|.+/(?1::, ')/}${2:selector}${2/(^,).*|.+/(?1::')/}${3/(^,).*|.+/(?1::, )/}${3:eventData}, function(${4:event}) {
+	<string>on('${1:event name}'${2/(^,).*|.+/(?1::, ')/}${2:selector}${2/(^,).*|.+/(?1::')/}${3/(^,).*|.+/(?1::, )/}${3:eventData}, function(${4:event}) {
   ${0:// Act on the event}
 });</string>
 	<key>name</key>
@@ -11,7 +11,7 @@
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.on</string>
+	<string>on</string>
 	<key>uuid</key>
 	<string>DB0109CE-92FA-4769-8D0C-409B8100A6E1</string>
 </dict>

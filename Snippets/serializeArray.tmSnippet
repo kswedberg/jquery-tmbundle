@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.serializeArray()$0</string>
+	<string>serializeArray()$0</string>
 	<key>name</key>
 	<string>serializeArray</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.serializeArray</string>
+	<string>serializeArray</string>
 	<key>uuid</key>
 	<string>495F6463-9166-43D7-A0A9-78481E386296</string>
 </dict>

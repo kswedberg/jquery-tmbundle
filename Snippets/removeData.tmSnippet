@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.removeData('${1:data name}')$0</string>
+	<string>removeData('${1:data name}')$0</string>
 	<key>name</key>
 	<string>removeData</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.removeData</string>
+	<string>removeData</string>
 	<key>uuid</key>
 	<string>A9846BA3-9EB7-4676-B412-CD675FB88161</string>
 </dict>

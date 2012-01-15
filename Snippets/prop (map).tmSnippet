@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.prop({
+	<string>prop({
   ${1/^([^'"].+-.+)$|.+/(?1:':)/}${1:property1}${1/^([^'"].+-.+[^'"])$|.+/(?1:':)/}: ${3:'${2:value1}'}${4/([^,]).*|.+/(?1:,
   :)/m}${4:property2: 'value2'}
 })$0</string>
@@ -12,7 +12,7 @@
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.prop</string>
+	<string>prop</string>
 	<key>uuid</key>
 	<string>0805864F-343C-4162-B709-6345B9DB34C5</string>
 </dict>

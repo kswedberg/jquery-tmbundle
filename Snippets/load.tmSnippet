@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.load(${1:function() {
+	<string>load(${1:function() {
 	${0:// Act on the event}
 \}});</string>
 	<key>name</key>
@@ -11,7 +11,7 @@
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.load</string>
+	<string>load</string>
 	<key>uuid</key>
 	<string>9599E726-CD10-4B52-8DAD-5F02343E6541</string>
 </dict>

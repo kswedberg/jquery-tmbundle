@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$.merge(${1:array1}, ${2:array2});
+	<string>merge(${1:array1}, ${2:array2});
 $0</string>
 	<key>name</key>
-	<string>$.merge</string>
+	<string>merge</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>$.merge</string>
+	<string>merge</string>
 	<key>uuid</key>
 	<string>63843996-9CA5-4D10-A6A2-70D9B77BEEED</string>
 </dict>

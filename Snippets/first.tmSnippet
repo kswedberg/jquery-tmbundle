@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.first()$0</string>
+	<string>first()$0</string>
 	<key>name</key>
 	<string>first</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>.first</string>
+	<string>first</string>
 	<key>uuid</key>
 	<string>CB695A61-6DF5-419D-B15E-A7BA3B5DECE5</string>
 </dict>

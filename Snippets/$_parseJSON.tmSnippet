@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$.parseJSON(${1:json});${0:}</string>
+	<string>parseJSON(${1:json});${0:}</string>
 	<key>name</key>
-	<string>$.parseJSON</string>
+	<string>parseJSON</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>$.parseJSON</string>
+	<string>parseJSON</string>
 	<key>uuid</key>
 	<string>C47F3A80-AB4A-4F0A-81DC-69483935F7E4</string>
 </dict>

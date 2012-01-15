@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$.when(${1:deferreds});
+	<string>when(${1:deferreds});
 $0</string>
 	<key>name</key>
-	<string>$.when</string>
+	<string>when</string>
 	<key>scope</key>
 	<string>source.js.jquery</string>
 	<key>tabTrigger</key>
-	<string>$.when</string>
+	<string>when</string>
 	<key>uuid</key>
 	<string>5CD6A590-2551-4413-BF2E-ACF166FBF7F8</string>
 </dict>
