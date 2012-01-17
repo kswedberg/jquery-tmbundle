@@ -15,7 +15,7 @@ $0</string>
 	<key>name</key>
 	<string>QUnit module</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>module</string>
 	<key>uuid</key>

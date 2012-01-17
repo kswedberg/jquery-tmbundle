@@ -8,7 +8,7 @@ $0</string>
 	<key>name</key>
 	<string>jQuery.extend</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>jQuery.extend</string>
 	<key>uuid</key>

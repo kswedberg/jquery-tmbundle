@@ -8,7 +8,7 @@
 	<key>name</key>
 	<string>clone</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>clone</string>
 	<key>uuid</key>

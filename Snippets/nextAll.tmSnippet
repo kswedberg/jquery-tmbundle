@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>nextAll</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>nextAll</string>
 	<key>uuid</key>
