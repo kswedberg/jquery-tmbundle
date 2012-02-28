@@ -3,4 +3,5 @@
 	${0:// Act on the event}
 \}});]]></content>
 	<tabTrigger>.scroll</tabTrigger>
+	<scope>source.js</scope>
 </snippet>

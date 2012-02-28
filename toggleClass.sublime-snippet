@@ -3,4 +3,5 @@
 .toggleClass('${1:class name}')$0
 		]]></content>
 	<tabTrigger>.toggleClass</tabTrigger>
+	<scope>source.js</scope>
 </snippet>

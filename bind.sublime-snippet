@@ -4,4 +4,5 @@
 });]]></content>
 	<tabTrigger>.bind</tabTrigger>
 	<description>.bind</description>
+	<scope>source.js</scope>
 </snippet>

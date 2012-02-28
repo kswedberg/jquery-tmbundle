@@ -7,4 +7,5 @@
 $0]]></content>
 	<tabTrigger>.toggle</tabTrigger>
 	<description>.toggle</description>
+	<scope>source.js</scope>
 </snippet>

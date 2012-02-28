@@ -2,4 +2,5 @@
 	<content><![CDATA[.appendTo('${1:selector expression}')$0]]></content>
 	<tabTrigger>.appendTo</tabTrigger>
 	<description>.appendTo</description>
+	<scope>source.js</scope>
 </snippet>

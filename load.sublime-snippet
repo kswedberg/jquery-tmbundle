@@ -4,4 +4,5 @@
 \}});]]></content>
 	<tabTrigger>.load</tabTrigger>
 	<description>.load</description>
+	<scope>source.js</scope>
 </snippet>

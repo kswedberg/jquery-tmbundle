@@ -1,4 +1,5 @@
 <snippet>
 	<content><![CDATA[.scrollLeft(${1:value})$0]]></content>
 	<tabTrigger>.scrollLeft</tabTrigger>
+	<scope>source.js</scope>
 </snippet>

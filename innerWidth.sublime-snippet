@@ -2,4 +2,5 @@
 	<content><![CDATA[.innerWidth()$0]]></content>
 	<tabTrigger>.innerWidth</tabTrigger>
 	<description>.innerWidth</description>
+	<scope>source.js</scope>
 </snippet>

@@ -1,4 +1,5 @@
 <snippet>
 	<content><![CDATA[.find('${1:selector expression}')$0]]></content>
 	<tabTrigger>.find</tabTrigger>
+	<scope>source.js</scope>
 </snippet>

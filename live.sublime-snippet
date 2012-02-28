@@ -3,4 +3,5 @@
 	${0:// Act on the event}
 });]]></content>
 	<tabTrigger>.live</tabTrigger>
+	<scope>source.js</scope>
 </snippet>

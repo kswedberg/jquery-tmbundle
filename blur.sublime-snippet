@@ -4,4 +4,5 @@
 \}});]]></content>
 	<tabTrigger>.blur</tabTrigger>
 	<description>.blur</description>
+	<scope>source.js</scope>
 </snippet>
