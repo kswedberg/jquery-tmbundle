@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[.on('${1:click}', '${2:\$("selector")}', function(${3:event}) {
+	${4:event.preventDefault();}
+	${0:// Act on the event}
+});]]></content>
+	<tabTrigger>.on</tabTrigger>
+	<scope>source.js</scope>
+</snippet>
