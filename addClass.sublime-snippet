@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[.addClass('${1:class_name}')$0]]></content>
+	<tabTrigger>.addClass</tabTrigger>
+	<scope>source.js</scope>
+</snippet>
