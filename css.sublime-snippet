@@ -1,5 +1,5 @@
 <snippet>
 	<content><![CDATA[.css('${1:property}'${2/(^,).*|.+/(?1::, )/}${2/(^([0-9]+$|,.*))|.+/(?1::')/}${2:value}${2/(^([0-9]+$|,.*))|.+/(?1::')/})$0]]></content>
 	<tabTrigger>.css</tabTrigger>
-	<scope>source.js</scope>
+	<scope>source.js.jquery</scope>
 </snippet>

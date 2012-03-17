@@ -4,5 +4,5 @@
 });]]></content>
 	<tabTrigger>.delegate</tabTrigger>
 	<description>.delegate</description>
-	<scope>source.js</scope>
+	<scope>source.js.jquery</scope>
 </snippet>

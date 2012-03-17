@@ -3,5 +3,5 @@
 	${0:// Act on the event}
 \}});]]></content>
 	<tabTrigger>.each</tabTrigger>
-	<scope>source.js</scope>
+	<scope>source.js.jquery</scope>
 </snippet>
