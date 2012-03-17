@@ -15,7 +15,7 @@
 	<key>name</key>
 	<string>plugin (selector)</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>plugin</string>
 	<key>uuid</key>

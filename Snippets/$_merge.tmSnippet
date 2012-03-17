@@ -8,7 +8,7 @@ $0</string>
 	<key>name</key>
 	<string>$.merge</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>$.merge</string>
 	<key>uuid</key>

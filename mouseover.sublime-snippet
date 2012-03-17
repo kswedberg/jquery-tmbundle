@@ -3,5 +3,5 @@
 	${0:// Act on the event}
 \}});]]></content>
 	<tabTrigger>.mouseover</tabTrigger>
-	<scope>source.js.jquery</scope>
+	<scope>source.js</scope>
 </snippet>

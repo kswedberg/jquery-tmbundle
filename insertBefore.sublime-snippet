@@ -2,5 +2,5 @@
 	<content><![CDATA[.insertBefore('${1:selector expression}')$0]]></content>
 	<tabTrigger>.insertBefore</tabTrigger>
 	<description>.insertBefore</description>
-	<scope>source.js.jquery</scope>
+	<scope>source.js</scope>
 </snippet>

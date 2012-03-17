@@ -3,5 +3,5 @@
 	${4:return ${5:something};}
 })]]></content>
 	<tabTrigger>.map</tabTrigger>
-	<scope>source.js.jquery</scope>
+	<scope>source.js</scope>
 </snippet>

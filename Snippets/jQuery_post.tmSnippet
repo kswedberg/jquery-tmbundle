@@ -10,7 +10,7 @@ $0</string>
 	<key>name</key>
 	<string>jQuery.post</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>jQuery.post</string>
 	<key>uuid</key>

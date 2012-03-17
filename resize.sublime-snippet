@@ -4,5 +4,5 @@
 \}});]]></content>
 	<tabTrigger>.resize</tabTrigger>
 	<description>.resize</description>
-	<scope>source.js.jquery</scope>
+	<scope>source.js</scope>
 </snippet>

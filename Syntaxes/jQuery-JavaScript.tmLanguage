@@ -112,7 +112,7 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>source.js.jquery</string>
+					<string>source.js</string>
 				</dict>
 			</array>
 		</dict>
@@ -210,7 +210,7 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>source.js.jquery</string>
+					<string>source.js</string>
 				</dict>
 			</array>
 		</dict>
@@ -304,7 +304,7 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>source.js.jquery</string>
+					<string>source.js</string>
 				</dict>
 			</array>
 		</dict>
@@ -398,7 +398,7 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>source.js.jquery</string>
+					<string>source.js</string>
 				</dict>
 			</array>
 		</dict>
@@ -454,7 +454,7 @@
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>source.js.jquery</string>
+			<string>source.js</string>
 		</dict>
 	</array>
 	<key>repository</key>
@@ -583,13 +583,13 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>source.js.jquery</string>
+					<string>source.js</string>
 				</dict>
 			</array>
 		</dict>
 	</dict>
 	<key>scopeName</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>uuid</key>
 	<string>1AD8EB10-62BE-417C-BC4B-29B5C6F0B36A</string>
 </dict>

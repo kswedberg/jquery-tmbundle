@@ -1,5 +1,5 @@
 <snippet>
 	<content><![CDATA[.replaceWith('${1:htmlString/DOMElement/jQueryObject}')$0]]></content>
 	<tabTrigger>.replaceWith</tabTrigger>
-	<scope>source.js.jquery</scope>
+	<scope>source.js</scope>
 </snippet>

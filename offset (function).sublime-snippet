@@ -4,5 +4,5 @@
 })]]></content>
 	<tabTrigger>.offset</tabTrigger>
 	<description>.offset</description>
-	<scope>source.js.jquery</scope>
+	<scope>source.js</scope>
 </snippet>

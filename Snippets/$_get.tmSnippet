@@ -10,7 +10,7 @@ $0</string>
 	<key>name</key>
 	<string>$.get</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>$.get</string>
 	<key>uuid</key>

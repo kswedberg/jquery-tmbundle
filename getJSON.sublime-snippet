@@ -4,5 +4,5 @@
 }:)/});
 $0]]></content>
 	<tabTrigger>.getjson</tabTrigger>
-	<scope>source.js.jquery</scope>
+	<scope>source.js</scope>
 </snippet>

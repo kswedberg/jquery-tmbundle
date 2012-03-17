@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>clearqueue</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>.clearQueue</string>
 	<key>uuid</key>

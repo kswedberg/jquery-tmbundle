@@ -4,5 +4,5 @@
 });]]></content>
 	<tabTrigger>.animate</tabTrigger>
 	<description>.animate() with callback</description>
-	<scope>source.js.jquery</scope>
+	<scope>source.js</scope>
 </snippet>

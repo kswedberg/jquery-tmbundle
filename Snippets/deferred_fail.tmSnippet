@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>deferred.fail</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>.fail</string>
 	<key>uuid</key>

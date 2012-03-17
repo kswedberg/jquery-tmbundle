@@ -10,7 +10,7 @@
 	<key>name</key>
 	<string>attr (map)</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>.attr</string>
 	<key>uuid</key>

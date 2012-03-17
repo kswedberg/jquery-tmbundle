@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>$.isWindow</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>$.isWindow</string>
 	<key>uuid</key>

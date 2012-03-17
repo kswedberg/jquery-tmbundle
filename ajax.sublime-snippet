@@ -16,5 +16,5 @@ ${7/(.+)/(?1:  }
 :)/}});
 $0]]></content>
 	<tabTrigger>.ajax</tabTrigger>
-	<scope>source.js.jquery</scope>
+	<scope>source.js</scope>
 </snippet>

@@ -8,7 +8,7 @@ $0</string>
 	<key>name</key>
 	<string>$.unique</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>$.unique</string>
 	<key>uuid</key>

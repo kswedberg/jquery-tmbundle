@@ -9,7 +9,7 @@
 	<key>name</key>
 	<string>select</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>.select</string>
 	<key>uuid</key>
