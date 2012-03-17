@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[.height(${1:integer})$0]]></content>
+	<tabTrigger>.height</tabTrigger>
+	<scope>source.js.jquery</scope>
+</snippet>

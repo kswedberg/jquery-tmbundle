@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[.ajaxError(function(${1:event, xhr, settings, thrownError}) {
+  ${2://stuff to do when an AJAX call returns an error};
+});
+$0]]></content>
+	<tabTrigger>.ajaxerror</tabTrigger>
+	<scope>source.js.jquery</scope>
+</snippet>

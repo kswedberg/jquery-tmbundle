@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[.is('${1:selector expression}')$0]]></content>
+	<tabTrigger>.is</tabTrigger>
+	<scope>source.js.jquery</scope>
+</snippet>
