@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[\$('${1:string/element/array/function/jQuery object/string, context}')$0]]></content>
+	<tabTrigger>$</tabTrigger>
+	<description>$('#select DOM Element')</description>
+</snippet>
