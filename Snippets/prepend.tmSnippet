@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>prepend</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>prepend</string>
 	<key>uuid</key>

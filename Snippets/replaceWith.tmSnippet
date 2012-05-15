@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>replaceWith</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>replaceWith</string>
 	<key>uuid</key>

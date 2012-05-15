@@ -11,7 +11,7 @@
 	<key>name</key>
 	<string>hover</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>hover</string>
 	<key>uuid</key>

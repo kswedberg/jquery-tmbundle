@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>$ (Select or Create DOM Element)</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>$</string>
 	<key>uuid</key>

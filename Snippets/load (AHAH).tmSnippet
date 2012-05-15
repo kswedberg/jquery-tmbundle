@@ -12,7 +12,7 @@ $0</string>
 	<key>name</key>
 	<string>load (AHAH)</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>load</string>
 	<key>uuid</key>

@@ -9,7 +9,7 @@
 	<key>name</key>
 	<string>scroll</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>scroll</string>
 	<key>uuid</key>

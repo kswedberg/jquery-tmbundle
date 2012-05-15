@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>trigger</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>trigger</string>
 	<key>uuid</key>

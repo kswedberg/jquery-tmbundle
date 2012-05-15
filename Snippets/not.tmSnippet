@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>not</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>not</string>
 	<key>uuid</key>

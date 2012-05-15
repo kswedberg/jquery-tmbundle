@@ -9,7 +9,7 @@
 	<key>name</key>
 	<string>live</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>live</string>
 	<key>uuid</key>

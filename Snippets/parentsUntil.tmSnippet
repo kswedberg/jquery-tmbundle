@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>parentsUntil</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>parentsUntil</string>
 	<key>uuid</key>

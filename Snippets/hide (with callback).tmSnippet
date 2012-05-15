@@ -10,7 +10,7 @@
 	<key>name</key>
 	<string>hide (with callback)</string>
 	<key>scope</key>
-	<string>source.js.jquery</string>
+	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>hide</string>
 	<key>uuid</key>
