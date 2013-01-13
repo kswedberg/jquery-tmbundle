@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[.contains('${1:text to find}');$0]]></content>
+	<tabTrigger>.contains</tabTrigger>
+	<description>.contains()</description>
+	<scope>source.js</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[jQuery(document).ready(function(\$) {
+	${0:// Stuff to do as soon as the DOM is ready;}
+});]]></content>
+	<tabTrigger>ready</tabTrigger>
+	<description>jQuery(document).ready</description>
+	<scope>source.js</scope>
+</snippet>
