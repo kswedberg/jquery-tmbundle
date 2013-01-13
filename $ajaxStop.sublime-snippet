@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[.ajaxStop((function() {
+	${1://stuff to do when all AJAX calls have completed};
+});
+$0]]></content>
+	<tabTrigger>.ajaxstop</tabTrigger>
+	<description>$.ajaxStop()</description>
+	<scope>source.js</scope>
+</snippet>

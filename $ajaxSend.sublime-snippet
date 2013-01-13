@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[.ajaxSend(function(${1:event, xhr, settings}) {
+	${2://stuff to do before an AJAX request is sent};
+});
+$0]]></content>
+	<tabTrigger>.ajaxsend</tabTrigger>
+	<description>$.ajaxSend()</description>
+	<scope>source.js</scope>
+</snippet>
