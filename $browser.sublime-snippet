@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[\\$.browser]]></content>
+	<tabTrigger>.browser</tabTrigger>
+	<description>$.browser</description>
+	<scope>source.js</scope>
+</snippet>

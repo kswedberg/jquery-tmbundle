@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[.filter(function(index) {
+	${1:return ${2:something};}
+});$0]]></content>
+	<tabTrigger>.filter</tabTrigger>
+	<description>.filter function</description>
+	<scope>source.js</scope>
+</snippet>

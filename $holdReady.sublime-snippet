@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[\\$.holdReady(${1:true/false});]]></content>
+	<tabTrigger>.holdready</tabTrigger>
+	<description>$.holdReady</description>
+	<scope>source.js</scope>
+</snippet>
