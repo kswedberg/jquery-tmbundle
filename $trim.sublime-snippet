@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[\\$.trim(${1:'${2:string}'})$0]]></content>
+	<tabTrigger>.trim</tabTrigger>
+	<description>$.trim()</description>
+	<scope>source.js</scope>
+</snippet>
