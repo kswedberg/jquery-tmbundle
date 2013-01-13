@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[\$.when(${1:deferreds});
+$0]]></content>
+	<tabTrigger>.when</tabTrigger>
+	<description>$.when()</description>
+	<scope>source.js</scope>
+</snippet>
