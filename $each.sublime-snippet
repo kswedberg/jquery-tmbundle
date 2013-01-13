@@ -3,6 +3,6 @@
 	${0: //iterate through array or object}
 });]]></content>
 	<tabTrigger>.each</tabTrigger>
-	<description>$.each</description>
+	<description>$.each()</description>
 	<scope>source.js</scope>
 </snippet>

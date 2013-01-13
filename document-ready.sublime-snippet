@@ -3,5 +3,6 @@
 	${0:// Stuff to do as soon as the DOM is ready;}
 });]]></content>
 	<tabTrigger>ready</tabTrigger>
+	<description>document.ready - $(function()</description>
 	<scope>source.js</scope>
 </snippet>
