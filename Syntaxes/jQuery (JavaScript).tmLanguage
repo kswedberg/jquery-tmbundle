@@ -15,10 +15,6 @@
 	<key>patterns</key>
 	<array>
 		<dict>
-			<key>include</key>
-			<string>source</string>
-		</dict>
-		<dict>
 			<key>begin</key>
 			<string>(\$|jQuery)(\((?!('|")&lt;))</string>
 			<key>beginCaptures</key>
