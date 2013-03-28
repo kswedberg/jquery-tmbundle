@@ -16,7 +16,11 @@ This bundle is dual-licensed under MIT and GPL licenses (just like jQuery).
 
 Use it, change it, fork it, sell it. Do what you will, but please leave the author attribution.
 
-## Install
+## Installation
+
+You can install this bundle in TextMate by opening the preferences and going to the bundles tab. After installation it will be automatically updated for you. (This requires 2.0+)
+
+## Manual Installation
 
 The quickest way to install the bundle is via the command line. If you have Git installed, you'll probably want to install with Git. With or without, you can simply copy and paste each line one by one into the Terminal instructions ( lifted from [drnic](http://github.com/drnic/ruby-on-rails-tmbundle) ):
 
