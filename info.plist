@@ -6,26 +6,6 @@
 	<string>xfjrqoret@tznvy.pbz</string>
 	<key>contactName</key>
 	<string>Karl Swedberg</string>
-	<key>deleted</key>
-	<array>
-		<string>9AE1D96B-BB81-4C35-9E4D-4B31C5FBDF4F</string>
-		<string>D2FE96AF-298B-406C-9670-DAAAC6A36DA2</string>
-		<string>F70327D8-9048-4284-98A8-17CABAC64FBF</string>
-		<string>0E52404C-6993-4BE1-A4BF-6108844DAEB4</string>
-		<string>F64F6BA8-1A56-44BB-A593-AED3962779E5</string>
-		<string>D3629558-2635-4201-8110-8F54AEF20B96</string>
-		<string>F68EE39A-7CCE-45D1-A73D-0EAD687B52C0</string>
-		<string>CED0227B-1AD3-4760-A857-CAA0B1C46D6E</string>
-		<string>DCA14E67-CCCE-48A0-843C-601EF42938FF</string>
-		<string>66AE7CD9-55FF-4394-AD17-8D4C7C523220</string>
-		<string>A2CC5F42-FB47-4A78-88FD-ACB9860331D2</string>
-		<string>53F442F0-1DF6-4397-ABAA-140CF986148C</string>
-		<string>E0D46ACB-9942-4F2D-9208-6D6B419530BD</string>
-		<string>682106E7-5230-4F50-B6DE-1F666B2FDBF5</string>
-		<string>27E32B09-7225-4375-87BA-644A91662867</string>
-		<string>42A2E1E3-BCCD-41B8-A5D5-DDB2BD99793D</string>
-		<string>30E96707-7160-4BA2-901A-741F087F8539</string>
-	</array>
 	<key>description</key>
 	<string>Support for the &lt;a href="http://jquery.com/"&gt;jQuery JavaScript library&lt;/a&gt;.</string>
 	<key>mainMenu</key>
@@ -75,6 +55,12 @@
 			<string>04234F37-7812-499B-BB9C-2FD1B92DB1B5</string>
 			<string>438A0DF2-C714-4D2A-A27A-EF0F62F5BC0F</string>
 			<string>58A59313-2F70-4024-985C-C46A454B88AF</string>
+			<string>------------------------------------</string>
+			<string>690646D5-AC38-4EB9-8C41-776E4F55CB59</string>
+			<string>------------------------------------</string>
+			<string>6BA17348-3208-4CD7-8CE1-B50020F5BB0D</string>
+			<string>F0E50FED-1712-4670-9916-D1D8F33D106D</string>
+			<string>------------------------------------</string>
 			<string>A5043B16-CB72-477B-82BB-69567A2911AB</string>
 			<string>5AA4FA14-EDFF-4A86-AD2C-41653F62F0FC</string>
 			<string>666E4E75-2C6F-4EE5-ACA7-8A6CC4341237</string>
@@ -87,12 +73,10 @@
 			<string>BEDFBFF2-0ADB-44B5-A9FD-FD9C5E0A24F4</string>
 			<string>EF1CB77B-1B29-41A2-B29B-05D4D1DA9E6D</string>
 			<string>E1CE8123-C9D7-47B4-8126-19E460B72D5C</string>
-			<string>690646D5-AC38-4EB9-8C41-776E4F55CB59</string>
+			<string>------------------------------------</string>
 			<string>A3107EF3-17D8-4453-9DB3-4F5CE1B502D9</string>
 			<string>08389AF0-8A25-4FC4-9AF2-D18C42CBD051</string>
 			<string>002C9C57-F00E-4338-B3FF-601D8E93F122</string>
-			<string>6BA17348-3208-4CD7-8CE1-B50020F5BB0D</string>
-			<string>F0E50FED-1712-4670-9916-D1D8F33D106D</string>
 		</array>
 		<key>submenus</key>
 		<dict>
@@ -125,6 +109,7 @@
 				<key>items</key>
 				<array>
 					<string>FD88DCF4-58A9-496A-9210-F20156700868</string>
+					<string>13A97EE5-9044-490A-88C9-953CEE619515</string>
 					<string>4E59B953-8663-41A5-BACE-34094480ED3B</string>
 					<string>D8442C25-F005-4995-8918-D51658FD75FA</string>
 					<string>A6D9E0E1-5232-4B30-9D96-A085F4B8C721</string>
@@ -227,6 +212,8 @@
 				<array>
 					<string>97E5547D-95E2-4185-86CE-500FA11B21B6</string>
 					<string>5432CA1D-9EFF-4F2C-AE3D-8361B3BC8605</string>
+					<string>935A75B5-69C9-4A86-8FEB-70E14F71B24B</string>
+					<string>0805864F-343C-4162-B709-6345B9DB34C5</string>
 					<string>57F5AE77-4616-4DE0-9D61-2D066E6273D3</string>
 					<string>A9846BA3-9EB7-4676-B412-CD675FB88161</string>
 					<string>A2A4C2A1-C6A8-4D0E-9549-DAD067016573</string>

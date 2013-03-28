@@ -4,7 +4,7 @@
 <dict>
 	<key>content</key>
 	<string>.map(function(${1:index}${2:, ${3:elem}}) {
-  ${4:return ${5:something};}
+	${4:return ${5:something};}
 })</string>
 	<key>name</key>
 	<string>map (function)</string>

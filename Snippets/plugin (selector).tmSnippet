@@ -4,12 +4,12 @@
 <dict>
 	<key>content</key>
 	<string>(function(\$) {
-  \$.extend(\$.expr[':'], {
-    ${1:selectorName}: function(element, index, matches, set) {
-      $0
-      return something;
-    }
-  });
+	\$.extend(\$.expr[':'], {
+		${1:selectorName}: function(element, index, matches, set) {
+			$0
+			return something;
+		}
+	});
 })(jQuery);
 </string>
 	<key>name</key>

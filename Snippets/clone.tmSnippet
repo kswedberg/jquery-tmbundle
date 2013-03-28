@@ -3,8 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.clone(${1:withDataAndEvents}${2/(^,).*|.+/(?1::, )/}${2:deepWithDataAndEvents})$0
-</string>
+	<string>.clone(${1:withDataAndEvents}${2/(^,).*|.+/(?1::, )/}${2:deepWithDataAndEvents})$0</string>
 	<key>name</key>
 	<string>clone</string>
 	<key>scope</key>

@@ -4,7 +4,7 @@
 <dict>
 	<key>content</key>
 	<string>.filter(function(index) {
-  ${1:return ${2:something};}
+	${1:return ${2:something};}
 })</string>
 	<key>name</key>
 	<string>filter (function)</string>
