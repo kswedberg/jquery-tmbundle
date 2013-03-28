@@ -3,8 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>:hidden
-</string>
+	<string>:hidden</string>
 	<key>keyEquivalent</key>
 	<string>^:</string>
 	<key>name</key>
