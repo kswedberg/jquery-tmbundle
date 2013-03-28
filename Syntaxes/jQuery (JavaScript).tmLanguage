@@ -29,7 +29,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.section.class.js</string>
+					<string>punctuation.section.class.begin.js</string>
 				</dict>
 			</dict>
 			<key>contentName</key>
@@ -41,7 +41,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.section.class.js</string>
+					<string>punctuation.section.class.end.js</string>
 				</dict>
 			</dict>
 			<key>patterns</key>
@@ -127,7 +127,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.section.function.js</string>
+					<string>punctuation.section.function.begin.js</string>
 				</dict>
 			</dict>
 			<key>contentName</key>
@@ -139,7 +139,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.section.function.js</string>
+					<string>punctuation.section.function.end.js</string>
 				</dict>
 			</dict>
 			<key>patterns</key>
@@ -563,16 +563,24 @@
 		<dict>
 			<key>begin</key>
 			<string>\(</string>
-			<key>captures</key>
+			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.section.scope.js</string>
+					<string>punctuation.section.scope.begin.js</string>
 				</dict>
 			</dict>
 			<key>end</key>
 			<string>\)</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.scope.end.js</string>
+				</dict>
+			</dict>
 			<key>patterns</key>
 			<array>
 				<dict>
