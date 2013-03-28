@@ -4,7 +4,7 @@
 <dict>
 	<key>content</key>
 	<string>jQuery.fn.${1:myeffect} = function(speed, easing, callback) {
-  return this.animate({${2:param1}: ${3:'value'}}, speed, easing, callback);
+	return this.animate({${2:param1}: ${3:'value'}}, speed, easing, callback);
 };</string>
 	<key>name</key>
 	<string>plugin (animation)</string>

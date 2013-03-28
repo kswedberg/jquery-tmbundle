@@ -4,7 +4,7 @@
 <dict>
 	<key>content</key>
 	<string>.animate({${2:param1}: ${3:value1}${4:, ${5:param2}: ${6:value2}}}, ${7:speed}, function() {
-  ${0:// stuff to do after animation is complete}
+	${0:// stuff to do after animation is complete}
 })</string>
 	<key>name</key>
 	<string>animate (with callback)</string>

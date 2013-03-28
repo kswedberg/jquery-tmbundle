@@ -4,7 +4,7 @@
 <dict>
 	<key>content</key>
 	<string>.replaceWith(function(index, currentContents) {
-  ${1:return ${2:something};}
+	${1:return ${2:something};}
 })</string>
 	<key>name</key>
 	<string>replaceWith (function)</string>

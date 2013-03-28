@@ -4,7 +4,7 @@
 <dict>
 	<key>content</key>
 	<string>.offset(function(index, currentCoordinates) {
-  ${1:return ${2:someObject};}
+	${1:return ${2:someObject};}
 })</string>
 	<key>name</key>
 	<string>offset (function)</string>

@@ -5,120 +5,121 @@
 	<key>content</key>
 	<string>// jQuery ${1:pluginName} Plugin
 (function( \$ ) {
-  var settings = {
-    ${30:}
-  };
+	var settings = {
+		${30:}
+	};
 
-  var methods = {
-    init: function( options ) {
+	var methods = {
+		init: function( options ) {
 
-      this.each(function() {
-        var data, dataId, opts,
-            ${10:\$this} = \$(this);
+			this.each(function() {
+				var data, dataId, opts,
+						${10:\$this} = \$(this);
 
-        $10.$1('options', options);
-        data = $10.data('$1') || {};
-        opts = data.options;
+				$10.$1('options', options);
+				data = $10.data('$1') || {};
+				opts = data.options;
 
-        // If the plugin hasn't been initialized yet
-        if ( !data.$1 ) {
-          dataId = +new Date;
+				// If the plugin hasn't been initialized yet
+				if ( !data.$1 ) {
+					dataId = +new Date;
 
-          data = {
-            $1: true,
-            options: opts,
-            id: dataId
-          };
+					data = {
+						$1: true,
+						options: opts,
+						id: dataId
+					};
 
-          ${14:
-          // create element and append to body
-          var \$$1 = \$('&lt;div /&gt;', {
-            'class': '$1'
-          \}).appendTo( 'body' );
+					${14:
+					// create element and append to body
+					var \$$1 = \$('&lt;div /&gt;', {
+						'class': '$1'
+					\}).appendTo( 'body' );
 
-          // Associate created element with invoking element
-          \$$1.data( '$1', {target: $10, id: dataId\} );
-          // And vice versa
-          data.$1 = \$$1;
+					// Associate created element with invoking element
+					\$$1.data( '$1', {target: $10, id: dataId\} );
+					// And vice versa
+					data.$1 = \$$1;
 }
-          $10.data('$1', data);
-        } // !data.$1
+					$10.data('$1', data);
+				} // !data.$1
 
-        $0
+				$0
 
-      });
+			});
 
-      return this;
-    },
-    destroy: function( ) {
+			return this;
+		},
+		destroy: function( ) {
 
-      this.each(function() {
+			this.each(function() {
 
-        var $10 = \$(this),
-            data = $10.data( '$1' );
+				var $10 = \$(this),
+						data = $10.data( '$1' );
 
-        // Remove created elements, unbind namespaced events, and remove data
-        \$(document).unbind( '.$1' );
-        data.$1.remove();
-        $10.unbind( '.$1' )
-        .removeData( '$1' );
+				// Remove created elements, unbind namespaced events, and remove data
+				\$(document).unbind( '.$1' );
+				data.$1.remove();
+				$10.unbind( '.$1' )
+				.removeData( '$1' );
 
-      });
+			});
 
-      return this;
-    },
-    options: function( options ) {
+			return this;
+		},
+		options: function( options ) {
 
-      this.each(function() {
-        var $10 = \$(this),
-            // don't use our getData() function here
-            // because we want an object regardless
-            data = $10.data( '$1' ) || {},
-            opts = data.options || {};
+			this.each(function() {
+				var $10 = \$(this),
+						// don't use our getData() function here
+						// because we want an object regardless
+						data = $10.data( '$1' ) || {},
+						opts = data.options || {};
 
-        // deep extend (merge) default settings, per-call options, and options set with:
-        // html10 data-$1 options JSON and \$('selector').$1( 'options', {} );
-        opts = \$.extend( true, {}, \$.fn.$1.defaults, opts, options || {} );
-        data.options = opts;
-        \$.data( this, '$1', data );
-      });
+				// deep extend (merge) default settings, per-call options, and options set with:
+				// html10 data-$1 options JSON and \$('selector').$1( 'options', {} );
+				opts = \$.extend( true, {}, \$.fn.$1.defaults, opts, options || {} );
+				data.options = opts;
+				\$.data( this, '$1', data );
+			});
 
-      return this;
-    }${20/(.+)/(?1:,
-    :)/}${20:someOtherMethod}${20/(.+)/(?1:\: function\(\) {
+			return this;
+		}${20/(.+)/(?1:,
+		:)/}${20:someOtherMethod}${20/(.+)/(?1:\: function\(\) {
 
-    }:)/}
-  };
+		}:)/}
+	};
 
-  var protoSlice = Array.prototype.slice;
+	var protoSlice = Array.prototype.slice;
 
-  \$.fn.$1 = function( method ) {
+	\$.fn.$1 = function( method ) {
 
-    if ( methods[method] ) {
-      return methods[method].apply( this, protoSlice.call( arguments, 1 ) );
-    } else if ( typeof method === 'object' || ! method ) {
-      return methods.init.apply( this, arguments );
-    } else {
-      \$.error( 'Method ' +  method + ' does not exist on jQuery.fn.$1' );
-    }
+		if ( methods[method] ) {
+			return methods[method].apply( this, protoSlice.call( arguments, 1 ) );
+		} else if ( typeof method === 'object' || ! method ) {
+			return methods.init.apply( this, arguments );
+		} else {
+			\$.error( 'Method ' +  method + ' does not exist on jQuery.fn.$1' );
+		}
 
-  };
+	};
 
-  \$.extend(\$.fn.$1, {
-    defaults: settings
-  });
+	\$.extend(\$.fn.$1, {
+		defaults: settings
+	});
 
-  function getData(el) {
-    var $1, opts,
-        $10 = \$(el),
-        data = $10.data( '$1' ) || {};
+	function getData(el) {
+		var $1, opts,
+				$10 = \$(el),
+				data = $10.data( '$1' ) || {};
 
-    if (!data.$1) { return false; }
+		if (!data.$1) { return false; }
 
-    return data;
-  }
+		return data;
+	}
 
-})( jQuery );</string>
+})( jQuery );
+</string>
 	<key>name</key>
 	<string>plugin (method extras)</string>
 	<key>scope</key>

@@ -7,23 +7,23 @@
 ${2:// ${3:What does the $1 plugin do?}}
 \$.fn.${1:pluginName} = function(options) {
 
-  if (!this.length) { return this; }
+	if (!this.length) { return this; }
 
-  var opts = \$.extend(${5:true, }{}, \$.fn.$1.defaults, options);
+	var opts = \$.extend(${5:true, }{}, \$.fn.$1.defaults, options);
 
-  this.each(function() {
-    var ${6:\$this} = \$(this);
-    $0
-  });
+	this.each(function() {
+		var ${6:\$this} = \$(this);
+		$0
+	});
 
-  return this;
+	return this;
 };
 
 // default options
 \$.fn.$1.defaults = {
-  ${4:defaultOne: true,
-  defaultTwo: false,
-  defaultThree: 'yay!'}
+	${4:defaultOne: true,
+	defaultTwo: false,
+	defaultThree: 'yay!'}
 };
 
 })(jQuery);
