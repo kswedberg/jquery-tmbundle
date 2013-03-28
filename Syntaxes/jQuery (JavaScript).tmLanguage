@@ -4,6 +4,8 @@
 <dict>
 	<key>comment</key>
 	<string>jQuery Javascript Library. TextMate bundle by Jonathan Chaffer &amp; Karl Swedberg. Dual licensed under MIT (http://www.opensource.org/licenses/mit-license.php) and GPL (http://www.gnu.org/licenses/gpl.html) licenses.</string>
+	<key>fileTypes</key>
+	<array/>
 	<key>foldingStartMarker</key>
 	<string>(^.*\{[^}]*$|^.*\([^\)]*$|^.*/\*(?!.*\*/).*$)</string>
 	<key>foldingStopMarker</key>
@@ -11,7 +13,7 @@
 	<key>keyEquivalent</key>
 	<string>^~J</string>
 	<key>name</key>
-	<string>jQuery (JavaScript)</string>
+	<string>JavaScript (jQuery)</string>
 	<key>patterns</key>
 	<array>
 		<dict>
