@@ -2,6 +2,6 @@
 	<content><![CDATA[.mousedown(${1:function(${2:event}) {
 	${0:// Act on the event}
 \}});]]></content>
-	<tabTrigger>.mousedown</tabTrigger>
+	<tabTrigger>mousedown</tabTrigger>
 	<scope>source.js</scope>
 </snippet>

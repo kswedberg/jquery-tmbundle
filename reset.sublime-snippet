@@ -2,7 +2,7 @@
 	<content><![CDATA[.reset(${1:function(${2:event}) {
 	${2:// Act on the event}
 \}});$0]]></content>
-	<tabTrigger>.reset</tabTrigger>
+	<tabTrigger>reset</tabTrigger>
 	<description>.reset()</description>
 	<scope>source.js</scope>
 </snippet>

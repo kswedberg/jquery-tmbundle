@@ -3,7 +3,7 @@
 	:)/}${3://optional stuff to do after success}${3/(.+)/(?1:
 }:)/});
 $0]]></content>
-	<tabTrigger>.get</tabTrigger>
+	<tabTrigger>get</tabTrigger>
 	<description>$.get()</description>
 	<scope>source.js</scope>
 </snippet>

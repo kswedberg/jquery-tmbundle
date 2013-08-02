@@ -2,6 +2,6 @@
 	<content><![CDATA[.map(function(${1:index}${2:, ${3:elem}}) {
 	${4:return ${5:something};}
 })]]></content>
-	<tabTrigger>.map</tabTrigger>
+	<tabTrigger>map</tabTrigger>
 	<scope>source.js</scope>
 </snippet>

@@ -1,5 +1,5 @@
 <snippet>
 	<content><![CDATA[.scrollTop(${1:value})$0]]></content>
-	<tabTrigger>.scrollTop</tabTrigger>
+	<tabTrigger>scrollTop</tabTrigger>
 	<scope>source.js</scope>
 </snippet>

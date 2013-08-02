@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[.prevAll(${1/(.+)/(?1:':)/}${1:selector}${1/(.+)/(?1:':)/})$0]]></content>
-	<tabTrigger>.prevAll</tabTrigger>
+	<tabTrigger>prevAll</tabTrigger>
 	<description>.prevAll</description>
 	<scope>source.js</scope>
 </snippet>

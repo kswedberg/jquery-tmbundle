@@ -1,5 +1,5 @@
 <snippet>
 	<content><![CDATA[.siblings(${1/(.+)/(?1:':)/}${1:selector expression}${1/(.+)/(?1:':)/})$0]]></content>
-	<tabTrigger>.siblings</tabTrigger>
+	<tabTrigger>siblings</tabTrigger>
 	<scope>source.js</scope>
 </snippet>

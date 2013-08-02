@@ -5,7 +5,7 @@
 		:)/}${3:// Stuff to do after the page is loaded}${3/(.+)/(?1:
 	}:)/});
 $0]]></content>
-	<tabTrigger>.load</tabTrigger>
+	<tabTrigger>load</tabTrigger>
 	<description>.load</description>
 	<scope>source.js</scope>
 </snippet>

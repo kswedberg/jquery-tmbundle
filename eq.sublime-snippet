@@ -1,5 +1,5 @@
 <snippet>
 	<content><![CDATA[.eq(${1:index})$0]]></content>
-	<tabTrigger>.eq</tabTrigger>
+	<tabTrigger>eq</tabTrigger>
 	<scope>source.js</scope>
 </snippet>

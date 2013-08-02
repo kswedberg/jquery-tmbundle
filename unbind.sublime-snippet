@@ -1,5 +1,5 @@
 <snippet>
 	<content><![CDATA[.unbind('${1:event name(s)}'${2/(^,).*|.+/(?1::, )/}${2/(^([0-9]+$|,.*))|.+/(?1::')/}${2:functionName}${2/(^([0-9]+$|,.*))|.+/(?1::')/})$0]]></content>
-	<tabTrigger>.unbind</tabTrigger>
+	<tabTrigger>unbind</tabTrigger>
 	<scope>source.js</scope>
 </snippet>

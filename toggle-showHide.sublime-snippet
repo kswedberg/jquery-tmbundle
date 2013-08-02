@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[.toggle(${1/(^[0-9]+$)|.+/(?1::')/}${1:slow/400/fast}${1/(^[0-9]+$)|.+/(?1::')/})$0]]></content>
-	<tabTrigger>.toggle</tabTrigger>
+	<tabTrigger>toggle</tabTrigger>
 	<description>toggle (show/hide)</description>
 	<scope>source.js</scope>
 </snippet>

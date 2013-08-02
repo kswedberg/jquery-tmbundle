@@ -2,6 +2,6 @@
 	<content><![CDATA[
 .toggleClass('${1:class name}')$0
 		]]></content>
-	<tabTrigger>.toggleClass</tabTrigger>
+	<tabTrigger>toggleClass</tabTrigger>
 	<scope>source.js</scope>
 </snippet>

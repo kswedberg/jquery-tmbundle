@@ -1,5 +1,5 @@
 <snippet>
 	<content><![CDATA[.add('${1:selector/elements/html}')$0]]></content>
-	<tabTrigger>.add</tabTrigger>
+	<tabTrigger>add</tabTrigger>
 	<scope>source.js</scope>
 </snippet>

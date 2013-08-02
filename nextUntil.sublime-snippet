@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[.nextUntil(${1/(.+)/(?1:':)/}${1:selector}${1/(.+)/(?1:':)/})$0]]></content>
-	<tabTrigger>.nextUntil</tabTrigger>
+	<tabTrigger>nextUntil</tabTrigger>
 	<description>.nextUntil</description>
 	<scope>source.js</scope>
 </snippet>

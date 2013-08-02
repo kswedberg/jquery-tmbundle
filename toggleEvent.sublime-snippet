@@ -5,7 +5,7 @@
 	${2:// Stuff to do every *even* time the element is clicked;}
 });
 $0]]></content>
-	<tabTrigger>.toggle</tabTrigger>
+	<tabTrigger>toggle</tabTrigger>
 	<description>.toggle</description>
 	<scope>source.js</scope>
 </snippet>
