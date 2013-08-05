@@ -2,7 +2,7 @@
 	<content><![CDATA[.focusout(${1:function(${2:event}) {
 	${3:// Act on the event}
 \}});]]></content>
-	<tabTrigger>.focusout</tabTrigger>
+	<tabTrigger>focusout</tabTrigger>
 	<description>.focusout()</description>
 	<scope>source.js</scope>
 </snippet>

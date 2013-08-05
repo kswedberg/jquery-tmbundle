@@ -1,5 +1,5 @@
 <snippet>
 	<content><![CDATA[.slideToggle(${1/(^[0-9]+$)|.+/(?1::')/}${1:slow/400/fast}${1/(^[0-9]+$)|.+/(?1::')/})$0]]></content>
-	<tabTrigger>.slideToggle</tabTrigger>
+	<tabTrigger>slideToggle</tabTrigger>
 	<scope>source.js</scope>
 </snippet>

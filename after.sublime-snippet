@@ -1,5 +1,5 @@
 <snippet>
 	<content><![CDATA[.after('${1:Some text &lt;b&gt;and bold!&lt;/b&gt;}')$0]]></content>
-	<tabTrigger>.after</tabTrigger>
+	<tabTrigger>after</tabTrigger>
 	<scope>source.js</scope>
 </snippet>

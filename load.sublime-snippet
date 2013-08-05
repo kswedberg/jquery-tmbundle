@@ -2,7 +2,7 @@
 	<content><![CDATA[.load(${1:function() {
 	${0:// Act on the event}
 \}});]]></content>
-	<tabTrigger>.load</tabTrigger>
+	<tabTrigger>load</tabTrigger>
 	<description>.load</description>
 	<scope>source.js</scope>
 </snippet>

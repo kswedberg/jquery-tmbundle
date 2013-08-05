@@ -1,5 +1,5 @@
 <snippet>
 	<content><![CDATA[.slideUp(${1/(^[0-9]+$)|.+/(?1::')/}${1:slow/400/fast}${1/(^[0-9]+$)|.+/(?1::')/})$0]]></content>
-	<tabTrigger>.slideUp</tabTrigger>
+	<tabTrigger>slideUp</tabTrigger>
 	<scope>source.js</scope>
 </snippet>

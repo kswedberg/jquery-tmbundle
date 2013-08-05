@@ -1,5 +1,5 @@
 <snippet>
 	<content><![CDATA[.first()$0]]></content>
-	<tabTrigger>.first</tabTrigger>
+	<tabTrigger>first</tabTrigger>
 	<scope>source.js</scope>
 </snippet>

@@ -1,5 +1,5 @@
 <snippet>
 	<content><![CDATA[.insertAfter('${1:selector expression}')$0]]></content>
-	<tabTrigger>.insertAfter</tabTrigger>
+	<tabTrigger>insertAfter</tabTrigger>
 	<scope>source.js</scope>
 </snippet>

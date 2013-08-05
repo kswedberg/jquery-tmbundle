@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[.insertBefore('${1:selector expression}')$0]]></content>
-	<tabTrigger>.insertBefore</tabTrigger>
+	<tabTrigger>insertBefore</tabTrigger>
 	<description>.insertBefore</description>
 	<scope>source.js</scope>
 </snippet>

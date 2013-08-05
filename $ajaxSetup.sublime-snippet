@@ -15,7 +15,7 @@ ${2/(.+)/(?1:	type\: ':)/}${2:POST}${2/(.+)/(?1:',
 ${7/(.+)/(?1:	}
 :)/}});
 $0]]></content>
-	<tabTrigger>.ajaxsetup</tabTrigger>
+	<tabTrigger>ajaxsetup</tabTrigger>
 	<description>$.ajaxSetup()</description>
 	<scope>source.js</scope>
 </snippet>

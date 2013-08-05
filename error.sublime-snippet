@@ -2,7 +2,7 @@
 	<content><![CDATA[.error(${1:function() {
 	${0:// Act on the event}
 \}});]]></content>
-	<tabTrigger>.error</tabTrigger>
+	<tabTrigger>error</tabTrigger>
 	<description>.error()</description>
 	<scope>source.js</scope>
 </snippet>

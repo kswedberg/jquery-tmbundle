@@ -2,6 +2,6 @@
 	<content><![CDATA[.keydown(${1:function(${2:event}) {
 	${0:// Act on the event}
 \}});]]></content>
-	<tabTrigger>.keydown</tabTrigger>
+	<tabTrigger>keydown</tabTrigger>
 	<scope>source.js</scope>
 </snippet>

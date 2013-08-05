@@ -1,5 +1,5 @@
 <snippet>
 	<content><![CDATA[.dequeue(${1/(.+)/(?1:':)/}${1:queueName}${1/(.+)/(?1:':)/})$0]]></content>
-	<tabTrigger>.dequeue</tabTrigger>
+	<tabTrigger>dequeue</tabTrigger>
 	<scope>source.js</scope>
 </snippet>

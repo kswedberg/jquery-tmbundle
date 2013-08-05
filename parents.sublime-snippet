@@ -1,5 +1,5 @@
 <snippet>
 	<content><![CDATA[.parents(${1/(.+)/(?1:':)/}${1:selector expression}${1/(.+)/(?1:':)/})$0]]></content>
-	<tabTrigger>.parents</tabTrigger>
+	<tabTrigger>parents</tabTrigger>
 	<scope>source.js</scope>
 </snippet>

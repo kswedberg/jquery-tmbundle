@@ -3,6 +3,6 @@
   ${2://stuff to do when an AJAX call returns an error};
 });
 $0]]></content>
-	<tabTrigger>.ajaxerror</tabTrigger>
+	<tabTrigger>ajaxerror</tabTrigger>
 	<scope>source.js</scope>
 </snippet>
