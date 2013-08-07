@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[.prev(${1/(.+)/(?1:':)/}${1:selector expression}${1/(.+)/(?1:':)/})$0]]></content>
+	<content><![CDATA[prev(${1/(.+)/(?1:':)/}${1:selector expression}${1/(.+)/(?1:':)/})$0]]></content>
 	<tabTrigger>prev</tabTrigger>
 	<description>.prev</description>
 	<scope>source.js</scope>

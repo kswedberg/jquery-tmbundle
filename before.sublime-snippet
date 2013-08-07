@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[.before('${1:content}');$0]]></content>
+	<content><![CDATA[before('${1:content}');$0]]></content>
 	<tabTrigger>before</tabTrigger>
 	<description>.before()</description>
 	<scope>source.js</scope>

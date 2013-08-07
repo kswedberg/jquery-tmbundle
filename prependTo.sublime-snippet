@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[.prependTo('${1:selector expression}')$0]]></content>
+	<content><![CDATA[prependTo('${1:selector expression}')$0]]></content>
 	<tabTrigger>prependTo</tabTrigger>
 	<description>.prependTo</description>
 	<scope>source.js</scope>

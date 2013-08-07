@@ -1,6 +1,6 @@
 <snippet>
-	<content><![CDATA[.error(${1:function() {
-	${0:// Act on the event}
+	<content><![CDATA[error(${1:function() {
+	${0:/* Act on the event */}
 \}});]]></content>
 	<tabTrigger>error</tabTrigger>
 	<description>.error()</description>

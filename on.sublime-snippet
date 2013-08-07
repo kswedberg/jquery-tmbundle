@@ -1,7 +1,7 @@
 <snippet>
-	<content><![CDATA[.on('${1:click}'${2:, '${3:.selector}'}, function(${4:event}) {
+	<content><![CDATA[on('${1:click}'${2:, '${3:.selector}'}, function(${4:event}) {
 	${5:event.preventDefault();}
-	${6:// Act on the event}
+	${6 /* Act on the event */}
 });]]></content>
 	<tabTrigger>on</tabTrigger>
 	<description>.on()</description>

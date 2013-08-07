@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[.removeAttr('${1:attribute name}')$0]]></content>
+	<content><![CDATA[removeAttr('${1:attribute name}')$0]]></content>
 	<tabTrigger>removeAttr</tabTrigger>
 	<description>.removeAttr</description>
 	<scope>source.js</scope>

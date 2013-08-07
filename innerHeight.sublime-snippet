@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[.innerHeight()$0]]></content>
+	<content><![CDATA[innerHeight()$0]]></content>
 	<tabTrigger>innerHeight</tabTrigger>
 	<description>.innerHeight</description>
 	<scope>source.js</scope>

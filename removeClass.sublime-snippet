@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[.removeClass('${1:class name}')$0]]></content>
+	<content><![CDATA[removeClass('${1:class name}')$0]]></content>
 	<tabTrigger>removeClass</tabTrigger>
 	<description>.removeClass</description>
 	<scope>source.js</scope>

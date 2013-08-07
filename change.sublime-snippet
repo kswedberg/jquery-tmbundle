@@ -1,6 +1,6 @@
 <snippet>
-	<content><![CDATA[.change(${1:function(${2:event}) {
-	${0:// Act on the event}
+	<content><![CDATA[change(${1:function(${2:event}) {
+	${0:/* Act on the event */}
 \}});]]></content>
 	<tabTrigger>change</tabTrigger>
 	<description>.change</description>
