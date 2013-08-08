@@ -1,7 +1,8 @@
 <snippet>
-	<content><![CDATA[each(${1:function(${2:event}) {
-	${0:/* Act on the event */}
-\}});]]></content>
+	<content><![CDATA[each(${1:function(${2:index}${3:, el}) {
+	$4
+\}});$0]]></content>
 	<tabTrigger>each</tabTrigger>
+	<description>.each()</description>
 	<scope>source.js</scope>
 </snippet>

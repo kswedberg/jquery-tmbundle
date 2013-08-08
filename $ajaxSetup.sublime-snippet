@@ -1,19 +1,19 @@
 <snippet>
-	<content><![CDATA[\$ajaxSetup({
+	<content><![CDATA[\$.ajaxSetup({
 	url: '${1:/path/to/file}',
-${2/(.+)/(?1:	type\: ':)/}${2:POST}${2/(.+)/(?1:',
-:)/}${3/(.+)/(?1:	dataType\: ':)/}${3:xml/html/script/json/jsonp}${3/(.+)/(?1:',
-:)/}${4/(.+)/(?1:	data\: {:)/}${4:param1: 'value1'}${4/(.+)/(?1:},
-:)/}${5/(.+)/(?1:	complete\: function\(xhr, textStatus\) {
-		:)/}${5://called when complete}${5/(.+)/(?1:
-	},
-:)/}${6/(.+)/(?1:	success\: function\(data, textStatus, xhr\) {
-		:)/}${6:/* Called when successful */}${6/(.+)/(?1:
-	},
-:)/}${7/(.+)/(?1:	error\: function\(xhr, textStatus, errorThrown\) {
-		:)/}${7:/* Called when there is an error */}
-${7/(.+)/(?1:	}
-:)/}});
+	${2:type: '${3:default GET (Other values: POST)}',}
+	${4:dataType: '${5:default: Intelligent Guess (Other values: xml, json, script, or html)}',}
+	${6:data: {param1: 'value1'\},}
+})
+${7:.done(function() {
+	console.log("success");
+\})}
+${8:.fail(function() {
+	console.log("error");
+\})}
+${9:.always(function() {
+	console.log("complete");
+\})};
 $0]]></content>
 	<tabTrigger>ajaxsetup</tabTrigger>
 	<description>$.ajaxSetup()</description>
