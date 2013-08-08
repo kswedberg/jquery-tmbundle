@@ -3,5 +3,6 @@
 	${0:/* Act on the event */}
 \}});]]></content>
 	<tabTrigger>dblclick</tabTrigger>
+	<description>.dblclick()</description>
 	<scope>source.js</scope>
 </snippet>

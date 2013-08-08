@@ -1,5 +1,6 @@
 <snippet>
 	<content><![CDATA[undelegate('${1:selector}', '${2:event type}', '${3:function}');]]></content>
 	<tabTrigger>undelegate</tabTrigger>
+	<description>.undelegate()</description>
 	<scope>source.js</scope>
 </snippet>
