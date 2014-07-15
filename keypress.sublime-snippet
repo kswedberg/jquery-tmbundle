@@ -1,7 +1,0 @@
-<snippet>
-	<content><![CDATA[keypress(${1:function(${2:event}) {
-	${0:/* Act on the event */}
-\}});]]></content>
-	<tabTrigger>keypress</tabTrigger>
-	<scope>source.js</scope>
-</snippet>

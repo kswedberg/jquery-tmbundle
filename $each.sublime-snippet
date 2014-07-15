@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[\$.each(${1:array/object}, function(${2:index}${3:, ${4:val}}) {
-	${0: /* iterate through array or object */}
-});]]></content>
-	<tabTrigger>each</tabTrigger>
-	<description>$.each()</description>
-	<scope>source.js</scope>
-</snippet>

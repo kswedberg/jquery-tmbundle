@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[slideToggle(${1:slow/400/fast})$0]]></content>
-	<tabTrigger>slideToggle</tabTrigger>
-	<description>.slideToggle()</description>
-	<scope>source.js</scope>
-</snippet>

@@ -1,5 +1,0 @@
-<snippet>
-	<content><![CDATA[last()$0]]></content>
-	<tabTrigger>last</tabTrigger>
-	<scope>source.js</scope>
-</snippet>

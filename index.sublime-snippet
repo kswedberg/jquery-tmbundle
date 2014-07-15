@@ -1,5 +1,0 @@
-<snippet>
-	<content><![CDATA[index(${1:selector/element})$0]]></content>
-	<tabTrigger>index</tabTrigger>
-	<scope>source.js</scope>
-</snippet>

@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[\$.ajaxSuccess(function(event, xhr, settings) {
-	${1:/* executes whenever an AJAX request completes successfully */}
-});$0]]></content>
-	<tabTrigger>ajaxsuccess</tabTrigger>
-	<description>$.ajaxSuccess()</description>
-	<scope>source.js</scope>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[\$.parseXML('${1:XML}');$0]]></content>
-	<tabTrigger>parse</tabTrigger>
-	<description>$.parseXML()</description>
-	<scope>source.js</scope>
-</snippet>

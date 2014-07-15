@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[resize(${1:function(${2:event}) {
-	${0:/* Act on the event */}
-\}});]]></content>
-	<tabTrigger>resize</tabTrigger>
-	<description>.resize</description>
-	<scope>source.js</scope>
-</snippet>

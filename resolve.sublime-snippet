@@ -1,5 +1,0 @@
-<snippet>
-	<content><![CDATA[resolve(${1:args})$0]]></content>
-	<tabTrigger>resolve</tabTrigger>
-	<scope>source.js</scope>
-</snippet>

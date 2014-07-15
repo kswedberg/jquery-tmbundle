@@ -1,9 +1,0 @@
-<snippet>
-	<content><![CDATA[prop({
-	${1:property1}: '${2:value1}'},
-	${3:property2}: '${4:value2}'},
-})$0]]></content>
-	<tabTrigger>prop</tabTrigger>
-	<description>.prop() - multiple</description>
-	<scope>source.js</scope>
-</snippet>

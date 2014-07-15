@@ -1,5 +1,0 @@
-<snippet>
-	<content><![CDATA[resolveWith(${1:context}${2:, args})$0]]></content>
-	<tabTrigger>resolveWith</tabTrigger>
-	<scope>source.js</scope>
-</snippet>

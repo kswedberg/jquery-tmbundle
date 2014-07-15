@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[offset(function(index, currentCoordinates) {
-	${1:return ${2:someObject};}
-})]]></content>
-	<tabTrigger>offset</tabTrigger>
-	<description>.offset</description>
-	<scope>source.js</scope>
-</snippet>

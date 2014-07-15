@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[\$.browser.version]]></content>
-	<tabTrigger>browser</tabTrigger>
-	<description>$.browser.version</description>
-	<scope>source.js</scope>
-</snippet>

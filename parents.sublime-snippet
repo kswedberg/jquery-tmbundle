@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[parents(${1:selector})$0]]></content>
-	<tabTrigger>parents</tabTrigger>
-	<description>.parents()</description>
-	<scope>source.js</scope>
-</snippet>

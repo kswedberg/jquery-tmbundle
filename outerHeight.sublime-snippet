@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[outerHeight()$0]]></content>
-	<tabTrigger>outerHeight</tabTrigger>
-	<description>.outerHeight</description>
-	<scope>source.js</scope>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[\$.sub();$0]]></content>
-	<tabTrigger>sub</tabTrigger>
-	<description>$.sub()</description>
-	<scope>source.js</scope>
-</snippet>

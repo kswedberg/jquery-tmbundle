@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[fadeTo('${1:slow/400/fast}', ${2:0.5}${3:, function() {
-	$4
-\}});$0]]></content>
-	<tabTrigger>fadeto</tabTrigger>
-	<description>.fadeTo()</description>
-	<scope>source.js</scope>
-</snippet>

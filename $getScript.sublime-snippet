@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[\$.getScript('${1:path/to/file}', function(data, textStatus) {
-	${3:/*optional stuff to do after getScript */ }
-});$0]]></content>
-	<tabTrigger>get</tabTrigger>
-	<description>$.getScript()</description>
-	<scope>source.js</scope>
-</snippet>

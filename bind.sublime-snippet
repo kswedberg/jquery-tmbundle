@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[bind('${1:event name}', ${2:eventData}, function(${3:event}) {
-	${0:/* Act on the event */}
-});]]></content>
-	<tabTrigger>bind</tabTrigger>
-	<description>.bind</description>
-	<scope>source.js</scope>
-</snippet>

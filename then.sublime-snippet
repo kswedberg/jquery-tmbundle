@@ -1,5 +1,0 @@
-<snippet>
-	<content><![CDATA[then(${1:doneCallbacks}, ${2:failCallbacks})$0]]></content>
-	<tabTrigger>then</tabTrigger>
-	<scope>source.js</scope>
-</snippet>

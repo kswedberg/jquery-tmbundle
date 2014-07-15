@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[size();$0]]></content>
-	<tabTrigger>size</tabTrigger>
-	<description>.size()</description>
-	<scope>source.js</scope>
-</snippet>

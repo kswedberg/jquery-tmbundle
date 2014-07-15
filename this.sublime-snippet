@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[\$(this)$0]]></content>
-	<tabTrigger>this</tabTrigger>
-	<description>$(this)</description>
-	<scope>source.js</scope>
-</snippet>

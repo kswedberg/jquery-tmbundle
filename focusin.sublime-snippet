@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[focusin(${1:function(${2:event}) {
-	${3:/* Act on the event */}
-\}});$0]]></content>
-	<tabTrigger>focusin</tabTrigger>
-	<description>.focusin()</description>
-	<scope>source.js</scope>
-</snippet>

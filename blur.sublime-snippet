@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[blur(${1:function(${2:event}) {
-	${0:/* Act on the event */}
-\}});]]></content>
-	<tabTrigger>blur</tabTrigger>
-	<description>.blur</description>
-	<scope>source.js</scope>
-</snippet>

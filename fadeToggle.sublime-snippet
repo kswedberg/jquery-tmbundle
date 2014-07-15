@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[fadeToggle('${1:slow/400/fast}'${2:, function() {
-	$3
-\}});$0]]></content>
-	<tabTrigger>fadeToggle</tabTrigger>
-	<description>.fadeToggle()</description>
-	<scope>source.js</scope>
-</snippet>

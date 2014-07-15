@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[clone(${1:boolean}, ${2:boolean})$0]]></content>
-	<tabTrigger>clone</tabTrigger>
-	<description>.clone</description>
-	<scope>source.js</scope>
-</snippet>

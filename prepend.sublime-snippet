@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[prepend('${1:Some text}')$0]]></content>
-	<tabTrigger>prepend</tabTrigger>
-	<description>.prepend</description>
-	<scope>source.js</scope>
-</snippet>

@@ -1,9 +1,0 @@
-<snippet>
-	<content><![CDATA[css({
-	${1:property1}: '${2:value1}'${3:,
-	${4:property2}: '${5:value2}'
-\}});$0]]></content>
-	<tabTrigger>css</tabTrigger>
-	<description>.css() - multiple</description>
-	<scope>source.js</scope>
-</snippet>

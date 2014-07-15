@@ -1,5 +1,0 @@
-<snippet>
-	<content><![CDATA[die('${1:eventType}')$0]]></content>
-	<tabTrigger>die</tabTrigger>
-	<scope>source.js</scope>
-</snippet>

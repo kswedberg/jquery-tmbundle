@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[serialize()$0]]></content>
-	<tabTrigger>serialize</tabTrigger>
-	<description>.serialize()</description>
-	<scope>source.js</scope>
-</snippet>

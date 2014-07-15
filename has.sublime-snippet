@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[has(${1:contained selector/element})$0]]></content>
-	<tabTrigger>has</tabTrigger>
-	<description>.has</description>
-	<scope>source.js</scope>
-</snippet>

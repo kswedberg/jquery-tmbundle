@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[delay(${1:milliseconds}${2:, 'queueName'})$0]]></content>
-	<tabTrigger>delay</tabTrigger>
-	<description>.delay()</description>
-	<scope>source.js</scope>
-</snippet>

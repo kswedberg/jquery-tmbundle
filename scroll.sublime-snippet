@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[scroll(${1:function(${2:event}) {
-	${0:/* Act on the event */}
-\}});]]></content>
-	<tabTrigger>scroll</tabTrigger>
-	<description>.scroll()</description>
-	<scope>source.js</scope>
-</snippet>

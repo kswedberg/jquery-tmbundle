@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[stop(${1:clearQueue}${2:, gotoEnd})$0]]></content>
-	<tabTrigger>stop</tabTrigger>
-	<description>.stop()</description>
-	<scope>source.js</scope>
-</snippet>

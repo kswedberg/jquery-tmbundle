@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[unbind('${1:event name(s)}'${2:functionName})$0]]></content>
-	<tabTrigger>unbind</tabTrigger>
-	<description>.unbind()</description>
-	<scope>source.js</scope>
-</snippet>

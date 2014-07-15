@@ -1,7 +1,0 @@
-<snippet>
-	<content><![CDATA[live('${1:click}', function(${2:event}) {
-	${0:/* Act on the event */}
-});]]></content>
-	<tabTrigger>live</tabTrigger>
-	<scope>source.js</scope>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[\$.type(${1:DOMelementArray});$0]]></content>
-	<tabTrigger>type</tabTrigger>
-	<description>$.type()</description>
-	<scope>source.js</scope>
-</snippet>

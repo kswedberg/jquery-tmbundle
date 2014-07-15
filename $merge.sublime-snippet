@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[\$.merge(${1:array1}, ${2:array2});]]></content>
-	<tabTrigger>merge</tabTrigger>
-	<description>$.merge()</description>
-	<scope>source.js</scope>
-</snippet>

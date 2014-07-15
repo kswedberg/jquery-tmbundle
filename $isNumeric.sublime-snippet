@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[\$.isNumeric('${1:object}');$0]]></content>
-	<tabTrigger>is</tabTrigger>
-	<description>$.isNumeric()</description>
-	<scope>source.js</scope>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[html(${1:Some text and markup})$0]]></content>
-	<tabTrigger>html</tabTrigger>
-	<description>.html</description>
-	<scope>source.js</scope>
-</snippet>

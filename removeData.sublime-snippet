@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[removeData('${1:data name}')$0]]></content>
-	<tabTrigger>removeData</tabTrigger>
-	<description>.removeData()</description>
-	<scope>source.js</scope>
-</snippet>

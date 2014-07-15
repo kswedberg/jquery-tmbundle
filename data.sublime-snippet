@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[data('${1:name}', ${2:'value'})$0]]></content>
-	<tabTrigger>data</tabTrigger>
-	<description>.data()</description>
-	<scope>source.js</scope>
-</snippet>

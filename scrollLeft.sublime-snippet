@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[scrollLeft(${1:value})$0]]></content>
-	<tabTrigger>scrollLeft</tabTrigger>
-	<description>.scrollLeft()</description>
-	<scope>source.js</scope>
-</snippet>

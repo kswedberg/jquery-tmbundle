@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[ajaxComplete(function(event, xhr, settings) {
-	${1:/* executes whenever an AJAX request completes */}
-});$0]]></content>
-	<tabTrigger>ajaxComplete</tabTrigger>
-	<description>.ajaxComplete()</description>
-	<scope>source.js</scope>
-</snippet>

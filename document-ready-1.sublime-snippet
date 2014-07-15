@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[jQuery(document).ready(function(\$) {
-	$1
-});$0]]></content>
-	<tabTrigger>ready</tabTrigger>
-	<description>jQuery(document).ready</description>
-	<scope>source.js</scope>
-</snippet>

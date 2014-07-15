@@ -1,5 +1,0 @@
-<snippet>
-	<content><![CDATA[animate({${1:${2:param1}: ${3:value1}${4:, ${5:param2}: ${6:value2}}}}, ${7:speed})$0]]></content>
-	<tabTrigger>animate</tabTrigger>
-	<scope>source.js</scope>
-</snippet>

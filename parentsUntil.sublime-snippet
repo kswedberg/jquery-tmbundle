@@ -1,5 +1,0 @@
-<snippet>
-	<content><![CDATA[parentsUntil(${1:selector})$0]]></content>
-	<tabTrigger>parentsUntil</tabTrigger>
-	<scope>source.js</scope>
-</snippet>

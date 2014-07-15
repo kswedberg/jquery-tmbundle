@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[\$.noop();$0]]></content>
-	<tabTrigger>noop</tabTrigger>
-	<description>$.noop()</description>
-	<scope>source.js</scope>
-</snippet>
